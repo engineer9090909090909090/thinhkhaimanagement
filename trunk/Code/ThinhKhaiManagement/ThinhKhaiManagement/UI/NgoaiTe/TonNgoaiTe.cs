@@ -15,5 +15,6 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         {
             InitializeComponent();
         }
+
     }
 }
