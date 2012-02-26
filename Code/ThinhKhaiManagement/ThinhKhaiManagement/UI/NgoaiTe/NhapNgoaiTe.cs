@@ -72,18 +72,19 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         {   
             return (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
                                                 StoreProcedureNames.constNgoaiTeGetAll,
-                                                new Dictionary<object,int>(),
+                                                new Collection<KeyValuePair<object,int>>(),
                                                 (int)ExecuteType.Query);
         }
 
         private bool Save()
         {
-            Dictionary<object, int> d = new Dictionary<object, int>();
-            d.Add(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString);
-            d.Add(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString);
-            d.Add(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString);
-            d.Add(DateTime.Today.ToShortDateString(),(int)ParameterType.String);
-            d.Add(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String);
+            Collection<KeyValuePair<object, int>> d = new Collection<KeyValuePair<object, int>>(){
+                new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
+                new KeyValuePair<object,int>(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString),
+                new KeyValuePair<object,int>(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString),
+                new KeyValuePair<object,int>(DateTime.Today.ToShortDateString(),(int)ParameterType.String),
+                new KeyValuePair<object,int>(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String)
+            };
 
             return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
                                                 StoreProcedureNames.constNgoaiTeInsert,

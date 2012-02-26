@@ -37,8 +37,9 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DatabaseAccesser">
-      <HintPath>..\..\..\..\DatabaseAccesser\DatabaseAccesser\bin\Debug\DatabaseAccesser.dll</HintPath>
+    <Reference Include="DatabaseAccesser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\New folder\DatabaseAccesser\bin\Debug\DatabaseAccesser.dll</HintPath>
     </Reference>
     <Reference Include="RadControlSpy, Version=2009.2.9.701, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="System" />
