@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ThinhKhaiManagement.Common;
@@ -17,7 +17,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
     {
         #region Variables and Constants
 
-
+        DataAccess dataaccess; 
 
         #endregion
 
@@ -26,6 +26,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         public NhapNgoaiTe()
         {
             InitializeComponent();
+            dataaccess = new DataAccess();
         }
 
         private void NhapNgoaiTe_Load(object sender, EventArgs e)
@@ -46,22 +47,6 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             chiTietNhapNgoaiTe.ShowDialog();
         }
 
-        #endregion
-
-        #region private methods
-
-        private DataTable ShowLoaiNgoaiTe()
-        {
-            SqlConnection sqlconnection = StaticMethods.ShowSqlConnection();
-            DataAccess dataaccess = new DataAccess();
-            return (DataTable)dataaccess.Access(sqlconnection,
-                                                StoreProcedureNames.constNgoaiTeGetAll,
-                                                new Dictionary<object,int>(),
-                                                (int)ExecuteType.Query);
-        }
-
-        #endregion
-
         private void buttonLamSachNhapNgoaiTe_Click(object sender, EventArgs e)
         {
             comboBoxLoaiNgoaiTeNhap.SelectedIndex = 0;
@@ -70,6 +55,46 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             radSpinEditorSoLuongNhapNgoaiTe.Value = 0;
             textBoxGhiChuNhapNgoaiTe.Text = string.Empty;
         }
+
+        private void buttonLuuNhapNgoaiTe_Click(object sender, EventArgs e)
+        {
+            if (Save())
+                MessageBox.Show("Nhập phiếu thành công");
+            else
+                MessageBox.Show("Nhập phiếu thất bại");
+        }
+
+        #endregion
+
+        #region private methods
+
+        private DataTable ShowLoaiNgoaiTe()
+        {   
+            return (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                                                StoreProcedureNames.constNgoaiTeGetAll,
+                                                new Dictionary<object,int>(),
+                                                (int)ExecuteType.Query);
+        }
+
+        private bool Save()
+        {
+            Dictionary<object, int> d = new Dictionary<object, int>();
+            d.Add(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString);
+            d.Add(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString);
+            d.Add(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString);
+            d.Add(DateTime.Today.ToShortDateString(),(int)ParameterType.String);
+            d.Add(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String);
+
+            return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                                                StoreProcedureNames.constNgoaiTeInsert,
+                                                d,
+                                                (int)ExecuteType.NonQuery);
+
+        }
+
+        #endregion
+
+     
 
 
     }
