@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ThinhKhaiManagement
+namespace ThinhKhaiManagement.UI
 {
     public partial class Main : Form
     {
