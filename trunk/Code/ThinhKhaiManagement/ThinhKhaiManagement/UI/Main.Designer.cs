@@ -1,4 +1,4 @@
-﻿namespace ThinhKhaiManagement
+﻿namespace ThinhKhaiManagement.UI
 {
     partial class Main
     {
