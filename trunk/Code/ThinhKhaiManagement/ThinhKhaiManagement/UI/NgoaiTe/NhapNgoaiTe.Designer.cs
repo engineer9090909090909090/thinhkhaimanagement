@@ -171,6 +171,7 @@
             this.buttonLuuNhapNgoaiTe.TabIndex = 5;
             this.buttonLuuNhapNgoaiTe.Text = "Lưu";
             this.buttonLuuNhapNgoaiTe.UseVisualStyleBackColor = true;
+            this.buttonLuuNhapNgoaiTe.Click += new System.EventHandler(this.buttonLuuNhapNgoaiTe_Click);
             // 
             // textBoxGhiChuNhapNgoaiTe
             // 
