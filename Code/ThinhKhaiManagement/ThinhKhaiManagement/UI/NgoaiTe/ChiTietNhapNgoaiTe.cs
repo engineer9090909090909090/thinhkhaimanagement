@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ThinhKhaiManagement.UI
+namespace ThinhKhaiManagement.UI.NgoaiTe
 {
-    public partial class XuatNgoaiTe : Form
+    public partial class ChiTietNhapNgoaiTe : Form
     {
-        public XuatNgoaiTe()
+        public ChiTietNhapNgoaiTe()
         {
             InitializeComponent();
         }

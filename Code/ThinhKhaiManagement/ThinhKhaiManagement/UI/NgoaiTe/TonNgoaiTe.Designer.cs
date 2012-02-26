@@ -1,4 +1,6 @@
-﻿namespace ThinhKhaiManagement.UI.NgoaiTe
+﻿using ThinhKhaiManagement;
+
+namespace ThinhKhaiManagement.UI.NgoaiTe
 {
     partial class TonNgoaiTe
     {
@@ -42,5 +44,8 @@
         }
 
         #endregion
+
+
+
     }
 }
