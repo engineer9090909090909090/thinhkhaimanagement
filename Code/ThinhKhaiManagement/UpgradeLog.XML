@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ThinhKhaiManagement">
+</Property><Property Name="Solution File" Value="C:\Users\Raysaldo\Desktop\New folder\Code\ThinhKhaiManagement\ThinhKhaiManagement.sln">
+</Property><Property Name="Date" Value="Sunday, February 26, 2012">
+</Property><Property Name="Time" Value="15:56 PM">
+</Property></Properties><Event ErrorLevel="0" Project="ThinhKhaiManagement" Source="ThinhKhaiManagement\ThinhKhaiManagement.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ThinhKhaiManagement" Source="ThinhKhaiManagement\ThinhKhaiManagement.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ThinhKhaiManagement.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ThinhKhaiManagement.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ThinhKhaiManagement" Source="ThinhKhaiManagement\ThinhKhaiManagement.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
