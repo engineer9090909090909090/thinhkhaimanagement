@@ -1,8 +1,0 @@
-D:\ThinhKhaiManagement\Code\ThinhKhaiManagement\ThinhKhaiManagement\obj\Debug\ResolveAssemblyReference.cache
-D:\ThinhKhaiManagement\Code\ThinhKhaiManagement\ThinhKhaiManagement\obj\Debug\ThinhKhaiManagement.Main.resources
-D:\ThinhKhaiManagement\Code\ThinhKhaiManagement\ThinhKhaiManagement\obj\Debug\ThinhKhaiManagement.Properties.Resources.resources
-D:\ThinhKhaiManagement\Code\ThinhKhaiManagement\ThinhKhaiManagement\obj\Debug\ThinhKhaiManagement.csproj.GenerateResource.Cache
-D:\ThinhKhaiManagement\Code\ThinhKhaiManagement\ThinhKhaiManagement\bin\Debug\ThinhKhaiManagement.exe
-D:\ThinhKhaiManagement\Code\ThinhKhaiManagement\ThinhKhaiManagement\bin\Debug\ThinhKhaiManagement.pdb
-D:\ThinhKhaiManagement\Code\ThinhKhaiManagement\ThinhKhaiManagement\obj\Debug\ThinhKhaiManagement.exe
-D:\ThinhKhaiManagement\Code\ThinhKhaiManagement\ThinhKhaiManagement\obj\Debug\ThinhKhaiManagement.pdb
