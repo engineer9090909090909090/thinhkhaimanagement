@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace ThinhKhaiManagement.Common
 {
@@ -26,4 +27,16 @@ namespace ThinhKhaiManagement.Common
         }
 
     }
+
+    #region enums
+
+    public enum CheckMethods
+    { 
+        nullOrEmpty = 0,
+        isNull = 1,
+        isEmpty = 2,
+        lessThanZero
+    }
+
+    #endregion
 }
