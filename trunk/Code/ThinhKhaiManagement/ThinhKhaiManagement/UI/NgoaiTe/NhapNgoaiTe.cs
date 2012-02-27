@@ -70,23 +70,33 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         private void buttonLuuNhapNgoaiTe_Click(object sender, EventArgs e)
         {
-            if (checkControl())
+            try
             {
-                if (MaNhapNgoaiTe == 0)
+                if (checkControl())
                 {
-                    if (Save())
-                        toolStripStatusLabelNhapNgoaiTe.Text = "Nhập phiếu thành công";
+                    if (MaNhapNgoaiTe == 0)
+                    {
+                        if (Save())
+                            toolStripStatusLabelNhapNgoaiTe.Text = "Nhập phiếu thành công";
+                        else
+                            MessageBox.Show("Nhập phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                     else
-                        MessageBox.Show("Nhập phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    {
+                        if (Update())
+                            toolStripStatusLabelNhapNgoaiTe.Text = "cập phiếu thành công";
+                        else
+                            MessageBox.Show("cập nhật phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        buttonLamSachNhapNgoaiTe_Click(sender, e);
+                    }
                 }
-                else
-                {
-                    if(Update())
-                        toolStripStatusLabelNhapNgoaiTe.Text = "cập phiếu thành công";
-                    else
-                        MessageBox.Show("cập nhật phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    buttonLamSachNhapNgoaiTe_Click(sender, e);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("#Message: {0} \n#StackTrace: {1}",ex.Message,ex.StackTrace),
+                                "Lỗi hệ thống",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
 
@@ -137,7 +147,11 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         private bool Save()
         {
-            Collection<KeyValuePair<object, int>> d = new Collection<KeyValuePair<object, int>>(){
+
+            SqlConnection sqlConnection = StaticMethods.ShowSqlConnection();
+            SqlTransaction sqlTransaction=null;
+
+            Collection<KeyValuePair<object, int>> c1 = new Collection<KeyValuePair<object, int>>(){
             new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
             new KeyValuePair<object,int>(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString),
             new KeyValuePair<object,int>(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString),
@@ -145,10 +159,43 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             new KeyValuePair<object,int>(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String)
             };
 
-            return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+            bool i = (bool)dataaccess.Access(ref sqlConnection,
                                                 StoreProcedureNames.constNhapNgoaiTeInsert,
-                                                d,
-                                                (int)ExecuteType.NonQuery);
+                                                c1,
+                                                (int)ExecuteType.NonQuery,
+                                                (int)TransactionType.StartTrans,
+                                                ref sqlTransaction
+                                                );
+
+            Collection<KeyValuePair<object, int>> c2 = new Collection<KeyValuePair<object, int>>(){
+            new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String)
+            };
+
+            bool k = (bool)dataaccess.Access(ref sqlConnection,
+                                                "fsd",
+                                                c2,
+                                                (int)ExecuteType.NonQuery,
+                                                (int)TransactionType.DurringTrans,
+                                                ref sqlTransaction
+                                                );
+
+
+            if (i & k)
+            {
+                sqlTransaction.Commit();
+                dataaccess.DongKetNoi(sqlConnection);
+                return true;
+            }
+            else
+            {
+                sqlTransaction.Rollback();
+                dataaccess.DongKetNoi(sqlConnection);
+                return false;
+            }
+
         }
 
         private bool Update()
