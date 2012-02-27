@@ -21,6 +21,10 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         public DateTime ngay { get; set; }
 
+        public decimal SoLuongOld { get; set; }
+
+        public decimal DonGiaOld { get; set; }
+
         #endregion
 
         #region Variables and Constants
@@ -63,9 +67,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             radSpinEditorDonGiaNhapNgoaiTe.Value = 0;
             radSpinEditorSoLuongNhapNgoaiTe.Value = 0;
             textBoxGhiChuNhapNgoaiTe.Text = string.Empty;
-            labelHeaderNhapNgoaiTe.Text = "Phiếu Nhập Ngoại Tệ";
-            buttonLuuNhapNgoaiTe.Text = "Lưu";
-            MaNhapNgoaiTe = 0;
+            toolStripStatusLabelNhapNgoaiTe.Text = string.Empty;
         }
 
         private void buttonLuuNhapNgoaiTe_Click(object sender, EventArgs e)
@@ -86,8 +88,10 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                         if (Update())
                             toolStripStatusLabelNhapNgoaiTe.Text = "cập phiếu thành công";
                         else
-                            MessageBox.Show("cập nhật phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        buttonLamSachNhapNgoaiTe_Click(sender, e);
+                            MessageBox.Show("cập nhật phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);  
+                        labelHeaderNhapNgoaiTe.Text = "Phiếu Nhập Ngoại Tệ";
+                        buttonLuuNhapNgoaiTe.Text = "Lưu";
+                        MaNhapNgoaiTe = 0;
                     }
                 }
             }
@@ -170,12 +174,11 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             Collection<KeyValuePair<object, int>> c2 = new Collection<KeyValuePair<object, int>>(){
             new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
             new KeyValuePair<object,int>(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString),
-            new KeyValuePair<object,int>(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString),
-            new KeyValuePair<object,int>(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String)
+            new KeyValuePair<object,int>(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString)
             };
 
             bool k = (bool)dataaccess.Access(ref sqlConnection,
-                                                "fsd",
+                                                StoreProcedureNames.constTonNgoaiTe_UpdateFromNhapInsert,
                                                 c2,
                                                 (int)ExecuteType.NonQuery,
                                                 (int)TransactionType.DurringTrans,
@@ -200,7 +203,10 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         private bool Update()
         {
-            Collection<KeyValuePair<object, int>> d = new Collection<KeyValuePair<object, int>>(){
+            SqlConnection sqlConnection = StaticMethods.ShowSqlConnection();
+            SqlTransaction sqlTransaction = null;
+
+            Collection<KeyValuePair<object, int>> c1 = new Collection<KeyValuePair<object, int>>(){
             new KeyValuePair<object,int>(MaNhapNgoaiTe,(int)ParameterType.NonString),
             new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
             new KeyValuePair<object,int>(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString),
@@ -209,10 +215,39 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             new KeyValuePair<object,int>(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String)
             };
 
-            return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+            bool i = (bool)dataaccess.Access(ref sqlConnection,
                                                 StoreProcedureNames.constNhapNgoaiTe_UpdateByMaNhap,
-                                                d,
-                                                (int)ExecuteType.NonQuery);
+                                                c1,
+                                                (int)ExecuteType.NonQuery,
+                                                (int)TransactionType.StartTrans,
+                                                ref sqlTransaction);
+
+            Collection<KeyValuePair<object, int>> c2 = new Collection<KeyValuePair<object, int>>(){
+            new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(SoLuongOld, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(DonGiaOld, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString),
+            };
+
+            bool k = (bool)dataaccess.Access(ref sqlConnection,
+                                                StoreProcedureNames.constTonNgoaiTe_UpdateFromNhapUpdate,
+                                                c2,
+                                                (int)ExecuteType.NonQuery,
+                                                (int)TransactionType.DurringTrans,
+                                                ref sqlTransaction);
+            if (i & k)
+            {
+                sqlTransaction.Commit();
+                dataaccess.DongKetNoi(sqlConnection);
+                return true;
+            }
+            else
+            {
+                sqlTransaction.Rollback();
+                dataaccess.DongKetNoi(sqlConnection);
+                return false;
+            }
         }
 
         #endregion
