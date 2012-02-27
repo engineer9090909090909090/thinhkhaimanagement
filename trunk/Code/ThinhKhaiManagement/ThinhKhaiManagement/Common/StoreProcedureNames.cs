@@ -9,6 +9,10 @@ namespace ThinhKhaiManagement.Common
     {
         public const string constNgoaiTeGetAll = "NgoaiTe_GetAll";
 
-        public const string constNgoaiTeInsert = "NhapNgoaiTe_Insert";
+        public const string constNhapNgoaiTeInsert = "NhapNgoaiTe_Insert";
+
+        public const string constNhapNgoaiTe_ShowByNgay = "NhapNgoaiTe_ShowByNgay";
+
+        public const string constNhapNgoaiTe_UpdateByMaNhap = "NhapNgoaiTe_UpdateByMaNhap";
     }
 }

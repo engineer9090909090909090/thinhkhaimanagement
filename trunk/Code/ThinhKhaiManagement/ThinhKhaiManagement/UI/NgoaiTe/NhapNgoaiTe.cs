@@ -15,6 +15,14 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 {
     public partial class NhapNgoaiTe : Form
     {
+        #region property
+
+        public int MaNhapNgoaiTe { get; set; }
+
+        public DateTime ngay { get; set; }
+
+        #endregion
+
         #region Variables and Constants
 
         DataAccess dataaccess; 
@@ -44,6 +52,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         private void buttonXemChiTietNhapNgoaiTe_Click(object sender, EventArgs e)
         {
             ChiTietNhapNgoaiTe chiTietNhapNgoaiTe = new ChiTietNhapNgoaiTe();
+            chiTietNhapNgoaiTe.nhapNgoaiTeObject = this;
             chiTietNhapNgoaiTe.ShowDialog();
         }
 
@@ -54,19 +63,69 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             radSpinEditorDonGiaNhapNgoaiTe.Value = 0;
             radSpinEditorSoLuongNhapNgoaiTe.Value = 0;
             textBoxGhiChuNhapNgoaiTe.Text = string.Empty;
+            labelHeaderNhapNgoaiTe.Text = "Phiếu Nhập Ngoại Tệ";
+            buttonLuuNhapNgoaiTe.Text = "Lưu";
+            MaNhapNgoaiTe = 0;
         }
 
         private void buttonLuuNhapNgoaiTe_Click(object sender, EventArgs e)
         {
-            if (Save())
-                MessageBox.Show("Nhập phiếu thành công");
-            else
-                MessageBox.Show("Nhập phiếu thất bại");
+            if (checkControl())
+            {
+                if (MaNhapNgoaiTe == 0)
+                {
+                    if (Save())
+                        toolStripStatusLabelNhapNgoaiTe.Text = "Nhập phiếu thành công";
+                    else
+                        MessageBox.Show("Nhập phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if(Update())
+                        toolStripStatusLabelNhapNgoaiTe.Text = "cập phiếu thành công";
+                    else
+                        MessageBox.Show("cập nhật phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    buttonLamSachNhapNgoaiTe_Click(sender, e);
+                }
+            }
         }
 
         #endregion
 
         #region private methods
+
+        private bool checkControl()
+        {
+            int flag = 0;
+
+            if (radSpinEditorSoLuongNhapNgoaiTe.Value > 0)
+            {
+                errorProvider_NhapNgoaiTe.SetError(radSpinEditorSoLuongNhapNgoaiTe, string.Empty);
+                flag++;
+            }
+            else
+            {
+                errorProvider_NhapNgoaiTe.SetError(radSpinEditorSoLuongNhapNgoaiTe, "Dữ liệu không hợp lệ");
+                flag = 0;
+            }
+
+            if (radSpinEditorDonGiaNhapNgoaiTe.Value > 0)
+            {
+                errorProvider_NhapNgoaiTe.SetError(radSpinEditorDonGiaNhapNgoaiTe, string.Empty);
+                flag++;
+            }
+            else
+            {
+                errorProvider_NhapNgoaiTe.SetError(radSpinEditorDonGiaNhapNgoaiTe, "Dữ liệu không hợp lệ");
+                flag = 0;
+            }
+
+            if (flag == 2)
+                return true;
+            else
+                return false;
+
+        }
 
         private DataTable ShowLoaiNgoaiTe()
         {   
@@ -79,24 +138,36 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         private bool Save()
         {
             Collection<KeyValuePair<object, int>> d = new Collection<KeyValuePair<object, int>>(){
-                new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
-                new KeyValuePair<object,int>(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString),
-                new KeyValuePair<object,int>(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString),
-                new KeyValuePair<object,int>(DateTime.Today.ToShortDateString(),(int)ParameterType.String),
-                new KeyValuePair<object,int>(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String)
+            new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(DateTime.Today.ToShortDateString(),(int)ParameterType.String),
+            new KeyValuePair<object,int>(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String)
             };
 
             return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                                                StoreProcedureNames.constNgoaiTeInsert,
+                                                StoreProcedureNames.constNhapNgoaiTeInsert,
                                                 d,
                                                 (int)ExecuteType.NonQuery);
+        }
 
+        private bool Update()
+        {
+            Collection<KeyValuePair<object, int>> d = new Collection<KeyValuePair<object, int>>(){
+            new KeyValuePair<object,int>(MaNhapNgoaiTe,(int)ParameterType.NonString),
+            new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(radSpinEditorSoLuongNhapNgoaiTe.Value, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(radSpinEditorDonGiaNhapNgoaiTe.Value, (int)ParameterType.NonString),
+            new KeyValuePair<object,int>(ngay,(int)ParameterType.String),
+            new KeyValuePair<object,int>(textBoxGhiChuNhapNgoaiTe.Text, (int)ParameterType.String)
+            };
+
+            return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                                                StoreProcedureNames.constNhapNgoaiTe_UpdateByMaNhap,
+                                                d,
+                                                (int)ExecuteType.NonQuery);
         }
 
         #endregion
-
-     
-
-
     }
 }

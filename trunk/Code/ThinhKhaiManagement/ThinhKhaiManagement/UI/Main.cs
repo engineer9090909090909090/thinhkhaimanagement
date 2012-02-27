@@ -17,9 +17,11 @@ namespace ThinhKhaiManagement.UI
             InitializeComponent();
         }
 
+        NhapNgoaiTe nhapNgoaiTe=null;
+
         private void toolStripMenuItemNhapNgoaiTe_Click(object sender, EventArgs e)
         {
-            NhapNgoaiTe nhapNgoaiTe = new NhapNgoaiTe();
+            nhapNgoaiTe = new NhapNgoaiTe();
             nhapNgoaiTe.MdiParent = this;
             nhapNgoaiTe.Show();
         }
