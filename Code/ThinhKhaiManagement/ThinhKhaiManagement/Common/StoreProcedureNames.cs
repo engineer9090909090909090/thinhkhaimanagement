@@ -14,5 +14,7 @@ namespace ThinhKhaiManagement.Common
         public const string constNhapNgoaiTe_ShowByNgay = "NhapNgoaiTe_ShowByNgay";
 
         public const string constNhapNgoaiTe_UpdateByMaNhap = "NhapNgoaiTe_UpdateByMaNhap";
+
+        public const string constTonNgoaiTe_UpdateFromNhap = "TonNgoaiTe_UpdateFromNhap";
     }
 }

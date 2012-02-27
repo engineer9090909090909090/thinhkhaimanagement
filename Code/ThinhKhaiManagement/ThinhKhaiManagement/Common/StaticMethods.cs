@@ -25,7 +25,6 @@ namespace ThinhKhaiManagement.Common
         {
             return new SqlConnection(ConfigurationManager.ConnectionStrings[constconnectionName].ConnectionString);
         }
-
     }
 
     #region enums
