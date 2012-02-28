@@ -273,10 +273,11 @@
             this.Controls.Add(this.labelNgayNhapNgoaiTe);
             this.Controls.Add(this.labelHeaderNhapNgoaiTe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(595, 0);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NhapNgoaiTe";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Nhập Ngoại Tệ";
             this.Load += new System.EventHandler(this.NhapNgoaiTe_Load);
             this.groupBoxNhapPhieu.ResumeLayout(false);

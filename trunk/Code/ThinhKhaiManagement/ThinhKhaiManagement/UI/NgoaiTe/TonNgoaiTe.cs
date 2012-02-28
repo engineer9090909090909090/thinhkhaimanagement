@@ -40,7 +40,28 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         private void TonNgoaiTe_Activated(object sender, EventArgs e)
         {
             // cap nhat lieu vao luoi
-            dataGridViewTonNgoaiTe.DataSource = ShowTonNgoaiTe();
+            UpdateTonNgoaiTe();
+        }
+
+        private void buttonCapNhatTonNgoaiTe_Click(object sender, EventArgs e)
+        {
+            // cap nhat lieu vao luoi
+            UpdateTonNgoaiTe();
+        }
+
+        private void dataGridViewTonNgoaiTe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((decimal)dataGridViewTonNgoaiTe.Rows[e.RowIndex].Cells[3].Value != 0)
+            {
+                XuatNgoaiTe xuatNgoaiTe = new XuatNgoaiTe();
+                xuatNgoaiTe.TonNgoaiTe = this;
+                xuatNgoaiTe.RowsIndexSelect = e.RowIndex;
+                xuatNgoaiTe.ShowDialog();
+            }
+            else
+            { 
+                MessageBox.Show("Ngoại tệ không còn hàng để xuất.", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         #endregion
@@ -50,7 +71,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         private DataTable ShowTonNgoaiTe()
         {
             return (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                                                StoreProcedureNames.constTonNgoaiTeGetAll,
+                                                StoreProcedureNames.constTonNgoaiTe_GetAll,
                                                 new Collection<KeyValuePair<object,int>>(),
                                                 (int)ExecuteType.Query);
         }
@@ -58,6 +79,12 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         #endregion
 
         #region public methods
+
+        public void UpdateTonNgoaiTe()
+        {
+            // cap nhat lieu vao luoi
+            dataGridViewTonNgoaiTe.DataSource = ShowTonNgoaiTe();
+        }
 
         #endregion
 
