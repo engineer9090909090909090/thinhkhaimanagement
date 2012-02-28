@@ -60,17 +60,50 @@ namespace ThinhKhaiManagement.UI.TienMat
         {
             if (checkControl())
             {
-                if (Save())
+                if (MaTemp == 0)
                 {
-                    toolStripStatusLabelTienMat.Text = string.Format("{0} phiếu thành công", comboBoxXuLy.SelectedItem.ToString());
+                    if (Save())
+                        toolStripStatusLabelTienMat.Text = string.Format("{0} phiếu thành công", comboBoxXuLy.SelectedItem.ToString());
+                    else
+                        MessageBox.Show(string.Format("{0} phiếu thất bại", comboBoxXuLy.SelectedItem.ToString()), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("{0} phiếu thất bại", comboBoxXuLy.SelectedItem.ToString()), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if(Update())
+                        toolStripStatusLabelTienMat.Text = string.Format("cập nhật phiếu {0} thành công", comboBoxXuLy.SelectedItem.ToString());
+                    else
+                        MessageBox.Show(string.Format("cập nhật phiếu {0} thất bại", comboBoxXuLy.SelectedItem.ToString()), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    labelHeaderThongTinTienMat.Text = "Thông Tin Tiền Mặt";
+                    buttonLuu.Text = "Lưu";
+                    MaTemp = 0;
                 }
 
                 buttonXem_Click(sender, e);
             }
+        }
+
+        private void buttonXemChiTiet_Click(object sender, EventArgs e)
+        {
+            if (comboBoxXuLy.SelectedIndex == 0)
+            {
+                ChiTietNhapTienMat chiTietNhapTienMat = new ChiTietNhapTienMat();
+                chiTietNhapTienMat.tienMat = this;
+                chiTietNhapTienMat.ShowDialog();
+            }
+            else
+            {
+                ChiTietXuatTienMat chiTietNhapTienMat = new ChiTietXuatTienMat();
+                chiTietNhapTienMat.tienMat = this;
+                chiTietNhapTienMat.ShowDialog();
+            }
+        }
+
+        private void buttonLamSach_Click(object sender, EventArgs e)
+        {
+            comboBoxXuLy.SelectedIndex = 0;
+            radSpinEditorTienMat.Value = 0;
+            textBoxLyDo.Text = string.Empty;
+            buttonXem_Click(sender, e);
         }
 
         #endregion
@@ -149,24 +182,35 @@ namespace ThinhKhaiManagement.UI.TienMat
             }
         }
 
-
-        #endregion
-
-        private void buttonXemChiTiet_Click(object sender, EventArgs e)
+        private bool Update()
         {
             if (comboBoxXuLy.SelectedIndex == 0)
             {
-                ChiTietNhapTienMat chiTietNhapTienMat = new ChiTietNhapTienMat();
-                chiTietNhapTienMat.tienMat = this;
-                chiTietNhapTienMat.ShowDialog();
+                return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                    StoreProcedureNames.constNhapTienMat_Update,
+                    new Collection<KeyValuePair<object, int>>{
+                        new KeyValuePair<object,int>(MaTemp,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(radSpinEditorTienMat.Value,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(textBoxLyDo.Text,(int)ParameterType.String),
+                    },
+                    (int)ExecuteType.NonQuery
+                    );
             }
             else
             {
-                ChiTietXuatTienMat chiTietNhapTienMat = new ChiTietXuatTienMat();
-                chiTietNhapTienMat.tienMat = this;
-                chiTietNhapTienMat.ShowDialog();
+                return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                    StoreProcedureNames.constXuatTienMat_Update,
+                    new Collection<KeyValuePair<object, int>>{
+                        new KeyValuePair<object,int>(MaTemp,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(radSpinEditorTienMat.Value,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(textBoxLyDo.Text,(int)ParameterType.String),
+                    },
+                    (int)ExecuteType.NonQuery
+                    );
             }
         }
+
+        #endregion
        
         #region public methods
 

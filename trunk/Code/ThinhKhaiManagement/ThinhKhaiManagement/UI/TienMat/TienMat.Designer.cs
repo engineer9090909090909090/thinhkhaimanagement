@@ -177,6 +177,7 @@
             this.buttonLamSach.TabIndex = 7;
             this.buttonLamSach.Text = "Làm Sạch";
             this.buttonLamSach.UseVisualStyleBackColor = true;
+            this.buttonLamSach.Click += new System.EventHandler(this.buttonLamSach_Click);
             // 
             // buttonLuu
             // 
