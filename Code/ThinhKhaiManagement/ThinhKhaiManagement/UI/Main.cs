@@ -17,13 +17,18 @@ namespace ThinhKhaiManagement.UI
             InitializeComponent();
         }
 
-        NhapNgoaiTe nhapNgoaiTe=null;
-
         private void toolStripMenuItemNhapNgoaiTe_Click(object sender, EventArgs e)
         {
-            nhapNgoaiTe = new NhapNgoaiTe();
+            NhapNgoaiTe nhapNgoaiTe = new NhapNgoaiTe();
             nhapNgoaiTe.MdiParent = this;
             nhapNgoaiTe.Show();
+        }
+
+        private void toolStripMenuItemTonNgoaiTe_Click(object sender, EventArgs e)
+        {
+            TonNgoaiTe tonNgoaiTe = new TonNgoaiTe();
+            tonNgoaiTe.MdiParent = this;
+            tonNgoaiTe.Show();
         }
     }
 }
