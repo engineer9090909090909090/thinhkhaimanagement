@@ -108,6 +108,24 @@
     <Compile Include="UI\NgoaiTe\XuatNgoaiTe.Designer.cs">
       <DependentUpon>XuatNgoaiTe.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\TienMat\ChiTietNhapTienMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TienMat\ChiTietNhapTienMat.Designer.cs">
+      <DependentUpon>ChiTietNhapTienMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TienMat\ChiTietXuatTienMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TienMat\ChiTietXuatTienMat.Designer.cs">
+      <DependentUpon>ChiTietXuatTienMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TienMat\TienMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TienMat\TienMat.Designer.cs">
+      <DependentUpon>TienMat.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UI\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +154,15 @@
     <EmbeddedResource Include="UI\NgoaiTe\XuatNgoaiTe.resx">
       <DependentUpon>XuatNgoaiTe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\TienMat\ChiTietNhapTienMat.resx">
+      <DependentUpon>ChiTietNhapTienMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TienMat\ChiTietXuatTienMat.resx">
+      <DependentUpon>ChiTietXuatTienMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TienMat\TienMat.resx">
+      <DependentUpon>TienMat.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -147,6 +174,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

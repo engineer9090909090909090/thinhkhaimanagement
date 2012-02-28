@@ -58,6 +58,7 @@
             this.dateTimePickerNgayXuatNgoaiTe.Name = "dateTimePickerNgayXuatNgoaiTe";
             this.dateTimePickerNgayXuatNgoaiTe.Size = new System.Drawing.Size(123, 21);
             this.dateTimePickerNgayXuatNgoaiTe.TabIndex = 14;
+            this.dateTimePickerNgayXuatNgoaiTe.ValueChanged += new System.EventHandler(this.dateTimePickerNgayXuatNgoaiTe_ValueChanged);
             // 
             // dataGridViewChiTietXuatNgoaiTe
             // 
@@ -81,7 +82,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 318);
             this.Controls.Add(this.groupBoxXemChiTietXuatNgoaiTe);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ChiTietXuatNgoaiTe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Xuất Ngoại Tệ";
             this.Load += new System.EventHandler(this.ChiTietXuatNgoaiTe_Load);
             this.groupBoxXemChiTietXuatNgoaiTe.ResumeLayout(false);

@@ -58,6 +58,11 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             dataGridViewChiTietXuatNgoaiTe.DataSource = ShowXuatNgoaiTeByNgayAndMaNT(dateTimePickerNgayXuatNgoaiTe.Value,Int32.Parse(xuatNgoaiTe.textBoxMaLoaiNgoaiTeXuat.Text));
         }
 
+        private void dateTimePickerNgayXuatNgoaiTe_ValueChanged(object sender, EventArgs e)
+        {
+            dataGridViewChiTietXuatNgoaiTe.DataSource = ShowXuatNgoaiTeByNgayAndMaNT(dateTimePickerNgayXuatNgoaiTe.Value, Int32.Parse(xuatNgoaiTe.textBoxMaLoaiNgoaiTeXuat.Text));
+        }
+
         #endregion
 
         #region private methods
@@ -65,7 +70,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         private DataTable ShowXuatNgoaiTeByNgayAndMaNT(DateTime ngayNhap, int maLoaiNT)
         {
             return (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                                                StoreProcedureNames.constXuatNgoaiTe_XuatNgoaiTe_ShowByNgayAndMaNT,
+                                                StoreProcedureNames.constXuatNgoaiTe_ShowByNgayAndMaNT,
                                                 new Collection<KeyValuePair<object, int>>(){
                                                     new KeyValuePair<object,int>(ngayNhap,(int)ParameterType.String),
                                                     new KeyValuePair<object,int>(maLoaiNT,(int)ParameterType.NonString)
@@ -74,5 +79,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         }
 
         #endregion
+
+       
     }
 }

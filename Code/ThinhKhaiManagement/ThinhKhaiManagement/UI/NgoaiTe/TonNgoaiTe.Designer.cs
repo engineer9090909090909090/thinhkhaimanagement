@@ -96,6 +96,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.Controls.Add(this.dataGridViewTonNgoaiTe);
             this.Controls.Add(this.labelHeaderTồnNgoaiTe);
             this.Controls.Add(this.labelNgayTonNgoaiTe);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TonNgoaiTe";
