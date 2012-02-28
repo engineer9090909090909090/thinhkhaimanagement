@@ -50,6 +50,8 @@ namespace ThinhKhaiManagement.UI.TienMat
             tienMat.Ngay = (DateTime)dataGridViewChiTietNhapTienMat.Rows[e.RowIndex].Cells[1].Value;
             tienMat.radSpinEditorTienMat.Value = (decimal)dataGridViewChiTietNhapTienMat.Rows[e.RowIndex].Cells[2].Value;
             tienMat.textBoxLyDo.Text = dataGridViewChiTietNhapTienMat.Rows[e.RowIndex].Cells[3].Value.ToString();
+            tienMat.labelHeaderThongTinTienMat.Text = "Sửa Thông Tin Tiền Mặt";
+            tienMat.buttonLuu.Text = "Cập Nhật";
 
             this.Dispose();
         }

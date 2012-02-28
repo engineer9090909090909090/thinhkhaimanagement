@@ -43,9 +43,13 @@ namespace ThinhKhaiManagement.Common
 
         public const string constXuatTienMat_ShowByNgay = "XuatTienMat_ShowByNgay";
 
+        public const string constXuatTienMat_Update = "XuatTienMat_Update";
+
         //Nhap Tien Mat
         public const string constNhapTienMat_Insert = "NhapTienMat_Insert";
 
         public const string constNhapTienMat_ShowByNgay = "NhapTienMat_ShowByNgay";
+
+        public const string constNhapTienMat_Update = "NhapTienMat_Update";
     }
 }
