@@ -112,6 +112,7 @@
             this.toolStripMenuItemTonNgoaiTe.Name = "toolStripMenuItemTonNgoaiTe";
             this.toolStripMenuItemTonNgoaiTe.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemTonNgoaiTe.Text = "Tồn";
+            this.toolStripMenuItemTonNgoaiTe.Click += new System.EventHandler(this.toolStripMenuItemTonNgoaiTe_Click);
             // 
             // toolStripMenuItemQuanLyMatHang
             // 

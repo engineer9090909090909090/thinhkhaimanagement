@@ -30,20 +30,74 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         /// </summary>
         private void InitializeComponent()
         {
+            this.labelNgayTonNgoaiTe = new System.Windows.Forms.Label();
+            this.labelHeaderTồnNgoaiTe = new System.Windows.Forms.Label();
+            this.dataGridViewTonNgoaiTe = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTonNgoaiTe)).BeginInit();
             this.SuspendLayout();
+            // 
+            // labelNgayTonNgoaiTe
+            // 
+            this.labelNgayTonNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelNgayTonNgoaiTe.AutoSize = true;
+            this.labelNgayTonNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNgayTonNgoaiTe.ForeColor = System.Drawing.Color.Blue;
+            this.labelNgayTonNgoaiTe.Location = new System.Drawing.Point(9, 9);
+            this.labelNgayTonNgoaiTe.Name = "labelNgayTonNgoaiTe";
+            this.labelNgayTonNgoaiTe.Size = new System.Drawing.Size(76, 15);
+            this.labelNgayTonNgoaiTe.TabIndex = 2;
+            this.labelNgayTonNgoaiTe.Text = "ngày hiện tại";
+            // 
+            // labelHeaderTồnNgoaiTe
+            // 
+            this.labelHeaderTồnNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelHeaderTồnNgoaiTe.AutoSize = true;
+            this.labelHeaderTồnNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeaderTồnNgoaiTe.ForeColor = System.Drawing.Color.Maroon;
+            this.labelHeaderTồnNgoaiTe.Location = new System.Drawing.Point(160, 36);
+            this.labelHeaderTồnNgoaiTe.Name = "labelHeaderTồnNgoaiTe";
+            this.labelHeaderTồnNgoaiTe.Size = new System.Drawing.Size(254, 31);
+            this.labelHeaderTồnNgoaiTe.TabIndex = 3;
+            this.labelHeaderTồnNgoaiTe.Text = "Phiếu Tồn Ngoại Tệ";
+            // 
+            // dataGridViewTonNgoaiTe
+            // 
+            this.dataGridViewTonNgoaiTe.AllowUserToAddRows = false;
+            this.dataGridViewTonNgoaiTe.AllowUserToDeleteRows = false;
+            this.dataGridViewTonNgoaiTe.AllowUserToResizeColumns = false;
+            this.dataGridViewTonNgoaiTe.AllowUserToResizeRows = false;
+            this.dataGridViewTonNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewTonNgoaiTe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewTonNgoaiTe.Location = new System.Drawing.Point(12, 82);
+            this.dataGridViewTonNgoaiTe.Name = "dataGridViewTonNgoaiTe";
+            this.dataGridViewTonNgoaiTe.ReadOnly = true;
+            this.dataGridViewTonNgoaiTe.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridViewTonNgoaiTe.Size = new System.Drawing.Size(547, 263);
+            this.dataGridViewTonNgoaiTe.TabIndex = 4;
             // 
             // TonNgoaiTe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(576, 357);
+            this.Controls.Add(this.dataGridViewTonNgoaiTe);
+            this.Controls.Add(this.labelHeaderTồnNgoaiTe);
+            this.Controls.Add(this.labelNgayTonNgoaiTe);
             this.Name = "TonNgoaiTe";
             this.Text = "Tồn Ngoại Tệ";
+            this.Activated += new System.EventHandler(this.TonNgoaiTe_Activated);
+            this.Load += new System.EventHandler(this.TonNgoaiTe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTonNgoaiTe)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label labelNgayTonNgoaiTe;
+        public System.Windows.Forms.Label labelHeaderTồnNgoaiTe;
+        private System.Windows.Forms.DataGridView dataGridViewTonNgoaiTe;
 
 
 
