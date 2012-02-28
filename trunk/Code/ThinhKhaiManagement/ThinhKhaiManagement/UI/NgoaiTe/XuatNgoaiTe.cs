@@ -21,7 +21,6 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         public int RowsIndexSelect { get; set; }
 
-        //----------
         public int MaXuatNgoaiTe { get; set; }
 
         public decimal SoLuongOld { get; set; }
@@ -68,14 +67,14 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                     {
                         if (Save())
                         {
-                            toolStripStatusLabelXuatNgoaiTe.Text = "Nhập phiếu thành công";
-                            if (MessageBox.Show("Nhập phiếu thành công", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                            toolStripStatusLabelXuatNgoaiTe.Text = "Xuất phiếu thành công";
+                            if (MessageBox.Show("Xuất phiếu thành công", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                             {
                                 this.Close();
                             }
                         }
                         else
-                            MessageBox.Show("Nhập phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Xuất phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
