@@ -31,7 +31,7 @@ namespace ThinhKhaiManagement.Common
         //Xuat Ngoai Te
         public const string constXuatNgoaiTe_Insert = "XuatNgoaiTe_Insert";
 
-        public const string constXuatNgoaiTe_ShowByNgay = "XuatNgoaiTe_ShowByNgay";
+        public const string constXuatNgoaiTe_XuatNgoaiTe_ShowByNgayAndMaNT = "XuatNgoaiTe_ShowByNgayAndMaNT";
 
         public const string constXuatNgoaiTe_UpdateByMaXuat = "XuatNgoaiTe_UpdateByMaXuat";
     }
