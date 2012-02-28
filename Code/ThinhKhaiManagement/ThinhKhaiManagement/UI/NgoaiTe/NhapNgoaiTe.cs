@@ -144,7 +144,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         private DataTable ShowLoaiNgoaiTe()
         {   
             return (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                                                StoreProcedureNames.constNgoaiTeGetAll,
+                                                StoreProcedureNames.constNgoaiTe_GetAll,
                                                 new Collection<KeyValuePair<object,int>>(),
                                                 (int)ExecuteType.Query);
         }
@@ -164,7 +164,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             };
 
             bool i = (bool)dataaccess.Access(ref sqlConnection,
-                                                StoreProcedureNames.constNhapNgoaiTeInsert,
+                                                StoreProcedureNames.constNhapNgoaiTe_Insert,
                                                 c1,
                                                 (int)ExecuteType.NonQuery,
                                                 (int)TransactionType.StartTrans,

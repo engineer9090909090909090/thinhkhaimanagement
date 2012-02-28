@@ -84,6 +84,12 @@
     <Compile Include="UI\NgoaiTe\ChiTietNhapNgoaiTe.Designer.cs">
       <DependentUpon>ChiTietNhapNgoaiTe.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\NgoaiTe\ChiTietXuatNgoaiTe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NgoaiTe\ChiTietXuatNgoaiTe.Designer.cs">
+      <DependentUpon>ChiTietXuatNgoaiTe.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\NgoaiTe\NhapNgoaiTe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="UI\NgoaiTe\ChiTietNhapNgoaiTe.resx">
       <DependentUpon>ChiTietNhapNgoaiTe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NgoaiTe\ChiTietXuatNgoaiTe.resx">
+      <DependentUpon>ChiTietXuatNgoaiTe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NgoaiTe\NhapNgoaiTe.resx">
       <DependentUpon>NhapNgoaiTe.cs</DependentUpon>

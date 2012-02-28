@@ -52,7 +52,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             nhapNgoaiTeObject.SoLuongOld = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
             nhapNgoaiTeObject.DonGiaOld = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[4].Value;
             nhapNgoaiTeObject.textBoxGhiChuNhapNgoaiTe.Text = dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[6].Value.ToString();
-            nhapNgoaiTeObject.MaNhapNgoaiTe = Convert.ToInt32( dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[0].Value);
+            nhapNgoaiTeObject.MaNhapNgoaiTe = Convert.ToInt32(dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[0].Value);
             nhapNgoaiTeObject.labelHeaderNhapNgoaiTe.Text = "Sửa Phiếu Nhập Ngoại Tệ";
             nhapNgoaiTeObject.buttonLuuNhapNgoaiTe.Text = "Cập nhật";
             nhapNgoaiTeObject.ngay = (DateTime)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[5].Value;

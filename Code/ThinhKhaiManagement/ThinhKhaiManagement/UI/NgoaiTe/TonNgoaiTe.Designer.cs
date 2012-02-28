@@ -33,6 +33,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.labelNgayTonNgoaiTe = new System.Windows.Forms.Label();
             this.labelHeaderTồnNgoaiTe = new System.Windows.Forms.Label();
             this.dataGridViewTonNgoaiTe = new System.Windows.Forms.DataGridView();
+            this.buttonCapNhatTonNgoaiTe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTonNgoaiTe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,16 +75,31 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.dataGridViewTonNgoaiTe.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewTonNgoaiTe.Size = new System.Drawing.Size(547, 263);
             this.dataGridViewTonNgoaiTe.TabIndex = 4;
+            this.dataGridViewTonNgoaiTe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTonNgoaiTe_CellDoubleClick);
+            // 
+            // buttonCapNhatTonNgoaiTe
+            // 
+            this.buttonCapNhatTonNgoaiTe.Location = new System.Drawing.Point(484, 46);
+            this.buttonCapNhatTonNgoaiTe.Name = "buttonCapNhatTonNgoaiTe";
+            this.buttonCapNhatTonNgoaiTe.Size = new System.Drawing.Size(75, 23);
+            this.buttonCapNhatTonNgoaiTe.TabIndex = 5;
+            this.buttonCapNhatTonNgoaiTe.Text = "Cập Nhật";
+            this.buttonCapNhatTonNgoaiTe.UseVisualStyleBackColor = true;
+            this.buttonCapNhatTonNgoaiTe.Click += new System.EventHandler(this.buttonCapNhatTonNgoaiTe_Click);
             // 
             // TonNgoaiTe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 357);
+            this.Controls.Add(this.buttonCapNhatTonNgoaiTe);
             this.Controls.Add(this.dataGridViewTonNgoaiTe);
             this.Controls.Add(this.labelHeaderTồnNgoaiTe);
             this.Controls.Add(this.labelNgayTonNgoaiTe);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TonNgoaiTe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Tồn Ngoại Tệ";
             this.Activated += new System.EventHandler(this.TonNgoaiTe_Activated);
             this.Load += new System.EventHandler(this.TonNgoaiTe_Load);
@@ -97,7 +113,8 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         private System.Windows.Forms.Label labelNgayTonNgoaiTe;
         public System.Windows.Forms.Label labelHeaderTồnNgoaiTe;
-        private System.Windows.Forms.DataGridView dataGridViewTonNgoaiTe;
+        public System.Windows.Forms.DataGridView dataGridViewTonNgoaiTe;
+        private System.Windows.Forms.Button buttonCapNhatTonNgoaiTe;
 
 
 
