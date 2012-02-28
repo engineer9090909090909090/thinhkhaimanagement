@@ -55,19 +55,20 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         private void ChiTietXuatNgoaiTe_Load(object sender, EventArgs e)
         {
-            dataGridViewChiTietXuatNgoaiTe.DataSource = ShowXuatNgoaiTeByNgay(dateTimePickerNgayXuatNgoaiTe.Value);
+            dataGridViewChiTietXuatNgoaiTe.DataSource = ShowXuatNgoaiTeByNgayAndMaNT(dateTimePickerNgayXuatNgoaiTe.Value,Int32.Parse(xuatNgoaiTe.textBoxMaLoaiNgoaiTeXuat.Text));
         }
 
         #endregion
 
         #region private methods
 
-        private DataTable ShowXuatNgoaiTeByNgay(DateTime ngayNhap)
+        private DataTable ShowXuatNgoaiTeByNgayAndMaNT(DateTime ngayNhap, int maLoaiNT)
         {
             return (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                                                StoreProcedureNames.constXuatNgoaiTe_ShowByNgay,
+                                                StoreProcedureNames.constXuatNgoaiTe_XuatNgoaiTe_ShowByNgayAndMaNT,
                                                 new Collection<KeyValuePair<object, int>>(){
-                                                    new KeyValuePair<object,int>(ngayNhap,(int)ParameterType.String)
+                                                    new KeyValuePair<object,int>(ngayNhap,(int)ParameterType.String),
+                                                    new KeyValuePair<object,int>(maLoaiNT,(int)ParameterType.NonString)
                                                 },
                                                 (int)ExecuteType.Query);
         }
