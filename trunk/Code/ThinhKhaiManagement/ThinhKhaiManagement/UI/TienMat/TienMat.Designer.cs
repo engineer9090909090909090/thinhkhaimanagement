@@ -89,7 +89,7 @@
             // 
             // dataGridViewXemTienMat
             // 
-            this.dataGridViewXemTienMat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridViewXemTienMat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewXemTienMat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewXemTienMat.Location = new System.Drawing.Point(25, 51);
             this.dataGridViewXemTienMat.Name = "dataGridViewXemTienMat";

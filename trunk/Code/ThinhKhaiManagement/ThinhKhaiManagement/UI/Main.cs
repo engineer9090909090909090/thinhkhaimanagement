@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using ThinhKhaiManagement.UI.NgoaiTe;
 using ThinhKhaiManagement.UI.TienMat;
+using ThinhKhaiManagement.UI.MatHang;
 
 namespace ThinhKhaiManagement.UI
 {
@@ -37,6 +38,13 @@ namespace ThinhKhaiManagement.UI
             TienMat.TienMat tienMat = new TienMat.TienMat();
             tienMat.MdiParent = this;
             tienMat.Show();
+        }
+
+        private void toolStripMenuItemTonMatHang_Click(object sender, EventArgs e)
+        {
+            TonMatHang tonMatHang = new TonMatHang();
+            tonMatHang.MdiParent = this;
+            tonMatHang.Show();
         }
     }
 }
