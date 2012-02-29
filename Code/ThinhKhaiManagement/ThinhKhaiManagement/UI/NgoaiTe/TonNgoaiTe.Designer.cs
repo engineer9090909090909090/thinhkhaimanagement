@@ -68,6 +68,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.dataGridViewTonNgoaiTe.AllowUserToResizeColumns = false;
             this.dataGridViewTonNgoaiTe.AllowUserToResizeRows = false;
             this.dataGridViewTonNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewTonNgoaiTe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTonNgoaiTe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewTonNgoaiTe.Location = new System.Drawing.Point(12, 82);
             this.dataGridViewTonNgoaiTe.Name = "dataGridViewTonNgoaiTe";

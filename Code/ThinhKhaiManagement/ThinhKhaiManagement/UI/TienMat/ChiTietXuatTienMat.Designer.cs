@@ -67,6 +67,7 @@
             this.dataGridViewChiTietXuatTienMat.AllowUserToResizeColumns = false;
             this.dataGridViewChiTietXuatTienMat.AllowUserToResizeRows = false;
             this.dataGridViewChiTietXuatTienMat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewChiTietXuatTienMat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChiTietXuatTienMat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewChiTietXuatTienMat.Location = new System.Drawing.Point(11, 46);
             this.dataGridViewChiTietXuatTienMat.MultiSelect = false;

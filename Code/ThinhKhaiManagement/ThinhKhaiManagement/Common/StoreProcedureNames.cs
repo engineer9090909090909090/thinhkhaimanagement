@@ -51,5 +51,18 @@ namespace ThinhKhaiManagement.Common
         public const string constNhapTienMat_ShowByNgay = "NhapTienMat_ShowByNgay";
 
         public const string constNhapTienMat_Update = "NhapTienMat_Update";
+
+        //Ton Mat Hang
+        public const string constTonMatHang_GetAll = "TonMatHang_GetAll";
+
+        public const string constTonMatHang_GetByCondition = "TonMatHang_GetByCondition";
+
+        public const string constTonMatHang_Count = "TonMatHang_Count";
+
+        //Chat Lieu
+        public const string constChatLieu_GetAll = "ChatLieu_GetAll";
+
+        //Loai Mat hang
+        public const string constLoaiMatHang_GetAll = "LoaiMatHang_GetAll";
     }
 }

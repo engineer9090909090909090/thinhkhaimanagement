@@ -185,7 +185,6 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                                                 ref sqlTransaction
                                                 );
 
-
             if (i & k)
             {
                 sqlTransaction.Commit();
