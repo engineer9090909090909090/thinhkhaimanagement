@@ -277,7 +277,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NhapNgoaiTe";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhập Ngoại Tệ";
             this.Load += new System.EventHandler(this.NhapNgoaiTe_Load);
             this.groupBoxNhapPhieu.ResumeLayout(false);
