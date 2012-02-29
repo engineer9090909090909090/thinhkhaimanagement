@@ -87,6 +87,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ChiTietXuatTienMat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Xuất Tiền Mặt";
             this.Load += new System.EventHandler(this.ChiTietXuatTienMat_Load);
             this.groupBoxXemChiTietXuatTienMat.ResumeLayout(false);

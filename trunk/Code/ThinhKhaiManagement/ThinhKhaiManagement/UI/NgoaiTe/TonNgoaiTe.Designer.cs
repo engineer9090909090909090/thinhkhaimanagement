@@ -101,7 +101,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TonNgoaiTe";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tồn Ngoại Tệ";
             this.Activated += new System.EventHandler(this.TonNgoaiTe_Activated);
             this.Load += new System.EventHandler(this.TonNgoaiTe_Load);

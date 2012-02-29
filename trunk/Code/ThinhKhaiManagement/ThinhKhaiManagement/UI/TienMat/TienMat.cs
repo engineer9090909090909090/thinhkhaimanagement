@@ -164,6 +164,7 @@ namespace ThinhKhaiManagement.UI.TienMat
                         new KeyValuePair<object,int>(DateTime.Today,(int)ParameterType.String),
                         new KeyValuePair<object,int>(radSpinEditorTienMat.Value,(int)ParameterType.NonString),
                         new KeyValuePair<object,int>(textBoxLyDo.Text,(int)ParameterType.String),
+                        new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
                     },
                     (int)ExecuteType.NonQuery
                     );
