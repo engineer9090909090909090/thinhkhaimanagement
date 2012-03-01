@@ -69,7 +69,7 @@
             // toolStripMenuItemThoat
             // 
             this.toolStripMenuItemThoat.Name = "toolStripMenuItemThoat";
-            this.toolStripMenuItemThoat.Size = new System.Drawing.Size(105, 22);
+            this.toolStripMenuItemThoat.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemThoat.Text = "Thoát";
             // 
             // toolStripMenuItemQuanLy
@@ -128,6 +128,7 @@
             this.toolStripMenuItemNhapMatHang.Name = "toolStripMenuItemNhapMatHang";
             this.toolStripMenuItemNhapMatHang.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemNhapMatHang.Text = "Phiếu Nhập";
+            this.toolStripMenuItemNhapMatHang.Click += new System.EventHandler(this.toolStripMenuItemNhapMatHang_Click);
             // 
             // toolStripMenuItemXuatMatHang
             // 
