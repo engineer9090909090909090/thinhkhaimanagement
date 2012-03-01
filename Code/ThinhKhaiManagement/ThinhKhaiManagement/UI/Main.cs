@@ -46,5 +46,12 @@ namespace ThinhKhaiManagement.UI
             tonMatHang.MdiParent = this;
             tonMatHang.Show();
         }
+
+        private void toolStripMenuItemNhapMatHang_Click(object sender, EventArgs e)
+        {
+            NhapMatHang nhapMatHang = new NhapMatHang();
+            nhapMatHang.MdiParent=this;
+            nhapMatHang.Show();
+        }
     }
 }
