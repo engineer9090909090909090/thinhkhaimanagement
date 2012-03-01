@@ -45,6 +45,8 @@ namespace ThinhKhaiManagement.Common
 
         public const string constXuatTienMat_Update = "XuatTienMat_Update";
 
+        public const string constXuatTienMat_UpdateMaXuat = "XuatTienMat_UpdateMaXuat";
+
         //Nhap Tien Mat
         public const string constNhapTienMat_Insert = "NhapTienMat_Insert";
 
@@ -63,6 +65,10 @@ namespace ThinhKhaiManagement.Common
         public const string constNhapMatHang_Insert = "NhapMatHang_Insert";
 
         public const string constNhapMatHang_GetMaMH = "NhapMatHang_GetMaMH";
+
+        public const string constNhapMatHang_UpdateByMaMH = "NhapMatHang_UpdateByMaMH";
+
+        public const string constNhapMatHang_GetMaMHBySTT = "NhapMatHang_GetMaMHBySTT";
 
         //Chat Lieu
         public const string constChatLieu_GetAll = "ChatLieu_GetAll";

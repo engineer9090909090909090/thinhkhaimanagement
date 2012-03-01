@@ -39,6 +39,8 @@
             this.toolStripStatusLabelNhapMatHang = new System.Windows.Forms.ToolStripStatusLabel();
             this.textBoxTenMatHang = new System.Windows.Forms.TextBox();
             this.groupBoxNhapPhieu = new System.Windows.Forms.GroupBox();
+            this.radSpinEditorThanhTien = new Telerik.WinControls.UI.RadSpinEditor();
+            this.labelThanhTien = new System.Windows.Forms.Label();
             this.radSpinEditorTyGiaUSD = new Telerik.WinControls.UI.RadSpinEditor();
             this.labelTyGiaUSD = new System.Windows.Forms.Label();
             this.radSpinEditorDonGia = new Telerik.WinControls.UI.RadSpinEditor();
@@ -58,18 +60,16 @@
             this.labelLoaiMaMH = new System.Windows.Forms.Label();
             this.labelNgayNhapNgoaiTe = new System.Windows.Forms.Label();
             this.errorProvider_NhapMatHang = new System.Windows.Forms.ErrorProvider(this.components);
-            this.labelThanhTien = new System.Windows.Forms.Label();
-            this.radSpinEditorThanhTien = new Telerik.WinControls.UI.RadSpinEditor();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTruHot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTrongLuong)).BeginInit();
             this.statusStripNhapMatHang.SuspendLayout();
             this.groupBoxNhapPhieu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorThanhTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTyGiaUSD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDonGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTienCong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTienHot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_NhapMatHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorThanhTien)).BeginInit();
             this.SuspendLayout();
             // 
             // radSpinEditorTruHot
@@ -224,6 +224,43 @@
             this.groupBoxNhapPhieu.TabIndex = 19;
             this.groupBoxNhapPhieu.TabStop = false;
             this.groupBoxNhapPhieu.Text = "Nhập Phiếu";
+            // 
+            // radSpinEditorThanhTien
+            // 
+            this.radSpinEditorThanhTien.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorThanhTien.DecimalPlaces = 2;
+            this.radSpinEditorThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditorThanhTien.ForeColor = System.Drawing.Color.Maroon;
+            this.radSpinEditorThanhTien.Location = new System.Drawing.Point(196, 367);
+            this.radSpinEditorThanhTien.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.radSpinEditorThanhTien.Name = "radSpinEditorThanhTien";
+            this.radSpinEditorThanhTien.ReadOnly = true;
+            // 
+            // 
+            // 
+            this.radSpinEditorThanhTien.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorThanhTien.RootElement.ForeColor = System.Drawing.Color.Maroon;
+            this.radSpinEditorThanhTien.ShowBorder = true;
+            this.radSpinEditorThanhTien.ShowUpDownButtons = false;
+            this.radSpinEditorThanhTien.Size = new System.Drawing.Size(270, 21);
+            this.radSpinEditorThanhTien.TabIndex = 11;
+            this.radSpinEditorThanhTien.Text = "radSpinEditor2";
+            this.radSpinEditorThanhTien.ThousandsSeparator = true;
+            // 
+            // labelThanhTien
+            // 
+            this.labelThanhTien.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelThanhTien.AutoSize = true;
+            this.labelThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThanhTien.Location = new System.Drawing.Point(60, 372);
+            this.labelThanhTien.Name = "labelThanhTien";
+            this.labelThanhTien.Size = new System.Drawing.Size(76, 16);
+            this.labelThanhTien.TabIndex = 25;
+            this.labelThanhTien.Text = "Thành Tiền";
             // 
             // radSpinEditorTyGiaUSD
             // 
@@ -479,42 +516,6 @@
             // 
             this.errorProvider_NhapMatHang.ContainerControl = this;
             // 
-            // labelThanhTien
-            // 
-            this.labelThanhTien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelThanhTien.AutoSize = true;
-            this.labelThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelThanhTien.Location = new System.Drawing.Point(60, 372);
-            this.labelThanhTien.Name = "labelThanhTien";
-            this.labelThanhTien.Size = new System.Drawing.Size(76, 16);
-            this.labelThanhTien.TabIndex = 25;
-            this.labelThanhTien.Text = "Thành Tiền";
-            // 
-            // radSpinEditorThanhTien
-            // 
-            this.radSpinEditorThanhTien.BackColor = System.Drawing.Color.White;
-            this.radSpinEditorThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorThanhTien.ForeColor = System.Drawing.Color.Maroon;
-            this.radSpinEditorThanhTien.Location = new System.Drawing.Point(196, 367);
-            this.radSpinEditorThanhTien.Maximum = new decimal(new int[] {
-            -1530494977,
-            232830,
-            0,
-            0});
-            this.radSpinEditorThanhTien.Name = "radSpinEditorThanhTien";
-            this.radSpinEditorThanhTien.ReadOnly = true;
-            // 
-            // 
-            // 
-            this.radSpinEditorThanhTien.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            this.radSpinEditorThanhTien.RootElement.ForeColor = System.Drawing.Color.Maroon;
-            this.radSpinEditorThanhTien.ShowBorder = true;
-            this.radSpinEditorThanhTien.ShowUpDownButtons = false;
-            this.radSpinEditorThanhTien.Size = new System.Drawing.Size(270, 21);
-            this.radSpinEditorThanhTien.TabIndex = 11;
-            this.radSpinEditorThanhTien.Text = "radSpinEditor2";
-            this.radSpinEditorThanhTien.ThousandsSeparator = true;
-            // 
             // NhapMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,12 +538,12 @@
             this.statusStripNhapMatHang.PerformLayout();
             this.groupBoxNhapPhieu.ResumeLayout(false);
             this.groupBoxNhapPhieu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorThanhTien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTyGiaUSD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDonGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTienCong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTienHot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_NhapMatHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorThanhTien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,14 +560,12 @@
         private System.Windows.Forms.StatusStrip statusStripNhapMatHang;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNhapMatHang;
         public System.Windows.Forms.TextBox textBoxTenMatHang;
-        private System.Windows.Forms.GroupBox groupBoxNhapPhieu;
         public Telerik.WinControls.UI.RadSpinEditor radSpinEditorTyGiaUSD;
         private System.Windows.Forms.Label labelTyGiaUSD;
         public Telerik.WinControls.UI.RadSpinEditor radSpinEditorDonGia;
         public Telerik.WinControls.UI.RadSpinEditor radSpinEditorTienCong;
         public Telerik.WinControls.UI.RadSpinEditor radSpinEditorTienHot;
         public System.Windows.Forms.ComboBox comboBoxLoaiMatHang;
-        private System.Windows.Forms.TextBox textBoxMaMatHang;
         private System.Windows.Forms.Label labelDonGia;
         private System.Windows.Forms.Label labelTienCong;
         private System.Windows.Forms.Label labelTienHot;
@@ -577,9 +576,11 @@
         private System.Windows.Forms.Label labelLoaiMatHang;
         private System.Windows.Forms.Label labelChatLieu;
         private System.Windows.Forms.Label labelLoaiMaMH;
-        private System.Windows.Forms.Label labelNgayNhapNgoaiTe;
         private System.Windows.Forms.ErrorProvider errorProvider_NhapMatHang;
         public Telerik.WinControls.UI.RadSpinEditor radSpinEditorThanhTien;
         private System.Windows.Forms.Label labelThanhTien;
+        public System.Windows.Forms.GroupBox groupBoxNhapPhieu;
+        public System.Windows.Forms.Label labelNgayNhapNgoaiTe;
+        public System.Windows.Forms.TextBox textBoxMaMatHang;
     }
 }
