@@ -98,7 +98,7 @@
             // 
             this.radSpinEditorTrongLuong.BackColor = System.Drawing.Color.White;
             this.radSpinEditorTrongLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorTrongLuong.Location = new System.Drawing.Point(196, 162);
+            this.radSpinEditorTrongLuong.Location = new System.Drawing.Point(196, 166);
             this.radSpinEditorTrongLuong.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -387,7 +387,7 @@
             this.labelDonGia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDonGia.AutoSize = true;
             this.labelDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDonGia.Location = new System.Drawing.Point(60, 210);
+            this.labelDonGia.Location = new System.Drawing.Point(60, 203);
             this.labelDonGia.Name = "labelDonGia";
             this.labelDonGia.Size = new System.Drawing.Size(56, 16);
             this.labelDonGia.TabIndex = 21;
@@ -417,7 +417,7 @@
             this.labelTienHot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTienHot.AutoSize = true;
             this.labelTienHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTienHot.Location = new System.Drawing.Point(60, 274);
+            this.labelTienHot.Location = new System.Drawing.Point(60, 272);
             this.labelTienHot.Name = "labelTienHot";
             this.labelTienHot.Size = new System.Drawing.Size(59, 16);
             this.labelTienHot.TabIndex = 19;
@@ -428,7 +428,7 @@
             this.labelTruHot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTruHot.AutoSize = true;
             this.labelTruHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTruHot.Location = new System.Drawing.Point(60, 241);
+            this.labelTruHot.Location = new System.Drawing.Point(60, 239);
             this.labelTruHot.Name = "labelTruHot";
             this.labelTruHot.Size = new System.Drawing.Size(52, 16);
             this.labelTruHot.TabIndex = 18;
@@ -439,7 +439,7 @@
             this.labelTrongLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTrongLuong.AutoSize = true;
             this.labelTrongLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTrongLuong.Location = new System.Drawing.Point(60, 174);
+            this.labelTrongLuong.Location = new System.Drawing.Point(60, 171);
             this.labelTrongLuong.Name = "labelTrongLuong";
             this.labelTrongLuong.Size = new System.Drawing.Size(84, 16);
             this.labelTrongLuong.TabIndex = 17;
