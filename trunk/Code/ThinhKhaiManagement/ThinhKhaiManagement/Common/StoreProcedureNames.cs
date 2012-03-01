@@ -64,11 +64,7 @@ namespace ThinhKhaiManagement.Common
         //Nhap Mat Hang
         public const string constNhapMatHang_Insert = "NhapMatHang_Insert";
 
-        public const string constNhapMatHang_GetMaMH = "NhapMatHang_GetMaMH";
-
         public const string constNhapMatHang_UpdateByMaMH = "NhapMatHang_UpdateByMaMH";
-
-        public const string constNhapMatHang_GetMaMHBySTT = "NhapMatHang_GetMaMHBySTT";
 
         //Chat Lieu
         public const string constChatLieu_GetAll = "ChatLieu_GetAll";
