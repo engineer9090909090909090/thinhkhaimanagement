@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using ThinhKhaiManagement.Common;
 using DatabaseAccesser;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 
 namespace ThinhKhaiManagement.UI.MatHang
 {
@@ -16,7 +17,7 @@ namespace ThinhKhaiManagement.UI.MatHang
     {
         #region properties
 
-        public Int64 Stt { get; set; }
+        public int Stt { get; set; }
 
         #endregion
 
@@ -66,12 +67,14 @@ namespace ThinhKhaiManagement.UI.MatHang
             radSpinEditorTienCong.Value = 0;
             radSpinEditorDonGia.Value = 0;
             radSpinEditorTyGiaUSD.Value = 1;
+            radSpinEditorThanhTien.Value = 0;
             textBoxMaMatHang.Focus();
         }
 
         private void buttonXemChiTietNhapMatHang_Click(object sender, EventArgs e)
         {
             ChiTietNhapMatHang chiTietNhapMatHang = new ChiTietNhapMatHang();
+            chiTietNhapMatHang.nhapMatHang = this;
             chiTietNhapMatHang.ShowDialog();
         }
 
@@ -79,29 +82,73 @@ namespace ThinhKhaiManagement.UI.MatHang
         {
             if (CheckControl())
             {
-                if (Stt==0)
+                if (Stt ==0)
                 {
                     if (Save())
                     {
                         DataTable tb = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                            StoreProcedureNames.constNhapMatHang_GetMaMH,
-                            new Collection<KeyValuePair<object, int>>(),
-                            (int)ExecuteType.Query);
-                        MessageBox.Show(string.Format("- Nhập mặt hàng thành công. \n- Đây là Mã Mặt Hàng: {0}",tb.Rows[0][0].ToString()), 
+                               StoreProcedureNames.constNhapMatHang_GetMaMH,
+                               new Collection<KeyValuePair<object, int>> (),
+                               (int)ExecuteType.Query);
+                        textBoxMaMatHang.Text = tb.Rows[0][0].ToString();
+                        calculateThanhTien();
+
+                        if ((bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                                    StoreProcedureNames.constXuatTienMat_Insert,
+                                    new Collection<KeyValuePair<object, int>>{
+                                                    new KeyValuePair<object,int>(DateTime.Today,(int)ParameterType.String),
+                                                    new KeyValuePair<object,int>(radSpinEditorThanhTien.Value,(int)ParameterType.NonString),
+                                                    new KeyValuePair<object,int>("NMH",(int)ParameterType.String),
+                                                    new KeyValuePair<object,int>(textBoxMaMatHang.Text,(int)ParameterType.NonString),
+                                                },
+                                    (int)ExecuteType.NonQuery))
+                        MessageBox.Show(string.Format("- Nhập mặt hàng thành công. \n- Đây là Mã Mặt Hàng: {0}", textBoxMaMatHang.Text), 
                                     "Thông báo", 
                                     MessageBoxButtons.OK, 
                                     MessageBoxIcon.Information);
-                        textBoxMaMatHang.Text = tb.Rows[0][0].ToString();
-                        radSpinEditorThanhTien.Value = (radSpinEditorTrongLuong.Value - radSpinEditorTruHot.Value) *
-                                                        radSpinEditorDonGia.Value *
-                                                        radSpinEditorTyGiaUSD.Value +
-                                                        radSpinEditorTienCong.Value +
-                                                        radSpinEditorTienHot.Value;
+
                     }
                 }
                 else
-                { 
-                
+                {
+                    if (Update())
+                    {
+                        DataTable tb = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                              StoreProcedureNames.constNhapMatHang_GetMaMHBySTT,
+                              new Collection<KeyValuePair<object, int>> { 
+                                new KeyValuePair<object,int>(Stt,(int)ParameterType.NonString),
+                              },
+                              (int)ExecuteType.Query);
+                        
+                        dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                            StoreProcedureNames.constXuatTienMat_UpdateMaXuat,
+                             new Collection<KeyValuePair<object, int>>{
+                                                    new KeyValuePair<object,int>(textBoxMaMatHang.Text,(int)ParameterType.NonString),
+                                                    new KeyValuePair<object,int>(tb.Rows[0][0].ToString(),(int)ParameterType.NonString),
+                                                },
+                                                (int)ExecuteType.NonQuery
+                            );
+
+                        textBoxMaMatHang.Text = tb.Rows[0][0].ToString();
+                        calculateThanhTien();
+
+                        if ((bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                                    StoreProcedureNames.constXuatTienMat_Update,
+                                    new Collection<KeyValuePair<object, int>>{
+                                                    new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
+                                                    new KeyValuePair<object,int>(radSpinEditorThanhTien.Value,(int)ParameterType.NonString),
+                                                    new KeyValuePair<object,int>("NMH",(int)ParameterType.String),
+                                                    new KeyValuePair<object,int>(textBoxMaMatHang.Text,(int)ParameterType.NonString),
+                                                },
+                                    (int)ExecuteType.NonQuery))
+                        MessageBox.Show(string.Format("- Cập nhật mặt hàng thành công. \n- Đây là Mã Mặt Hàng Sau Khi cập nhật: {0}", textBoxMaMatHang.Text),
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                        labelHeaderNhapMatHang.Text = "Phiếu Nhập Mặt Hàng";
+                        buttonLuuNhapMatHang.Text = "Lưu";
+                        Stt = 0;
+                    }
                 }
             }
         }
@@ -157,7 +204,7 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         private bool Save()
         {
-            return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+            return  (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
                     StoreProcedureNames.constNhapMatHang_Insert,
                     new Collection<KeyValuePair<object, int>>{
                         new KeyValuePair<object,int>(comboBoxChatLieu.SelectedValue,(int)ParameterType.NonString),
@@ -171,14 +218,41 @@ namespace ThinhKhaiManagement.UI.MatHang
                         new KeyValuePair<object,int>(radSpinEditorTyGiaUSD.Value,(int)ParameterType.NonString),
                         new KeyValuePair<object,int>(DateTime.Today.ToShortDateString(),(int)ParameterType.String),
                     },
+                    (int)ExecuteType.NonQuery);
+        }
+
+        private bool Update()
+        {
+            return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                    StoreProcedureNames.constNhapMatHang_UpdateByMaMH,
+                    new Collection<KeyValuePair<object, int>>{
+                        new KeyValuePair<object,int>(textBoxMaMatHang.Text,(int)ParameterType.String),
+                        new KeyValuePair<object,int>(comboBoxChatLieu.SelectedValue,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(comboBoxLoaiMatHang.SelectedValue,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(textBoxTenMatHang.Text,(int)ParameterType.String),
+                        new KeyValuePair<object,int>(radSpinEditorTrongLuong.Value,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(radSpinEditorTruHot.Value,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(radSpinEditorTienHot.Value,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(radSpinEditorTienCong.Value,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(radSpinEditorDonGia.Value,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(radSpinEditorTyGiaUSD.Value,(int)ParameterType.NonString),
+                    },
                     (int)ExecuteType.NonQuery
                     );
-
         }
 
         #endregion
 
         #region public methods
+
+        public void calculateThanhTien()
+        {
+            radSpinEditorThanhTien.Value = (radSpinEditorTrongLuong.Value - radSpinEditorTruHot.Value) *
+                                                        radSpinEditorDonGia.Value *
+                                                        radSpinEditorTyGiaUSD.Value +
+                                                        radSpinEditorTienCong.Value +
+                                                        radSpinEditorTienHot.Value;
+        }
 
         #endregion
     }
