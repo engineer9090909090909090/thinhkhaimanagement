@@ -58,5 +58,12 @@ namespace ThinhKhaiManagement.UI
         {
             this.Dispose();
         }
+
+        private void toolStripMenuItemXuatMatHang_Click(object sender, EventArgs e)
+        {
+            XuatMatHang xuatMatHang = new XuatMatHang();
+            xuatMatHang.MdiParent = this;
+            xuatMatHang.Show();
+        }
     }
 }
