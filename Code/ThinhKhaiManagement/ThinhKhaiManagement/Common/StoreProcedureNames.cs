@@ -73,6 +73,10 @@ namespace ThinhKhaiManagement.Common
         //Chat Lieu
         public const string constChatLieu_GetAll = "ChatLieu_GetAll";
 
+        public const string constChatLieu_Insert = "ChatLieu_Insert";
+
+        public const string constChatLieu_Update = "ChatLieu_Update";
+
         //Loai Mat hang
         public const string constLoaiMatHang_GetAll = "LoaiMatHang_GetAll";
 

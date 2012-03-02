@@ -72,5 +72,12 @@ namespace ThinhKhaiManagement.UI
             ngoaiTe.MdiParent = this;
             ngoaiTe.Show();
         }
+
+        private void ToolStripMenuItemChatLieu_Click(object sender, EventArgs e)
+        {
+            ChatLieu chatLieu = new ChatLieu();
+            chatLieu.MdiParent = this;
+            chatLieu.Show();
+        }
     }
 }
