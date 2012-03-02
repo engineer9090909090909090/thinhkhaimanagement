@@ -12,37 +12,37 @@ using System.Collections.ObjectModel;
 
 namespace ThinhKhaiManagement.UI.MatHang
 {
-    public partial class ChatLieu : Form
+    public partial class Loai : Form
     {
-        DataAccess dataaccess;
+         DataAccess dataaccess;
 
         int maNT = 0;
 
-        public ChatLieu()
+        public Loai()
         {
             InitializeComponent();
             dataaccess = new DataAccess();
         }
 
-        private void ChatLieu_Load(object sender, EventArgs e)
+        private void Loai_Load(object sender, EventArgs e)
         {
-            dataGridViewCL.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                StoreProcedureNames.constChatLieu_GetAll,
+            dataGridViewLoai.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                StoreProcedureNames.constLoaiMatHang_GetAll,
                 new Collection<KeyValuePair<object, int>>(),
                 (int)ExecuteType.Query);
         }
 
-        private void dataGridViewCL_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewLoai_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            maNT = Convert.ToInt32(dataGridViewCL.Rows[e.RowIndex].Cells[0].Value);
-            textBoxTCL.Text = dataGridViewCL.Rows[e.RowIndex].Cells[1].Value.ToString();
-            textBoxKTDD.Text = dataGridViewCL.Rows[e.RowIndex].Cells[2].Value.ToString();
+            maNT = Convert.ToInt32(dataGridViewLoai.Rows[e.RowIndex].Cells[0].Value);
+            textBoxLoai.Text = dataGridViewLoai.Rows[e.RowIndex].Cells[1].Value.ToString();
+            textBoxKTDD.Text = dataGridViewLoai.Rows[e.RowIndex].Cells[2].Value.ToString();
             buttonLuu.Text = "Cập Nhật";
         }
 
         private void buttonLS_Click(object sender, EventArgs e)
         {
-            textBoxTCL.Text = string.Empty;
+            textBoxLoai.Text = string.Empty;
             textBoxKTDD.Text = string.Empty;
             maNT = 0;
             buttonLuu.Text = "Lưu";
@@ -55,9 +55,9 @@ namespace ThinhKhaiManagement.UI.MatHang
                 if (maNT == 0)
                 {
                     if ((bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                        StoreProcedureNames.constChatLieu_Insert,
+                        StoreProcedureNames.constLoaiMatHang_Insert,
                         new Collection<KeyValuePair<object, int>>{
-                        new KeyValuePair<object,int>(textBoxTCL.Text,(int)ParameterType.String),
+                        new KeyValuePair<object,int>(textBoxLoai.Text,(int)ParameterType.String),
                         new KeyValuePair<object,int>(textBoxKTDD.Text,(int)ParameterType.String),
                     },
                         (int)ExecuteType.NonQuery))
@@ -68,10 +68,10 @@ namespace ThinhKhaiManagement.UI.MatHang
                 else
                 {
                     if ((bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                       StoreProcedureNames.constChatLieu_Update,
+                       StoreProcedureNames.constLoaiMatHang_Update,
                        new Collection<KeyValuePair<object, int>>{
                            new KeyValuePair<object,int>(maNT,(int)ParameterType.NonString),
-                           new KeyValuePair<object,int>(textBoxTCL.Text,(int)ParameterType.String),
+                           new KeyValuePair<object,int>(textBoxLoai.Text,(int)ParameterType.String),
                            new KeyValuePair<object,int>(textBoxKTDD.Text,(int)ParameterType.String),
                     },
                        (int)ExecuteType.NonQuery))
@@ -80,7 +80,7 @@ namespace ThinhKhaiManagement.UI.MatHang
                         MessageBox.Show("Cập nhật chất liệu thất bại");
                 }
                 buttonLS_Click(sender, e);
-                ChatLieu_Load(sender, e);
+                Loai_Load(sender, e);
             }
         }
 
@@ -88,25 +88,25 @@ namespace ThinhKhaiManagement.UI.MatHang
         {
             int a=0;
 
-            if (string.IsNullOrEmpty(textBoxTCL.Text))
+            if (string.IsNullOrEmpty(textBoxLoai.Text))
             {
-                errorProviderChatLieu.SetError(textBoxTCL, "Mời nhập");
+                errorProviderLoai.SetError(textBoxLoai, "Mời nhập");
                 a = 0;
             }
             else
             {
-                errorProviderChatLieu.SetError(textBoxTCL, string.Empty);
+                errorProviderLoai.SetError(textBoxLoai, string.Empty);
                 a++;
             }
 
             if (string.IsNullOrEmpty(textBoxKTDD.Text))
             {
-                errorProviderChatLieu.SetError(textBoxKTDD, "Mời nhập");
+                errorProviderLoai.SetError(textBoxKTDD, "Mời nhập");
                 a = 0;
             }
             else
             {
-                errorProviderChatLieu.SetError(textBoxKTDD, string.Empty);
+                errorProviderLoai.SetError(textBoxKTDD, string.Empty);
                 a++;
             }
 
