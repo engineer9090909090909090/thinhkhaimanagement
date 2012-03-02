@@ -67,7 +67,6 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                     {
                         if (Save())
                         {
-                            toolStripStatusLabelXuatNgoaiTe.Text = "Xuất phiếu thành công";
                             if (MessageBox.Show("Xuất phiếu thành công", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                             {
                                 this.Close();
@@ -80,7 +79,6 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                     {
                         if (Update())
                         {
-                            toolStripStatusLabelXuatNgoaiTe.Text = "cập nhật phiếu thành công";
                             if (MessageBox.Show("cập nhật phiếu thành công", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                             {
                                 this.Close();
