@@ -78,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\MatHang\ChatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MatHang\ChatLieu.Designer.cs">
+      <DependentUpon>ChatLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MatHang\ChiTietNhapMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\MatHang\ChatLieu.resx">
+      <DependentUpon>ChatLieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MatHang\ChiTietNhapMatHang.resx">
       <DependentUpon>ChiTietNhapMatHang.cs</DependentUpon>
     </EmbeddedResource>
