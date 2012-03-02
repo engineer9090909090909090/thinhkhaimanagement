@@ -86,5 +86,20 @@ namespace ThinhKhaiManagement.UI
             loai.MdiParent = this;
             loai.Show();
         }
+
+        private void toolStripMenuItemNhapHangThau_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("trong quá trình phát triển");
+        }
+
+        private void toolStripMenuItemXuatHangThau_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("trong quá trình phát triển");
+        }
+
+        private void toolStripMenuItemTonHangThau_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("trong quá trình phát triển");
+        }
     }
 }
