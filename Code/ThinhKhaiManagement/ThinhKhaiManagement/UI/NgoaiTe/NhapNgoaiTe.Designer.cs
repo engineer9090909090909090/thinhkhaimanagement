@@ -43,13 +43,10 @@
             this.labelDonGiaNhapNgoaiTe = new System.Windows.Forms.Label();
             this.labelSoLuongNhapNgoaiTe = new System.Windows.Forms.Label();
             this.labelLoaiNgoaiTeNhap = new System.Windows.Forms.Label();
-            this.statusStripNhapNgoaiTe = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelNhapNgoaiTe = new System.Windows.Forms.ToolStripStatusLabel();
             this.errorProvider_NhapNgoaiTe = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxNhapPhieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDonGiaNhapNgoaiTe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorSoLuongNhapNgoaiTe)).BeginInit();
-            this.statusStripNhapNgoaiTe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_NhapNgoaiTe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,16 +91,17 @@
             this.groupBoxNhapPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxNhapPhieu.Location = new System.Drawing.Point(6, 71);
             this.groupBoxNhapPhieu.Name = "groupBoxNhapPhieu";
-            this.groupBoxNhapPhieu.Size = new System.Drawing.Size(424, 186);
+            this.groupBoxNhapPhieu.Size = new System.Drawing.Size(424, 211);
             this.groupBoxNhapPhieu.TabIndex = 15;
             this.groupBoxNhapPhieu.TabStop = false;
             this.groupBoxNhapPhieu.Text = "Nhập Phiếu";
             // 
             // radSpinEditorDonGiaNhapNgoaiTe
             // 
+            this.radSpinEditorDonGiaNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorDonGiaNhapNgoaiTe.BackColor = System.Drawing.Color.White;
             this.radSpinEditorDonGiaNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorDonGiaNhapNgoaiTe.Location = new System.Drawing.Point(172, 91);
+            this.radSpinEditorDonGiaNhapNgoaiTe.Location = new System.Drawing.Point(172, 96);
             this.radSpinEditorDonGiaNhapNgoaiTe.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -123,9 +121,10 @@
             // 
             // radSpinEditorSoLuongNhapNgoaiTe
             // 
+            this.radSpinEditorSoLuongNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSoLuongNhapNgoaiTe.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSoLuongNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorSoLuongNhapNgoaiTe.Location = new System.Drawing.Point(172, 62);
+            this.radSpinEditorSoLuongNhapNgoaiTe.Location = new System.Drawing.Point(172, 64);
             this.radSpinEditorSoLuongNhapNgoaiTe.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -147,7 +146,7 @@
             // 
             this.buttonXemChiTietNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonXemChiTietNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXemChiTietNhapNgoaiTe.Location = new System.Drawing.Point(286, 150);
+            this.buttonXemChiTietNhapNgoaiTe.Location = new System.Drawing.Point(286, 163);
             this.buttonXemChiTietNhapNgoaiTe.Name = "buttonXemChiTietNhapNgoaiTe";
             this.buttonXemChiTietNhapNgoaiTe.Size = new System.Drawing.Size(105, 24);
             this.buttonXemChiTietNhapNgoaiTe.TabIndex = 7;
@@ -159,7 +158,7 @@
             // 
             this.buttonLamSachNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLamSachNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLamSachNhapNgoaiTe.Location = new System.Drawing.Point(119, 150);
+            this.buttonLamSachNhapNgoaiTe.Location = new System.Drawing.Point(119, 163);
             this.buttonLamSachNhapNgoaiTe.Name = "buttonLamSachNhapNgoaiTe";
             this.buttonLamSachNhapNgoaiTe.Size = new System.Drawing.Size(92, 24);
             this.buttonLamSachNhapNgoaiTe.TabIndex = 6;
@@ -171,7 +170,7 @@
             // 
             this.buttonLuuNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLuuNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLuuNhapNgoaiTe.Location = new System.Drawing.Point(38, 150);
+            this.buttonLuuNhapNgoaiTe.Location = new System.Drawing.Point(38, 163);
             this.buttonLuuNhapNgoaiTe.Name = "buttonLuuNhapNgoaiTe";
             this.buttonLuuNhapNgoaiTe.Size = new System.Drawing.Size(75, 24);
             this.buttonLuuNhapNgoaiTe.TabIndex = 5;
@@ -183,7 +182,7 @@
             // 
             this.textBoxGhiChuNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxGhiChuNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGhiChuNhapNgoaiTe.Location = new System.Drawing.Point(172, 116);
+            this.textBoxGhiChuNhapNgoaiTe.Location = new System.Drawing.Point(170, 128);
             this.textBoxGhiChuNhapNgoaiTe.Name = "textBoxGhiChuNhapNgoaiTe";
             this.textBoxGhiChuNhapNgoaiTe.Size = new System.Drawing.Size(219, 22);
             this.textBoxGhiChuNhapNgoaiTe.TabIndex = 4;
@@ -194,7 +193,7 @@
             this.comboBoxLoaiNgoaiTeNhap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLoaiNgoaiTeNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLoaiNgoaiTeNhap.FormattingEnabled = true;
-            this.comboBoxLoaiNgoaiTeNhap.Location = new System.Drawing.Point(172, 30);
+            this.comboBoxLoaiNgoaiTeNhap.Location = new System.Drawing.Point(172, 28);
             this.comboBoxLoaiNgoaiTeNhap.Name = "comboBoxLoaiNgoaiTeNhap";
             this.comboBoxLoaiNgoaiTeNhap.Size = new System.Drawing.Size(218, 24);
             this.comboBoxLoaiNgoaiTeNhap.TabIndex = 1;
@@ -204,7 +203,7 @@
             this.labelGhiChuNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelGhiChuNhapNgoaiTe.AutoSize = true;
             this.labelGhiChuNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGhiChuNhapNgoaiTe.Location = new System.Drawing.Point(35, 119);
+            this.labelGhiChuNhapNgoaiTe.Location = new System.Drawing.Point(33, 131);
             this.labelGhiChuNhapNgoaiTe.Name = "labelGhiChuNhapNgoaiTe";
             this.labelGhiChuNhapNgoaiTe.Size = new System.Drawing.Size(54, 16);
             this.labelGhiChuNhapNgoaiTe.TabIndex = 16;
@@ -215,7 +214,7 @@
             this.labelDonGiaNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDonGiaNhapNgoaiTe.AutoSize = true;
             this.labelDonGiaNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDonGiaNhapNgoaiTe.Location = new System.Drawing.Point(33, 91);
+            this.labelDonGiaNhapNgoaiTe.Location = new System.Drawing.Point(33, 98);
             this.labelDonGiaNhapNgoaiTe.Name = "labelDonGiaNhapNgoaiTe";
             this.labelDonGiaNhapNgoaiTe.Size = new System.Drawing.Size(56, 16);
             this.labelDonGiaNhapNgoaiTe.TabIndex = 15;
@@ -226,7 +225,7 @@
             this.labelSoLuongNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelSoLuongNhapNgoaiTe.AutoSize = true;
             this.labelSoLuongNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoLuongNhapNgoaiTe.Location = new System.Drawing.Point(33, 62);
+            this.labelSoLuongNhapNgoaiTe.Location = new System.Drawing.Point(33, 64);
             this.labelSoLuongNhapNgoaiTe.Name = "labelSoLuongNhapNgoaiTe";
             this.labelSoLuongNhapNgoaiTe.Size = new System.Drawing.Size(65, 16);
             this.labelSoLuongNhapNgoaiTe.TabIndex = 14;
@@ -237,27 +236,11 @@
             this.labelLoaiNgoaiTeNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLoaiNgoaiTeNhap.AutoSize = true;
             this.labelLoaiNgoaiTeNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoaiNgoaiTeNhap.Location = new System.Drawing.Point(33, 33);
+            this.labelLoaiNgoaiTeNhap.Location = new System.Drawing.Point(33, 31);
             this.labelLoaiNgoaiTeNhap.Name = "labelLoaiNgoaiTeNhap";
             this.labelLoaiNgoaiTeNhap.Size = new System.Drawing.Size(94, 16);
             this.labelLoaiNgoaiTeNhap.TabIndex = 13;
             this.labelLoaiNgoaiTeNhap.Text = "Loại Ngoại Tệ";
-            // 
-            // statusStripNhapNgoaiTe
-            // 
-            this.statusStripNhapNgoaiTe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelNhapNgoaiTe});
-            this.statusStripNhapNgoaiTe.Location = new System.Drawing.Point(0, 272);
-            this.statusStripNhapNgoaiTe.Name = "statusStripNhapNgoaiTe";
-            this.statusStripNhapNgoaiTe.Size = new System.Drawing.Size(434, 22);
-            this.statusStripNhapNgoaiTe.TabIndex = 16;
-            this.statusStripNhapNgoaiTe.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabelNhapNgoaiTe
-            // 
-            this.toolStripStatusLabelNhapNgoaiTe.ForeColor = System.Drawing.Color.Maroon;
-            this.toolStripStatusLabelNhapNgoaiTe.Name = "toolStripStatusLabelNhapNgoaiTe";
-            this.toolStripStatusLabelNhapNgoaiTe.Size = new System.Drawing.Size(0, 17);
             // 
             // errorProvider_NhapNgoaiTe
             // 
@@ -268,7 +251,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 294);
-            this.Controls.Add(this.statusStripNhapNgoaiTe);
             this.Controls.Add(this.groupBoxNhapPhieu);
             this.Controls.Add(this.labelNgayNhapNgoaiTe);
             this.Controls.Add(this.labelHeaderNhapNgoaiTe);
@@ -284,8 +266,6 @@
             this.groupBoxNhapPhieu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDonGiaNhapNgoaiTe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorSoLuongNhapNgoaiTe)).EndInit();
-            this.statusStripNhapNgoaiTe.ResumeLayout(false);
-            this.statusStripNhapNgoaiTe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_NhapNgoaiTe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -302,8 +282,6 @@
         private System.Windows.Forms.Label labelDonGiaNhapNgoaiTe;
         private System.Windows.Forms.Label labelSoLuongNhapNgoaiTe;
         private System.Windows.Forms.Label labelLoaiNgoaiTeNhap;
-        private System.Windows.Forms.StatusStrip statusStripNhapNgoaiTe;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNhapNgoaiTe;
         private System.Windows.Forms.ErrorProvider errorProvider_NhapNgoaiTe;
         public System.Windows.Forms.TextBox textBoxGhiChuNhapNgoaiTe;
         public System.Windows.Forms.ComboBox comboBoxLoaiNgoaiTeNhap;
