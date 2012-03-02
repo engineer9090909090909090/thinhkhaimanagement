@@ -10,6 +10,10 @@ namespace ThinhKhaiManagement.Common
         //Ngoai Te
         public const string constNgoaiTe_GetAll = "NgoaiTe_GetAll";
 
+        public const string constNgoaiTe_Insert = "NgoaiTe_Insert";
+
+        public const string constNgoaiTe_Update = "NgoaiTe_Update";
+
         //Nhap Ngoai Te
         public const string constNhapNgoaiTe_Insert = "NhapNgoaiTe_Insert";
 

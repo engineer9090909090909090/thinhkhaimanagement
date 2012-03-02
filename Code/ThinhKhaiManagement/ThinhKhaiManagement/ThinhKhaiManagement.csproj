@@ -90,6 +90,12 @@
     <Compile Include="UI\MatHang\ChiTietXuatMatHang.Designer.cs">
       <DependentUpon>ChiTietXuatMatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\NgoaiTe\NgoaiTe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NgoaiTe\NgoaiTe.Designer.cs">
+      <DependentUpon>NgoaiTe.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MatHang\NhapMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MatHang\ChiTietXuatMatHang.resx">
       <DependentUpon>ChiTietXuatMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NgoaiTe\NgoaiTe.resx">
+      <DependentUpon>NgoaiTe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MatHang\NhapMatHang.resx">
       <DependentUpon>NhapMatHang.cs</DependentUpon>

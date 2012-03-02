@@ -65,5 +65,12 @@ namespace ThinhKhaiManagement.UI
             xuatMatHang.MdiParent = this;
             xuatMatHang.Show();
         }
+
+        private void ToolStripMenuItemDinhKhoanNT_Click(object sender, EventArgs e)
+        {
+            NgoaiTe.NgoaiTe ngoaiTe = new NgoaiTe.NgoaiTe();
+            ngoaiTe.MdiParent = this;
+            ngoaiTe.Show();
+        }
     }
 }
