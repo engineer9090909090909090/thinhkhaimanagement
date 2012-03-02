@@ -47,15 +47,12 @@
             this.labelTienMat = new System.Windows.Forms.Label();
             this.labelXuLy = new System.Windows.Forms.Label();
             this.labelNgayTienMat = new System.Windows.Forms.Label();
-            this.statusStripTienMat = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelTienMat = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelHeaderThongTinTienMat = new System.Windows.Forms.Label();
             this.errorProviderTienMat = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxTon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXemTienMat)).BeginInit();
             this.groupBoxXuat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTienMat)).BeginInit();
-            this.statusStripTienMat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTienMat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,7 +149,7 @@
             this.groupBoxXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxXuat.Location = new System.Drawing.Point(21, 267);
             this.groupBoxXuat.Name = "groupBoxXuat";
-            this.groupBoxXuat.Size = new System.Drawing.Size(417, 152);
+            this.groupBoxXuat.Size = new System.Drawing.Size(417, 168);
             this.groupBoxXuat.TabIndex = 2;
             this.groupBoxXuat.TabStop = false;
             this.groupBoxXuat.Text = "Nhập / Xuất Tiền Mặt";
@@ -275,22 +272,6 @@
             this.labelNgayTienMat.TabIndex = 0;
             this.labelNgayTienMat.Text = "ngày hiện tại";
             // 
-            // statusStripTienMat
-            // 
-            this.statusStripTienMat.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelTienMat});
-            this.statusStripTienMat.Location = new System.Drawing.Point(0, 425);
-            this.statusStripTienMat.Name = "statusStripTienMat";
-            this.statusStripTienMat.Size = new System.Drawing.Size(458, 22);
-            this.statusStripTienMat.TabIndex = 3;
-            this.statusStripTienMat.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabelTienMat
-            // 
-            this.toolStripStatusLabelTienMat.ForeColor = System.Drawing.Color.Maroon;
-            this.toolStripStatusLabelTienMat.Name = "toolStripStatusLabelTienMat";
-            this.toolStripStatusLabelTienMat.Size = new System.Drawing.Size(0, 17);
-            // 
             // labelHeaderThongTinTienMat
             // 
             this.labelHeaderThongTinTienMat.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -313,7 +294,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 447);
             this.Controls.Add(this.labelHeaderThongTinTienMat);
-            this.Controls.Add(this.statusStripTienMat);
             this.Controls.Add(this.groupBoxXuat);
             this.Controls.Add(this.groupBoxTon);
             this.Controls.Add(this.labelNgayTienMat);
@@ -330,8 +310,6 @@
             this.groupBoxXuat.ResumeLayout(false);
             this.groupBoxXuat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTienMat)).EndInit();
-            this.statusStripTienMat.ResumeLayout(false);
-            this.statusStripTienMat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTienMat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -350,8 +328,6 @@
         private System.Windows.Forms.GroupBox groupBoxXuat;
         private System.Windows.Forms.Label labelNgayTienMat;
         public Telerik.WinControls.UI.RadSpinEditor radSpinEditorTienMat;
-        private System.Windows.Forms.StatusStrip statusStripTienMat;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelTienMat;
         public System.Windows.Forms.Label labelHeaderThongTinTienMat;
         private System.Windows.Forms.ErrorProvider errorProviderTienMat;
         public System.Windows.Forms.ComboBox comboBoxXuLy;

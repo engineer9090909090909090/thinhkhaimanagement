@@ -63,14 +63,14 @@ namespace ThinhKhaiManagement.UI.TienMat
                 if (MaTemp == 0)
                 {
                     if (Save())
-                        toolStripStatusLabelTienMat.Text = string.Format("{0} phiếu thành công", comboBoxXuLy.SelectedItem.ToString());
+                        MessageBox.Show(string.Format("{0} phiếu thành công", comboBoxXuLy.SelectedItem.ToString()), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show(string.Format("{0} phiếu thất bại", comboBoxXuLy.SelectedItem.ToString()), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     if(Update())
-                        toolStripStatusLabelTienMat.Text = string.Format("cập nhật phiếu {0} thành công", comboBoxXuLy.SelectedItem.ToString());
+                        MessageBox.Show(string.Format("cập nhật phiếu {0} thành công", comboBoxXuLy.SelectedItem.ToString()), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show(string.Format("cập nhật phiếu {0} thất bại", comboBoxXuLy.SelectedItem.ToString()), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     labelHeaderThongTinTienMat.Text = "Thông Tin Tiền Mặt";
@@ -78,7 +78,7 @@ namespace ThinhKhaiManagement.UI.TienMat
                     MaTemp = 0;
                 }
 
-                buttonXem_Click(sender, e);
+                buttonLamSach_Click(sender, e);
             }
         }
 
