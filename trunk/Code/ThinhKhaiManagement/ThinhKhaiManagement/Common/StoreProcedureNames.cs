@@ -70,6 +70,8 @@ namespace ThinhKhaiManagement.Common
 
         public const string constNhapMatHang_UpdateByMaMH = "NhapMatHang_UpdateByMaMH";
 
+        public const string constNhapMatHang_ShowByNgay = "NhapMatHang_ShowByNgay";
+
         //Chat Lieu
         public const string constChatLieu_GetAll = "ChatLieu_GetAll";
 
