@@ -31,6 +31,7 @@
             this.groupBoxXemChiTietNhapMatHang = new System.Windows.Forms.GroupBox();
             this.dateTimePickerNgayXuatMatHang = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewChiTietXuatMatHang = new System.Windows.Forms.DataGridView();
+            this.buttonHuyPhieu = new System.Windows.Forms.Button();
             this.groupBoxXemChiTietNhapMatHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietXuatMatHang)).BeginInit();
             this.SuspendLayout();
@@ -38,6 +39,7 @@
             // groupBoxXemChiTietNhapMatHang
             // 
             this.groupBoxXemChiTietNhapMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxXemChiTietNhapMatHang.Controls.Add(this.buttonHuyPhieu);
             this.groupBoxXemChiTietNhapMatHang.Controls.Add(this.dataGridViewChiTietXuatMatHang);
             this.groupBoxXemChiTietNhapMatHang.Controls.Add(this.dateTimePickerNgayXuatMatHang);
             this.groupBoxXemChiTietNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,11 +64,28 @@
             // 
             // dataGridViewChiTietXuatMatHang
             // 
+            this.dataGridViewChiTietXuatMatHang.AllowUserToAddRows = false;
+            this.dataGridViewChiTietXuatMatHang.AllowUserToDeleteRows = false;
+            this.dataGridViewChiTietXuatMatHang.AllowUserToResizeColumns = false;
+            this.dataGridViewChiTietXuatMatHang.AllowUserToResizeRows = false;
+            this.dataGridViewChiTietXuatMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewChiTietXuatMatHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChiTietXuatMatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewChiTietXuatMatHang.Location = new System.Drawing.Point(12, 56);
+            this.dataGridViewChiTietXuatMatHang.MultiSelect = false;
             this.dataGridViewChiTietXuatMatHang.Name = "dataGridViewChiTietXuatMatHang";
             this.dataGridViewChiTietXuatMatHang.Size = new System.Drawing.Size(671, 311);
             this.dataGridViewChiTietXuatMatHang.TabIndex = 15;
+            // 
+            // buttonHuyPhieu
+            // 
+            this.buttonHuyPhieu.Location = new System.Drawing.Point(608, 26);
+            this.buttonHuyPhieu.Name = "buttonHuyPhieu";
+            this.buttonHuyPhieu.Size = new System.Drawing.Size(75, 23);
+            this.buttonHuyPhieu.TabIndex = 16;
+            this.buttonHuyPhieu.Text = "Hủy Phiếu";
+            this.buttonHuyPhieu.UseVisualStyleBackColor = true;
+            this.buttonHuyPhieu.Click += new System.EventHandler(this.buttonHuyPhieu_Click);
             // 
             // ChiTietXuatMatHang
             // 
@@ -92,5 +111,6 @@
         private System.Windows.Forms.GroupBox groupBoxXemChiTietNhapMatHang;
         private System.Windows.Forms.DataGridView dataGridViewChiTietXuatMatHang;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayXuatMatHang;
+        private System.Windows.Forms.Button buttonHuyPhieu;
     }
 }
