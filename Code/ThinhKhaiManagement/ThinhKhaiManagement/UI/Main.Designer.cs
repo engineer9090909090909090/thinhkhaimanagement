@@ -151,6 +151,7 @@
             this.loạiToolStripMenuItemLoai.Name = "loạiToolStripMenuItemLoai";
             this.loạiToolStripMenuItemLoai.Size = new System.Drawing.Size(152, 22);
             this.loạiToolStripMenuItemLoai.Text = "Loại";
+            this.loạiToolStripMenuItemLoai.Click += new System.EventHandler(this.loạiToolStripMenuItemLoai_Click);
             // 
             // toolStripMenuItemTonMatHang
             // 

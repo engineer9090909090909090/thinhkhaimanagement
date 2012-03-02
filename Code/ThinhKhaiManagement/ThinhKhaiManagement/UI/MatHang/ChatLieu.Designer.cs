@@ -84,7 +84,7 @@
             this.labelKTDD.Name = "labelKTDD";
             this.labelKTDD.Size = new System.Drawing.Size(96, 16);
             this.labelKTDD.TabIndex = 10;
-            this.labelKTDD.Text = "Ký Tự Đại Dien";
+            this.labelKTDD.Text = "Ký Tự Đại Diện";
             // 
             // labelTenCL
             // 
@@ -122,7 +122,7 @@
             this.dataGridViewCL.Name = "dataGridViewCL";
             this.dataGridViewCL.Size = new System.Drawing.Size(378, 257);
             this.dataGridViewCL.TabIndex = 7;
-            this.dataGridViewCL.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNT_CellDoubleClick);
+            this.dataGridViewCL.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCL_CellDoubleClick);
             // 
             // ChatLieu
             // 
@@ -142,7 +142,7 @@
             this.Name = "ChatLieu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chất Liệu";
-            this.Load += new System.EventHandler(this.NgoaiTe_Load);
+            this.Load += new System.EventHandler(this.ChatLieu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderChatLieu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCL)).EndInit();
             this.ResumeLayout(false);

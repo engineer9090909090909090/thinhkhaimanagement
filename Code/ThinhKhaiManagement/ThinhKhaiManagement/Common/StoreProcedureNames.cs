@@ -80,6 +80,10 @@ namespace ThinhKhaiManagement.Common
         //Loai Mat hang
         public const string constLoaiMatHang_GetAll = "LoaiMatHang_GetAll";
 
+        public const string constLoaiMatHang_Insert = "LoaiMatHang_Insert";
+
+        public const string constLoaiMatHang_Update = "LoaiMatHang_Update";
+
         //Xuat Mat Hang
         public const string constXuatMatHang_ShowByMaMH = "XuatMatHang_ShowByMaMH";
 
