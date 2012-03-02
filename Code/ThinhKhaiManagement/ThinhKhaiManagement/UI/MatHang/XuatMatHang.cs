@@ -47,10 +47,8 @@ namespace ThinhKhaiManagement.UI.MatHang
                     textBoxTenMatHang.Text = tb.Rows[0][4].ToString();
                     radSpinEditorTrongLuong.Value = (decimal)tb.Rows[0][5];
                     radSpinEditorTruHot.Value = (decimal)tb.Rows[0][6];
-                    radSpinEditorTienHot.Value = (decimal)tb.Rows[0][7];
-                    radSpinEditorTienCong.Value = (decimal)tb.Rows[0][8];
-                    radSpinEditorDonGia.Value = (decimal)tb.Rows[0][9];
-                    radSpinEditorTyGiaUSD.Value = (decimal)tb.Rows[0][10];
+                    radSpinEditorTienHot.Value = (decimal)tb.Rows[0][12];
+                    radSpinEditorTienCong.Value = (decimal)tb.Rows[0][13];
                 }
                 else
                     MessageBox.Show("Mặt hàng này không tồn tại", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
