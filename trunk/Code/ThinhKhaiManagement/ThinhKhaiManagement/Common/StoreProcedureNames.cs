@@ -74,5 +74,9 @@ namespace ThinhKhaiManagement.Common
 
         //Xuat Mat Hang
         public const string constXuatMatHang_ShowByMaMH = "XuatMatHang_ShowByMaMH";
+
+        public const string constXuatMatHang_UpdateByMaMH = "XuatMatHang_UpdateByMaMH";
+
+        public const string constXuatMatHang_ShowSoldByNgay = "XuatMatHang_ShowSoldByNgay";
     }
 }
