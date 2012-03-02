@@ -58,6 +58,7 @@
             this.dateTimePickerNgayNhapMatHang.Name = "dateTimePickerNgayNhapMatHang";
             this.dateTimePickerNgayNhapMatHang.Size = new System.Drawing.Size(123, 21);
             this.dateTimePickerNgayNhapMatHang.TabIndex = 14;
+            this.dateTimePickerNgayNhapMatHang.ValueChanged += new System.EventHandler(this.dateTimePickerNgayNhapMatHang_ValueChanged);
             // 
             // dataGridViewChiTietNhapMatHang
             // 

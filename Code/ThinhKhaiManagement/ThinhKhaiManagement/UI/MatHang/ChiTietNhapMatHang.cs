@@ -28,8 +28,10 @@ namespace ThinhKhaiManagement.UI.MatHang
         private void ChiTietNhapMatHang_Load(object sender, EventArgs e)
         {
             dataGridViewChiTietNhapMatHang.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                                                                    StoreProcedureNames.constTonMatHang_GetAll,
-                                                                    new Collection<KeyValuePair<object, int>>(),
+                                                                    StoreProcedureNames.constNhapMatHang_ShowByNgay,
+                                                                    new Collection<KeyValuePair<object, int>> { 
+                                                                        new KeyValuePair<object,int>(dateTimePickerNgayNhapMatHang.Value,(int)ParameterType.String)
+                                                                    },
                                                                     (int)ExecuteType.Query);
             ResetCollummFormat();
         }
@@ -80,6 +82,11 @@ namespace ThinhKhaiManagement.UI.MatHang
             nhapMatHang.labelHeaderNhapMatHang.Text = "Sửa Phiếu Nhập Mặt Hàng";
             nhapMatHang.buttonLuuNhapMatHang.Text = "Cập Nhật";
             this.Dispose();
+        }
+
+        private void dateTimePickerNgayNhapMatHang_ValueChanged(object sender, EventArgs e)
+        {
+            ChiTietNhapMatHang_Load(sender, e);
         }
     }
 }
