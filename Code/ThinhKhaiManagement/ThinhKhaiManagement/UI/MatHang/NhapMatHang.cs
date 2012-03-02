@@ -125,6 +125,7 @@ namespace ThinhKhaiManagement.UI.MatHang
         {
             int flag = 0;
 
+            //1
             if (!string.IsNullOrEmpty(textBoxTenMatHang.Text))
             {
                 errorProvider_NhapMatHang.SetError(textBoxTenMatHang, string.Empty);
@@ -137,6 +138,7 @@ namespace ThinhKhaiManagement.UI.MatHang
 
             }
 
+            //2
             if (radSpinEditorTrongLuong.Value > 0)
             {
                 errorProvider_NhapMatHang.SetError(radSpinEditorTrongLuong, string.Empty);
@@ -148,6 +150,7 @@ namespace ThinhKhaiManagement.UI.MatHang
                 flag = 0;
             }
 
+            //3
             if (radSpinEditorDonGia.Value > 0)
             {
                 errorProvider_NhapMatHang.SetError(radSpinEditorDonGia, string.Empty);
@@ -159,6 +162,7 @@ namespace ThinhKhaiManagement.UI.MatHang
                 flag = 0;
             }
 
+            //4
             if (radSpinEditorTruHot.Value < radSpinEditorTrongLuong.Value)
             {
                 errorProvider_NhapMatHang.SetError(radSpinEditorTruHot, string.Empty);
@@ -170,7 +174,53 @@ namespace ThinhKhaiManagement.UI.MatHang
                 flag = 0;
             }
 
-            if (flag == 3)
+            //5
+            if (radSpinEditorTienCongBan.Value <= radSpinEditorTienCong.Value && radSpinEditorTienCong.Value > 0)
+            {
+                errorProvider_NhapMatHang.SetError(radSpinEditorTienCongBan, "Tiền công bán không hợp lệ");
+                flag = 0;
+            }
+            else if (radSpinEditorTienCongBan.Value > radSpinEditorTienCong.Value && radSpinEditorTienCong.Value == 0)
+            {
+                errorProvider_NhapMatHang.SetError(radSpinEditorTienCongBan, "Tiền công bán không hợp lệ");
+                flag = 0;
+            }
+            else
+            {
+                errorProvider_NhapMatHang.SetError(radSpinEditorTienCongBan, string.Empty);
+                flag++;
+            }
+
+            //6
+            if (radSpinEditorTienHotBan.Value <= radSpinEditorTienHot.Value && radSpinEditorTienHot.Value > 0)
+            {
+                errorProvider_NhapMatHang.SetError(radSpinEditorTienHotBan, "Tiền hột bán không hợp lệ");
+                flag = 0;
+            }
+            else if (radSpinEditorTienHotBan.Value > radSpinEditorTienHot.Value && radSpinEditorTienHot.Value == 0)
+            {
+                errorProvider_NhapMatHang.SetError(radSpinEditorTienHotBan, "Tiền công bán không hợp lệ");
+                flag = 0;
+            }
+            else
+            {
+                errorProvider_NhapMatHang.SetError(radSpinEditorTienHotBan, string.Empty);
+                flag++;
+            }
+
+            //7
+            if (radSpinEditorTruHot.Value > 0 && (radSpinEditorTienHot.Value == 0 || radSpinEditorTienCong.Value == 0))
+            {
+                errorProvider_NhapMatHang.SetError(radSpinEditorTruHot, "Mời nhập tiền công và tiền hột");
+                flag = 0;
+            }
+            else
+            {
+                errorProvider_NhapMatHang.SetError(radSpinEditorTruHot,string.Empty);
+                flag++;
+            }
+
+            if (flag == 7)
                 return true;
             else
                 return false;
@@ -198,6 +248,8 @@ namespace ThinhKhaiManagement.UI.MatHang
                 cmd.Parameters.Add("@TyGiaUSDNhap", SqlDbType.Decimal).SqlValue = radSpinEditorTyGiaUSD.Value;
                 cmd.Parameters.Add("@NgayNhap", SqlDbType.Date).SqlValue = DateTime.Today;
                 cmd.Parameters.Add("@MaMH", SqlDbType.NVarChar, 50).Direction = ParameterDirection.Output;
+                cmd.Parameters.Add("@CongXuat", SqlDbType.Decimal).SqlValue = radSpinEditorTienCongBan.Value;
+                cmd.Parameters.Add("HotXuat", SqlDbType.Decimal).SqlValue = radSpinEditorTienHotBan.Value;
 
                 con.Open();
                 tran = con.BeginTransaction();
@@ -266,6 +318,8 @@ namespace ThinhKhaiManagement.UI.MatHang
                 cmd.Parameters.Add("@DonGiaNhap", SqlDbType.Decimal).SqlValue = radSpinEditorDonGia.Value;
                 cmd.Parameters.Add("@TyGiaUSDNhap", SqlDbType.Decimal).SqlValue = radSpinEditorTyGiaUSD.Value;
                 cmd.Parameters.Add("@MaMH_U", SqlDbType.NVarChar, 50).Direction = ParameterDirection.Output;
+                cmd.Parameters.Add("@CongXuat", SqlDbType.Decimal).SqlValue = radSpinEditorTienCongBan.Value;
+                cmd.Parameters.Add("@HotXuat", SqlDbType.Decimal).SqlValue = radSpinEditorTienHotBan.Value;
 
                 con.Open();
                 tran = con.BeginTransaction();
@@ -336,5 +390,6 @@ namespace ThinhKhaiManagement.UI.MatHang
         }
 
         #endregion
+
     }
 }

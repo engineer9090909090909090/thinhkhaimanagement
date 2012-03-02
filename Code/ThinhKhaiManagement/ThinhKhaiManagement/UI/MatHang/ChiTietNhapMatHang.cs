@@ -70,7 +70,9 @@ namespace ThinhKhaiManagement.UI.MatHang
             nhapMatHang.radSpinEditorTrongLuong.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[4].Value;
             nhapMatHang.radSpinEditorTruHot.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[5].Value;
             nhapMatHang.radSpinEditorTienHot.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[6].Value;
+            nhapMatHang.radSpinEditorTienHotBan.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[13].Value;
             nhapMatHang.radSpinEditorTienCong.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[7].Value;
+            nhapMatHang.radSpinEditorTienCongBan.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[12].Value;
             nhapMatHang.radSpinEditorDonGia.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[8].Value;
             nhapMatHang.radSpinEditorTyGiaUSD.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[9].Value;
             nhapMatHang.Stt = Convert.ToInt32(dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[11].Value);

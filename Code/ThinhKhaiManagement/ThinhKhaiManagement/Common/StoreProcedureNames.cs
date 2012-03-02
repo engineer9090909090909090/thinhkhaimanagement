@@ -71,5 +71,8 @@ namespace ThinhKhaiManagement.Common
 
         //Loai Mat hang
         public const string constLoaiMatHang_GetAll = "LoaiMatHang_GetAll";
+
+        //Xuat Mat Hang
+        public const string constXuatMatHang_ShowByMaMH = "XuatMatHang_ShowByMaMH";
     }
 }
