@@ -61,9 +61,9 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                         new KeyValuePair<object,int>(textBoxGhiChu.Text,(int)ParameterType.String),
                     },
                         (int)ExecuteType.NonQuery))
-                        MessageBox.Show("Thêm ngoại tệ thành công");
+                        MessageBox.Show("Thêm ngoại tệ thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("Thêm ngoại tệ thất bại");
+                        MessageBox.Show("Thêm ngoại tệ thất bại", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -75,9 +75,9 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                            new KeyValuePair<object,int>(textBoxGhiChu.Text,(int)ParameterType.String),
                     },
                        (int)ExecuteType.NonQuery))
-                        MessageBox.Show("Cập nhật ngoại tệ thành công");
+                        MessageBox.Show("Cập nhật ngoại tệ thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("Cập nhật ngoại tệ thất bại");
+                        MessageBox.Show("Cập nhật ngoại tệ thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 buttonLS_Click(sender, e);
                 NgoaiTe_Load(sender, e);

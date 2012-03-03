@@ -61,9 +61,9 @@ namespace ThinhKhaiManagement.UI.MatHang
                         new KeyValuePair<object,int>(textBoxKTDD.Text,(int)ParameterType.String),
                     },
                         (int)ExecuteType.NonQuery))
-                        MessageBox.Show("Thêm chất liệu thành công");
+                        MessageBox.Show("Thêm chất liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("Thêm chất liệu thất bại");
+                        MessageBox.Show("Thêm chất liệu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -75,9 +75,9 @@ namespace ThinhKhaiManagement.UI.MatHang
                            new KeyValuePair<object,int>(textBoxKTDD.Text,(int)ParameterType.String),
                     },
                        (int)ExecuteType.NonQuery))
-                        MessageBox.Show("Cập nhật chất liệu thành công");
+                        MessageBox.Show("Cập nhật chất liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("Cập nhật chất liệu thất bại");
+                        MessageBox.Show("Cập nhật chất liệu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 buttonLS_Click(sender, e);
                 Loai_Load(sender, e);
