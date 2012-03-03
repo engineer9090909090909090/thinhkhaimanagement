@@ -17,6 +17,8 @@ namespace ThinhKhaiManagement.UI.MatHang
     {
         DataAccess dataaccess;
 
+        int x = -1;
+
         public TonMatHang()
         {
             InitializeComponent();
@@ -37,6 +39,28 @@ namespace ThinhKhaiManagement.UI.MatHang
                 new Collection<KeyValuePair<object, int>>(),
                 (int)ExecuteType.Query);
             ResetCollummFormat();
+            labelTSL.Text = (dataGridViewXem.Rows.Count).ToString();
+
+            labelTGV.Text = String.Format("{0:0.00}", CalculateTotal());
+        }
+
+        private decimal CalculateTotal()
+        {
+            decimal k = 0;
+            for (int i = 0; i < dataGridViewXem.Rows.Count; i++)
+            {
+                if (dataGridViewXem.Rows[i].Cells[0].Value == null)
+                    break;
+
+                k = k +
+                    ((decimal)dataGridViewXem.Rows[i].Cells[4].Value -
+                    (decimal)dataGridViewXem.Rows[i].Cells[5].Value) *
+                    (decimal)dataGridViewXem.Rows[i].Cells[8].Value *
+                    (decimal)dataGridViewXem.Rows[i].Cells[9].Value +
+                    (decimal)dataGridViewXem.Rows[i].Cells[6].Value +
+                    (decimal)dataGridViewXem.Rows[i].Cells[7].Value;
+            }
+            return k;
         }
 
         private void FillSortInfo()
@@ -103,6 +127,30 @@ namespace ThinhKhaiManagement.UI.MatHang
                 },
                 (int)ExecuteType.Query);
                 labelTSL.Text = tb.Rows[0][0].ToString();
+                labelTGV.Text = String.Format("{0:0.00}", CalculateTotal());
+        }
+
+        private void buttonKiemTra_Click(object sender, EventArgs e)
+        {
+            if (x == -1)
+                MessageBox.Show("Mời chọn mặt hàng cần kiểm tra", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                labelGV.Text = String.Format("{0:0.00}",
+                    ((decimal)dataGridViewXem.Rows[x].Cells[4].Value -
+                    (decimal)dataGridViewXem.Rows[x].Cells[5].Value) *
+                    (decimal)dataGridViewXem.Rows[x].Cells[8].Value *
+                    (decimal)dataGridViewXem.Rows[x].Cells[9].Value +
+                    (decimal)dataGridViewXem.Rows[x].Cells[6].Value +
+                    (decimal)dataGridViewXem.Rows[x].Cells[7].Value);
+            }
+        }
+
+        private void dataGridViewXem_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            x = e.RowIndex;
+            textBoxMaMatHang.Text = dataGridViewXem.Rows[x].Cells[0].Value.ToString();
+            textBoxTenMatHang.Text = dataGridViewXem.Rows[x].Cells[3].Value.ToString();
         }
     }
 }
