@@ -120,6 +120,7 @@
             this.dataGridViewCL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCL.Location = new System.Drawing.Point(19, 78);
             this.dataGridViewCL.Name = "dataGridViewCL";
+            this.dataGridViewCL.ReadOnly = true;
             this.dataGridViewCL.Size = new System.Drawing.Size(378, 257);
             this.dataGridViewCL.TabIndex = 7;
             this.dataGridViewCL.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCL_CellDoubleClick);
