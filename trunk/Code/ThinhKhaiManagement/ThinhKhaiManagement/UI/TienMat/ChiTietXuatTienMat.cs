@@ -54,14 +54,16 @@ namespace ThinhKhaiManagement.UI.TienMat
 
         private void dataGridViewChiTietXuatTienMat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            tienMat.MaTemp = Convert.ToInt32(dataGridViewChiTietXuatTienMat.Rows[e.RowIndex].Cells[0].Value);
-            tienMat.Ngay = (DateTime)dataGridViewChiTietXuatTienMat.Rows[e.RowIndex].Cells[1].Value;
-            tienMat.radSpinEditorTienMat.Value = (decimal)dataGridViewChiTietXuatTienMat.Rows[e.RowIndex].Cells[2].Value;
-            tienMat.textBoxLyDo.Text = dataGridViewChiTietXuatTienMat.Rows[e.RowIndex].Cells[3].Value.ToString();
-            tienMat.labelHeaderThongTinTienMat.Text = "Sửa Thông Tin Tiền Mặt";
-            tienMat.buttonLuu.Text = "Cập Nhật";
-
-            this.Dispose();
+            if (e.RowIndex >= 0)
+            {
+                tienMat.MaTemp = Convert.ToInt32(dataGridViewChiTietXuatTienMat.Rows[e.RowIndex].Cells[0].Value);
+                tienMat.Ngay = (DateTime)dataGridViewChiTietXuatTienMat.Rows[e.RowIndex].Cells[1].Value;
+                tienMat.radSpinEditorTienMat.Value = (decimal)dataGridViewChiTietXuatTienMat.Rows[e.RowIndex].Cells[2].Value;
+                tienMat.textBoxLyDo.Text = dataGridViewChiTietXuatTienMat.Rows[e.RowIndex].Cells[3].Value.ToString();
+                tienMat.labelHeaderThongTinTienMat.Text = "Sửa Thông Tin Tiền Mặt";
+                tienMat.buttonLuu.Text = "Cập Nhật";
+                this.Dispose();
+            }
         }
 
     }
