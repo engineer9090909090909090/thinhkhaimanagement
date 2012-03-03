@@ -41,7 +41,7 @@ namespace ThinhKhaiManagement.UI.MatHang
             ResetCollummFormat();
             labelTSL.Text = (dataGridViewXem.Rows.Count).ToString();
 
-            labelTGV.Text = String.Format("{0:0.00}", CalculateTotal());
+            labelTGV.Text = String.Format("{0:0,0.00}", CalculateTotal());
         }
 
         private decimal CalculateTotal()
@@ -127,7 +127,7 @@ namespace ThinhKhaiManagement.UI.MatHang
                 },
                 (int)ExecuteType.Query);
                 labelTSL.Text = tb.Rows[0][0].ToString();
-                labelTGV.Text = String.Format("{0:0.00}", CalculateTotal());
+                labelTGV.Text = String.Format("{0:0,0.00}", CalculateTotal());
         }
 
         private void buttonKiemTra_Click(object sender, EventArgs e)
@@ -136,7 +136,7 @@ namespace ThinhKhaiManagement.UI.MatHang
                 MessageBox.Show("Mời chọn mặt hàng cần kiểm tra", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                labelGV.Text = String.Format("{0:0.00}",
+                labelGV.Text = String.Format("{0:0,0.00}",
                     ((decimal)dataGridViewXem.Rows[x].Cells[4].Value -
                     (decimal)dataGridViewXem.Rows[x].Cells[5].Value) *
                     (decimal)dataGridViewXem.Rows[x].Cells[8].Value *
