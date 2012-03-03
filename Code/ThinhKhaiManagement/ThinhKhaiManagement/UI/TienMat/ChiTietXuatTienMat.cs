@@ -37,6 +37,7 @@ namespace ThinhKhaiManagement.UI.TienMat
             dataGridViewChiTietXuatTienMat.Columns[2].ValueType = typeof(Decimal);
             dataGridViewChiTietXuatTienMat.Columns[2].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
             dataGridViewChiTietXuatTienMat.Columns[2].DefaultCellStyle.Format = "N2";
+            labelTC.Text = String.Format("{0:0,0.00}", CalculateTotal());
         }
 
         private void ChiTietXuatTienMat_Load(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace ThinhKhaiManagement.UI.TienMat
             dataGridViewChiTietXuatTienMat.Columns[2].ValueType = typeof(Decimal);
             dataGridViewChiTietXuatTienMat.Columns[2].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
             dataGridViewChiTietXuatTienMat.Columns[2].DefaultCellStyle.Format = "N2";
+            labelTC.Text = String.Format("{0:0,0.00}", CalculateTotal());
         }
 
         private void dataGridViewChiTietXuatTienMat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -64,6 +66,16 @@ namespace ThinhKhaiManagement.UI.TienMat
                 tienMat.buttonLuu.Text = "Cập Nhật";
                 this.Dispose();
             }
+        }
+
+        private decimal CalculateTotal()
+        {
+            decimal k = 0;
+            for (int i = 0; i < dataGridViewChiTietXuatTienMat.Rows.Count; i++)
+            {
+                k += (decimal)dataGridViewChiTietXuatTienMat.Rows[i].Cells[2].Value;
+            }
+            return k;
         }
 
     }

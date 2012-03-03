@@ -31,6 +31,8 @@
             this.groupBoxXemChiTietXuatTienMat = new System.Windows.Forms.GroupBox();
             this.dateTimePickerNgayXuatTienMat = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewChiTietXuatTienMat = new System.Windows.Forms.DataGridView();
+            this.labelTC = new System.Windows.Forms.Label();
+            this.labelTongChi = new System.Windows.Forms.Label();
             this.groupBoxXemChiTietXuatTienMat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietXuatTienMat)).BeginInit();
             this.SuspendLayout();
@@ -38,6 +40,8 @@
             // groupBoxXemChiTietXuatTienMat
             // 
             this.groupBoxXemChiTietXuatTienMat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxXemChiTietXuatTienMat.Controls.Add(this.labelTC);
+            this.groupBoxXemChiTietXuatTienMat.Controls.Add(this.labelTongChi);
             this.groupBoxXemChiTietXuatTienMat.Controls.Add(this.dateTimePickerNgayXuatTienMat);
             this.groupBoxXemChiTietXuatTienMat.Controls.Add(this.dataGridViewChiTietXuatTienMat);
             this.groupBoxXemChiTietXuatTienMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -77,6 +81,30 @@
             this.dataGridViewChiTietXuatTienMat.TabIndex = 13;
             this.dataGridViewChiTietXuatTienMat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChiTietXuatTienMat_CellDoubleClick);
             // 
+            // labelTC
+            // 
+            this.labelTC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTC.AutoSize = true;
+            this.labelTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTC.ForeColor = System.Drawing.Color.Blue;
+            this.labelTC.Location = new System.Drawing.Point(253, 19);
+            this.labelTC.Name = "labelTC";
+            this.labelTC.Size = new System.Drawing.Size(24, 16);
+            this.labelTC.TabIndex = 18;
+            this.labelTC.Text = "##";
+            // 
+            // labelTongChi
+            // 
+            this.labelTongChi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTongChi.AutoSize = true;
+            this.labelTongChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongChi.ForeColor = System.Drawing.Color.Maroon;
+            this.labelTongChi.Location = new System.Drawing.Point(163, 19);
+            this.labelTongChi.Name = "labelTongChi";
+            this.labelTongChi.Size = new System.Drawing.Size(70, 16);
+            this.labelTongChi.TabIndex = 17;
+            this.labelTongChi.Text = "Tổng Chi";
+            // 
             // ChiTietXuatTienMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +119,7 @@
             this.Text = "Chi Tiết Xuất Tiền Mặt";
             this.Load += new System.EventHandler(this.ChiTietXuatTienMat_Load);
             this.groupBoxXemChiTietXuatTienMat.ResumeLayout(false);
+            this.groupBoxXemChiTietXuatTienMat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietXuatTienMat)).EndInit();
             this.ResumeLayout(false);
 
@@ -101,5 +130,7 @@
         private System.Windows.Forms.GroupBox groupBoxXemChiTietXuatTienMat;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayXuatTienMat;
         private System.Windows.Forms.DataGridView dataGridViewChiTietXuatTienMat;
+        public System.Windows.Forms.Label labelTC;
+        public System.Windows.Forms.Label labelTongChi;
     }
 }
