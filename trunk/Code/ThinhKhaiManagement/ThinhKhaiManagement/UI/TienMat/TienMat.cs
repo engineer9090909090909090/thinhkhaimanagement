@@ -185,7 +185,7 @@ namespace ThinhKhaiManagement.UI.TienMat
                         );
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 MessageBox.Show(string.Format("#Message: {0} \n#StackTrace: {1}", ex.Message, ex.StackTrace),
                                        "Lỗi hệ thống",

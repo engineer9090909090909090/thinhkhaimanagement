@@ -46,6 +46,7 @@
             this.buttonTim = new System.Windows.Forms.Button();
             this.errorProviderXuatMatHang = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxThanhToan = new System.Windows.Forms.GroupBox();
+            this.labelSpliter = new System.Windows.Forms.Label();
             this.buttonThanhTien = new System.Windows.Forms.Button();
             this.radSpinEditorKhuyenMai = new Telerik.WinControls.UI.RadSpinEditor();
             this.labelKhuyenMai = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.buttonLuu = new System.Windows.Forms.Button();
             this.radSpinEditorTyGiaUSD = new Telerik.WinControls.UI.RadSpinEditor();
             this.labelTyGiaUSD = new System.Windows.Forms.Label();
-            this.labelSpliter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTrongLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTruHot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTienHot)).BeginInit();
@@ -186,6 +186,7 @@
             // 
             this.radSpinEditorTrongLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorTrongLuong.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorTrongLuong.DecimalPlaces = 2;
             this.radSpinEditorTrongLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorTrongLuong.Location = new System.Drawing.Point(151, 81);
             this.radSpinEditorTrongLuong.Maximum = new decimal(new int[] {
@@ -211,6 +212,7 @@
             // 
             this.radSpinEditorTruHot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorTruHot.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorTruHot.DecimalPlaces = 2;
             this.radSpinEditorTruHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorTruHot.Location = new System.Drawing.Point(151, 109);
             this.radSpinEditorTruHot.Maximum = new decimal(new int[] {
@@ -236,6 +238,7 @@
             // 
             this.radSpinEditorTienHot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorTienHot.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorTienHot.DecimalPlaces = 2;
             this.radSpinEditorTienHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorTienHot.Location = new System.Drawing.Point(151, 141);
             this.radSpinEditorTienHot.Maximum = new decimal(new int[] {
@@ -261,6 +264,7 @@
             // 
             this.radSpinEditorTienCong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorTienCong.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorTienCong.DecimalPlaces = 2;
             this.radSpinEditorTienCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorTienCong.Location = new System.Drawing.Point(151, 171);
             this.radSpinEditorTienCong.Maximum = new decimal(new int[] {
@@ -333,6 +337,16 @@
             this.groupBoxThanhToan.TabStop = false;
             this.groupBoxThanhToan.Text = "Thanh Toán";
             // 
+            // labelSpliter
+            // 
+            this.labelSpliter.AutoSize = true;
+            this.labelSpliter.Location = new System.Drawing.Point(12, 206);
+            this.labelSpliter.Name = "labelSpliter";
+            this.labelSpliter.Size = new System.Drawing.Size(331, 13);
+            this.labelSpliter.TabIndex = 68;
+            this.labelSpliter.Text = "---------------------------------------------------------------------------------" +
+                "";
+            // 
             // buttonThanhTien
             // 
             this.buttonThanhTien.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -349,6 +363,7 @@
             // 
             this.radSpinEditorKhuyenMai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorKhuyenMai.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorKhuyenMai.DecimalPlaces = 2;
             this.radSpinEditorKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorKhuyenMai.Location = new System.Drawing.Point(151, 298);
             this.radSpinEditorKhuyenMai.Maximum = new decimal(new int[] {
@@ -418,6 +433,7 @@
             // 
             this.radSpinEditorDonGia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorDonGia.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorDonGia.DecimalPlaces = 2;
             this.radSpinEditorDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorDonGia.Location = new System.Drawing.Point(151, 238);
             this.radSpinEditorDonGia.Maximum = new decimal(new int[] {
@@ -441,6 +457,7 @@
             // 
             this.radSpinEditorThanhTien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorThanhTien.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorThanhTien.DecimalPlaces = 2;
             this.radSpinEditorThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorThanhTien.Location = new System.Drawing.Point(151, 330);
             this.radSpinEditorThanhTien.Maximum = new decimal(new int[] {
@@ -478,6 +495,7 @@
             // 
             this.radSpinEditorTyGiaUSD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorTyGiaUSD.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorTyGiaUSD.DecimalPlaces = 2;
             this.radSpinEditorTyGiaUSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorTyGiaUSD.Location = new System.Drawing.Point(151, 266);
             this.radSpinEditorTyGiaUSD.Maximum = new decimal(new int[] {
@@ -517,16 +535,6 @@
             this.labelTyGiaUSD.Size = new System.Drawing.Size(80, 16);
             this.labelTyGiaUSD.TabIndex = 66;
             this.labelTyGiaUSD.Text = "Tỷ Giá USD";
-            // 
-            // labelSpliter
-            // 
-            this.labelSpliter.AutoSize = true;
-            this.labelSpliter.Location = new System.Drawing.Point(12, 206);
-            this.labelSpliter.Name = "labelSpliter";
-            this.labelSpliter.Size = new System.Drawing.Size(331, 13);
-            this.labelSpliter.TabIndex = 68;
-            this.labelSpliter.Text = "---------------------------------------------------------------------------------" +
-                "";
             // 
             // XuatMatHang
             // 

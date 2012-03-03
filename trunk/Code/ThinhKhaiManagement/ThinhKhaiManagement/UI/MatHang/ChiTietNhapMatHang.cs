@@ -38,14 +38,6 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         private void ResetCollummFormat()
         {
-            dataGridViewChiTietNhapMatHang.Columns[2].ValueType = typeof(Decimal);
-            dataGridViewChiTietNhapMatHang.Columns[2].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
-            dataGridViewChiTietNhapMatHang.Columns[2].DefaultCellStyle.Format = "N2";
-
-            dataGridViewChiTietNhapMatHang.Columns[3].ValueType = typeof(Decimal);
-            dataGridViewChiTietNhapMatHang.Columns[3].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
-            dataGridViewChiTietNhapMatHang.Columns[3].DefaultCellStyle.Format = "N2";
-
             dataGridViewChiTietNhapMatHang.Columns[4].ValueType = typeof(Decimal);
             dataGridViewChiTietNhapMatHang.Columns[4].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
             dataGridViewChiTietNhapMatHang.Columns[4].DefaultCellStyle.Format = "N2";
@@ -61,27 +53,46 @@ namespace ThinhKhaiManagement.UI.MatHang
             dataGridViewChiTietNhapMatHang.Columns[7].ValueType = typeof(Decimal);
             dataGridViewChiTietNhapMatHang.Columns[7].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
             dataGridViewChiTietNhapMatHang.Columns[7].DefaultCellStyle.Format = "N2";
+
+            dataGridViewChiTietNhapMatHang.Columns[8].ValueType = typeof(Decimal);
+            dataGridViewChiTietNhapMatHang.Columns[8].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietNhapMatHang.Columns[8].DefaultCellStyle.Format = "N2";
+
+            dataGridViewChiTietNhapMatHang.Columns[9].ValueType = typeof(Decimal);
+            dataGridViewChiTietNhapMatHang.Columns[9].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietNhapMatHang.Columns[9].DefaultCellStyle.Format = "N2";
+
+            dataGridViewChiTietNhapMatHang.Columns[12].ValueType = typeof(Decimal);
+            dataGridViewChiTietNhapMatHang.Columns[12].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietNhapMatHang.Columns[12].DefaultCellStyle.Format = "N2";
+
+            dataGridViewChiTietNhapMatHang.Columns[13].ValueType = typeof(Decimal);
+            dataGridViewChiTietNhapMatHang.Columns[13].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietNhapMatHang.Columns[13].DefaultCellStyle.Format = "N2";
         }
 
         private void dataGridViewChiTietNhapMatHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            nhapMatHang.textBoxMaMatHang.Text = dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[0].Value.ToString();
-            nhapMatHang.comboBoxChatLieu.SelectedValue = dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[1].Value;
-            nhapMatHang.comboBoxLoaiMatHang.SelectedValue = dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[2].Value;
-            nhapMatHang.textBoxTenMatHang.Text = dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[3].Value.ToString();
-            nhapMatHang.radSpinEditorTrongLuong.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[4].Value;
-            nhapMatHang.radSpinEditorTruHot.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[5].Value;
-            nhapMatHang.radSpinEditorTienHot.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[6].Value;
-            nhapMatHang.radSpinEditorTienHotBan.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[13].Value;
-            nhapMatHang.radSpinEditorTienCong.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[7].Value;
-            nhapMatHang.radSpinEditorTienCongBan.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[12].Value;
-            nhapMatHang.radSpinEditorDonGia.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[8].Value;
-            nhapMatHang.radSpinEditorTyGiaUSD.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[9].Value;
-            nhapMatHang.Stt = Convert.ToInt32(dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[11].Value);
-            nhapMatHang.calculateThanhTien();
-            nhapMatHang.labelHeaderNhapMatHang.Text = "Sửa Phiếu Nhập Mặt Hàng";
-            nhapMatHang.buttonLuuNhapMatHang.Text = "Cập Nhật";
-            this.Dispose();
+            if (e.RowIndex >= 0)
+            {
+                nhapMatHang.textBoxMaMatHang.Text = dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[0].Value.ToString();
+                nhapMatHang.comboBoxChatLieu.SelectedValue = dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[1].Value;
+                nhapMatHang.comboBoxLoaiMatHang.SelectedValue = dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[2].Value;
+                nhapMatHang.textBoxTenMatHang.Text = dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[3].Value.ToString();
+                nhapMatHang.radSpinEditorTrongLuong.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[4].Value;
+                nhapMatHang.radSpinEditorTruHot.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[5].Value;
+                nhapMatHang.radSpinEditorTienHot.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[6].Value;
+                nhapMatHang.radSpinEditorTienHotBan.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[13].Value;
+                nhapMatHang.radSpinEditorTienCong.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[7].Value;
+                nhapMatHang.radSpinEditorTienCongBan.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[12].Value;
+                nhapMatHang.radSpinEditorDonGia.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[8].Value;
+                nhapMatHang.radSpinEditorTyGiaUSD.Value = (decimal)dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[9].Value;
+                nhapMatHang.Stt = Convert.ToInt32(dataGridViewChiTietNhapMatHang.Rows[e.RowIndex].Cells[11].Value);
+                nhapMatHang.calculateThanhTien();
+                nhapMatHang.labelHeaderNhapMatHang.Text = "Sửa Phiếu Nhập Mặt Hàng";
+                nhapMatHang.buttonLuuNhapMatHang.Text = "Cập Nhật";
+                this.Dispose();
+            }
         }
 
         private void dateTimePickerNgayNhapMatHang_ValueChanged(object sender, EventArgs e)
