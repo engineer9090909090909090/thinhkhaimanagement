@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using ThinhKhaiManagement.Common;
 using DatabaseAccesser;
+using System.Globalization;
 
 namespace ThinhKhaiManagement.UI.NgoaiTe
 {
@@ -37,6 +38,13 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         private void ChiTietNhapNgoaiTe_Load(object sender, EventArgs e)
         {
             dataGridViewChiTietNhapNgoaiTe.DataSource = ShowNhapNgoaiTeByNgay(dateTimePickerNgayNhapNgoaiTe.Value);
+            dataGridViewChiTietNhapNgoaiTe.Columns[3].ValueType = typeof(Decimal);
+            dataGridViewChiTietNhapNgoaiTe.Columns[3].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietNhapNgoaiTe.Columns[3].DefaultCellStyle.Format = "N2";
+
+            dataGridViewChiTietNhapNgoaiTe.Columns[4].ValueType = typeof(Decimal);
+            dataGridViewChiTietNhapNgoaiTe.Columns[4].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietNhapNgoaiTe.Columns[4].DefaultCellStyle.Format = "N2";
         }
 
         private void dateTimePickerNgayNhapNgoaiTe_ValueChanged(object sender, EventArgs e)
@@ -46,18 +54,20 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         private void dataGridViewChiTietNhapNgoaiTe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            nhapNgoaiTeObject.comboBoxLoaiNgoaiTeNhap.SelectedValue = dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[1].Value.ToString();
-            nhapNgoaiTeObject.radSpinEditorSoLuongNhapNgoaiTe.Value = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
-            nhapNgoaiTeObject.radSpinEditorDonGiaNhapNgoaiTe.Value = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[4].Value;
-            nhapNgoaiTeObject.SoLuongOld = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
-            nhapNgoaiTeObject.DonGiaOld = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[4].Value;
-            nhapNgoaiTeObject.textBoxGhiChuNhapNgoaiTe.Text = dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[6].Value.ToString();
-            nhapNgoaiTeObject.MaNhapNgoaiTe = Convert.ToInt32(dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[0].Value);
-            nhapNgoaiTeObject.labelHeaderNhapNgoaiTe.Text = "Sửa Phiếu Nhập Ngoại Tệ";
-            nhapNgoaiTeObject.buttonLuuNhapNgoaiTe.Text = "Cập nhật";
-            nhapNgoaiTeObject.ngay = (DateTime)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[5].Value;
-
-            this.Dispose();
+            if (e.RowIndex >= 0)
+            {
+                nhapNgoaiTeObject.comboBoxLoaiNgoaiTeNhap.SelectedValue = dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[1].Value.ToString();
+                nhapNgoaiTeObject.radSpinEditorSoLuongNhapNgoaiTe.Value = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
+                nhapNgoaiTeObject.radSpinEditorDonGiaNhapNgoaiTe.Value = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[4].Value;
+                nhapNgoaiTeObject.SoLuongOld = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
+                nhapNgoaiTeObject.DonGiaOld = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[4].Value;
+                nhapNgoaiTeObject.textBoxGhiChuNhapNgoaiTe.Text = dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[6].Value.ToString();
+                nhapNgoaiTeObject.MaNhapNgoaiTe = Convert.ToInt32(dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[0].Value);
+                nhapNgoaiTeObject.labelHeaderNhapNgoaiTe.Text = "Sửa Phiếu Nhập Ngoại Tệ";
+                nhapNgoaiTeObject.buttonLuuNhapNgoaiTe.Text = "Cập nhật";
+                nhapNgoaiTeObject.ngay = (DateTime)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[5].Value;
+                this.Dispose();
+            }
         }
 
             
