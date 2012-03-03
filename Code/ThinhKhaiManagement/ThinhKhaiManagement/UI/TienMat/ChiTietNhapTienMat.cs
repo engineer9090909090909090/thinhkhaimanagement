@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using ThinhKhaiManagement.Common;
 using DatabaseAccesser;
+using System.Globalization;
 
 namespace ThinhKhaiManagement.UI.TienMat
 {
@@ -32,6 +33,9 @@ namespace ThinhKhaiManagement.UI.TienMat
                                                                         new KeyValuePair<object,int> (dateTimePickerNgayNhapTienMat.Value,(int)ParameterType.String)
                                                                     },
                                                                     (int)ExecuteType.Query);
+            dataGridViewChiTietNhapTienMat.Columns[2].ValueType = typeof(Decimal);
+            dataGridViewChiTietNhapTienMat.Columns[2].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietNhapTienMat.Columns[2].DefaultCellStyle.Format = "N2";
         }
 
         private void dateTimePickerNgayNhapTienMat_ValueChanged(object sender, EventArgs e)
@@ -42,6 +46,9 @@ namespace ThinhKhaiManagement.UI.TienMat
                                                                         new KeyValuePair<object,int> (dateTimePickerNgayNhapTienMat.Value,(int)ParameterType.String)
                                                                     },
                                                                     (int)ExecuteType.Query);
+            dataGridViewChiTietNhapTienMat.Columns[2].ValueType = typeof(Decimal);
+            dataGridViewChiTietNhapTienMat.Columns[2].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietNhapTienMat.Columns[2].DefaultCellStyle.Format = "N2";
         }
 
         private void dataGridViewChiTietNhapTienMat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
