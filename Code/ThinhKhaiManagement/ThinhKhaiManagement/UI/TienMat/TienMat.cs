@@ -156,61 +156,83 @@ namespace ThinhKhaiManagement.UI.TienMat
 
         private bool Save()
         {
-            if (comboBoxXuLy.SelectedIndex == 0)
+            try
             {
-                return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                    StoreProcedureNames.constNhapTienMat_Insert,
-                    new Collection<KeyValuePair<object, int>>{
+                if (comboBoxXuLy.SelectedIndex == 0)
+                {
+                    return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                        StoreProcedureNames.constNhapTienMat_Insert,
+                        new Collection<KeyValuePair<object, int>>{
                         new KeyValuePair<object,int>(DateTime.Today,(int)ParameterType.String),
                         new KeyValuePair<object,int>(radSpinEditorTienMat.Value,(int)ParameterType.NonString),
                         new KeyValuePair<object,int>(textBoxLyDo.Text,(int)ParameterType.String),
                         new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
                     },
-                    (int)ExecuteType.NonQuery
-                    );
+                        (int)ExecuteType.NonQuery
+                        );
+                }
+                else
+                {
+                    return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                        StoreProcedureNames.constXuatTienMat_Insert,
+                        new Collection<KeyValuePair<object, int>>{
+                        new KeyValuePair<object,int>(DateTime.Today,(int)ParameterType.String),
+                        new KeyValuePair<object,int>(radSpinEditorTienMat.Value,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(textBoxLyDo.Text,(int)ParameterType.String),
+                        new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
+                    },
+                        (int)ExecuteType.NonQuery
+                        );
+                }
             }
-            else
+            catch (Exception e)
             {
-                return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                    StoreProcedureNames.constXuatTienMat_Insert,
-                    new Collection<KeyValuePair<object, int>>{
-                        new KeyValuePair<object,int>(DateTime.Today,(int)ParameterType.String),
-                        new KeyValuePair<object,int>(radSpinEditorTienMat.Value,(int)ParameterType.NonString),
-                        new KeyValuePair<object,int>(textBoxLyDo.Text,(int)ParameterType.String),
-                        new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
-                    },
-                    (int)ExecuteType.NonQuery
-                    );
+                MessageBox.Show(string.Format("#Message: {0} \n#StackTrace: {1}", ex.Message, ex.StackTrace),
+                                       "Lỗi hệ thống",
+                                       MessageBoxButtons.OK,
+                                       MessageBoxIcon.Error);
+                return false;
             }
         }
 
         private bool Update()
         {
-            if (comboBoxXuLy.SelectedIndex == 0)
+            try
             {
-                return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                    StoreProcedureNames.constNhapTienMat_Update,
-                    new Collection<KeyValuePair<object, int>>{
+                if (comboBoxXuLy.SelectedIndex == 0)
+                {
+                    return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                        StoreProcedureNames.constNhapTienMat_Update,
+                        new Collection<KeyValuePair<object, int>>{
                         new KeyValuePair<object,int>(MaTemp,(int)ParameterType.NonString),
                         new KeyValuePair<object,int>(radSpinEditorTienMat.Value,(int)ParameterType.NonString),
                         new KeyValuePair<object,int>(textBoxLyDo.Text,(int)ParameterType.String),
                         new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
                     },
-                    (int)ExecuteType.NonQuery
-                    );
+                        (int)ExecuteType.NonQuery
+                        );
+                }
+                else
+                {
+                    return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                        StoreProcedureNames.constXuatTienMat_Update,
+                        new Collection<KeyValuePair<object, int>>{
+                        new KeyValuePair<object,int>(MaTemp,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(radSpinEditorTienMat.Value,(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>(textBoxLyDo.Text,(int)ParameterType.String),
+                        new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
+                    },
+                        (int)ExecuteType.NonQuery
+                        );
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return (bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                    StoreProcedureNames.constXuatTienMat_Update,
-                    new Collection<KeyValuePair<object, int>>{
-                        new KeyValuePair<object,int>(MaTemp,(int)ParameterType.NonString),
-                        new KeyValuePair<object,int>(radSpinEditorTienMat.Value,(int)ParameterType.NonString),
-                        new KeyValuePair<object,int>(textBoxLyDo.Text,(int)ParameterType.String),
-                        new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
-                    },
-                    (int)ExecuteType.NonQuery
-                    );
+                MessageBox.Show(string.Format("#Message: {0} \n#StackTrace: {1}", ex.Message, ex.StackTrace),
+                                           "Lỗi hệ thống",
+                                           MessageBoxButtons.OK,
+                                           MessageBoxIcon.Error);
+                return false;
             }
         }
 
