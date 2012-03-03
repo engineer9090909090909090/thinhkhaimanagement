@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBoxXemChiTietNhapTienMat = new System.Windows.Forms.GroupBox();
+            this.labelTT = new System.Windows.Forms.Label();
+            this.labelTongThu = new System.Windows.Forms.Label();
             this.dateTimePickerNgayNhapTienMat = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewChiTietNhapTienMat = new System.Windows.Forms.DataGridView();
             this.groupBoxXemChiTietNhapTienMat.SuspendLayout();
@@ -38,6 +40,8 @@
             // groupBoxXemChiTietNhapTienMat
             // 
             this.groupBoxXemChiTietNhapTienMat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxXemChiTietNhapTienMat.Controls.Add(this.labelTT);
+            this.groupBoxXemChiTietNhapTienMat.Controls.Add(this.labelTongThu);
             this.groupBoxXemChiTietNhapTienMat.Controls.Add(this.dateTimePickerNgayNhapTienMat);
             this.groupBoxXemChiTietNhapTienMat.Controls.Add(this.dataGridViewChiTietNhapTienMat);
             this.groupBoxXemChiTietNhapTienMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -47,6 +51,30 @@
             this.groupBoxXemChiTietNhapTienMat.TabIndex = 16;
             this.groupBoxXemChiTietNhapTienMat.TabStop = false;
             this.groupBoxXemChiTietNhapTienMat.Text = "Chi Tiết";
+            // 
+            // labelTT
+            // 
+            this.labelTT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTT.AutoSize = true;
+            this.labelTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTT.ForeColor = System.Drawing.Color.Blue;
+            this.labelTT.Location = new System.Drawing.Point(276, 19);
+            this.labelTT.Name = "labelTT";
+            this.labelTT.Size = new System.Drawing.Size(24, 16);
+            this.labelTT.TabIndex = 16;
+            this.labelTT.Text = "##";
+            // 
+            // labelTongThu
+            // 
+            this.labelTongThu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTongThu.AutoSize = true;
+            this.labelTongThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongThu.ForeColor = System.Drawing.Color.Maroon;
+            this.labelTongThu.Location = new System.Drawing.Point(186, 19);
+            this.labelTongThu.Name = "labelTongThu";
+            this.labelTongThu.Size = new System.Drawing.Size(74, 16);
+            this.labelTongThu.TabIndex = 15;
+            this.labelTongThu.Text = "Tổng Thu";
             // 
             // dateTimePickerNgayNhapTienMat
             // 
@@ -91,6 +119,7 @@
             this.Text = "Chi Tiết Nhập Tiền Mặt";
             this.Load += new System.EventHandler(this.ChiTietNhapTienMat_Load);
             this.groupBoxXemChiTietNhapTienMat.ResumeLayout(false);
+            this.groupBoxXemChiTietNhapTienMat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietNhapTienMat)).EndInit();
             this.ResumeLayout(false);
 
@@ -101,5 +130,7 @@
         private System.Windows.Forms.GroupBox groupBoxXemChiTietNhapTienMat;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayNhapTienMat;
         private System.Windows.Forms.DataGridView dataGridViewChiTietNhapTienMat;
+        public System.Windows.Forms.Label labelTT;
+        public System.Windows.Forms.Label labelTongThu;
     }
 }
