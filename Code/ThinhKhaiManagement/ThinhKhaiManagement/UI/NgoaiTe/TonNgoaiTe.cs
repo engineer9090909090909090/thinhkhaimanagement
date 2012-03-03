@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using ThinhKhaiManagement.Common;
 using DatabaseAccesser;
+using System.Globalization;
 
 namespace ThinhKhaiManagement.UI.NgoaiTe
 {
@@ -35,6 +36,13 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
             // do du lieu vao luoi
             dataGridViewTonNgoaiTe.DataSource = ShowTonNgoaiTe();
+            dataGridViewTonNgoaiTe.Columns[3].ValueType = typeof(Decimal);
+            dataGridViewTonNgoaiTe.Columns[3].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewTonNgoaiTe.Columns[3].DefaultCellStyle.Format = "N2";
+
+            dataGridViewTonNgoaiTe.Columns[4].ValueType = typeof(Decimal);
+            dataGridViewTonNgoaiTe.Columns[4].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewTonNgoaiTe.Columns[4].DefaultCellStyle.Format = "N2";
         }
 
         private void TonNgoaiTe_Activated(object sender, EventArgs e)
