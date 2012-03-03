@@ -45,7 +45,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.labelNgayTonNgoaiTe.AutoSize = true;
             this.labelNgayTonNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayTonNgoaiTe.ForeColor = System.Drawing.Color.Blue;
-            this.labelNgayTonNgoaiTe.Location = new System.Drawing.Point(9, 17);
+            this.labelNgayTonNgoaiTe.Location = new System.Drawing.Point(9, 13);
             this.labelNgayTonNgoaiTe.Name = "labelNgayTonNgoaiTe";
             this.labelNgayTonNgoaiTe.Size = new System.Drawing.Size(76, 15);
             this.labelNgayTonNgoaiTe.TabIndex = 2;
@@ -57,7 +57,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.labelHeaderTồnNgoaiTe.AutoSize = true;
             this.labelHeaderTồnNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeaderTồnNgoaiTe.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHeaderTồnNgoaiTe.Location = new System.Drawing.Point(157, 28);
+            this.labelHeaderTồnNgoaiTe.Location = new System.Drawing.Point(157, 38);
             this.labelHeaderTồnNgoaiTe.Name = "labelHeaderTồnNgoaiTe";
             this.labelHeaderTồnNgoaiTe.Size = new System.Drawing.Size(254, 31);
             this.labelHeaderTồnNgoaiTe.TabIndex = 3;
