@@ -68,6 +68,9 @@ namespace ThinhKhaiManagement.UI.MatHang
             radSpinEditorDonGia.Value = 0;
             radSpinEditorTyGiaUSD.Value = 1;
             radSpinEditorThanhTien.Value = 0;
+            labelHeaderNhapMatHang.Text = "Phiếu Nhập Mặt Hàng";
+            buttonLuuNhapMatHang.Text = "Lưu";
+            Stt = 0;
             textBoxMaMatHang.Focus();
         }
 
@@ -108,12 +111,8 @@ namespace ThinhKhaiManagement.UI.MatHang
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
-
-                    labelHeaderNhapMatHang.Text = "Phiếu Nhập Mặt Hàng";
-                    buttonLuuNhapMatHang.Text = "Lưu";
-                    Stt = 0;
-                    buttonLamSachNhapMatHang_Click(sender, e);
                 }
+                buttonLamSachNhapMatHang_Click(sender, e);
             }
         }
 

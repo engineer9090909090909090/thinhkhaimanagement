@@ -67,6 +67,9 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             radSpinEditorDonGiaNhapNgoaiTe.Value = 0;
             radSpinEditorSoLuongNhapNgoaiTe.Value = 0;
             textBoxGhiChuNhapNgoaiTe.Text = string.Empty;
+            labelHeaderNhapNgoaiTe.Text = "Phiếu Nhập Ngoại Tệ";
+            buttonLuuNhapNgoaiTe.Text = "Lưu";
+            MaNhapNgoaiTe = 0;
         }
 
         private void buttonLuuNhapNgoaiTe_Click(object sender, EventArgs e)
@@ -86,9 +89,6 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                         MessageBox.Show("Cập nhật phiếu thành công", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show("cập nhật phiếu thất bại", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);  
-                    labelHeaderNhapNgoaiTe.Text = "Phiếu Nhập Ngoại Tệ";
-                    buttonLuuNhapNgoaiTe.Text = "Lưu";
-                    MaNhapNgoaiTe = 0;
                 }
                 buttonLamSachNhapNgoaiTe_Click(sender, e);
             }

@@ -59,16 +59,19 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         private void dataGridViewTonNgoaiTe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ((decimal)dataGridViewTonNgoaiTe.Rows[e.RowIndex].Cells[3].Value != 0)
+            if (e.RowIndex >= 0)
             {
-                XuatNgoaiTe xuatNgoaiTe = new XuatNgoaiTe();
-                xuatNgoaiTe.TonNgoaiTe = this;
-                xuatNgoaiTe.RowsIndexSelect = e.RowIndex;
-                xuatNgoaiTe.ShowDialog();
-            }
-            else
-            { 
-                MessageBox.Show("Ngoại tệ không còn hàng để xuất.", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if ((decimal)dataGridViewTonNgoaiTe.Rows[e.RowIndex].Cells[3].Value != 0)
+                {
+                    XuatNgoaiTe xuatNgoaiTe = new XuatNgoaiTe();
+                    xuatNgoaiTe.TonNgoaiTe = this;
+                    xuatNgoaiTe.RowsIndexSelect = e.RowIndex;
+                    xuatNgoaiTe.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Ngoại tệ không còn hàng để xuất.", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
