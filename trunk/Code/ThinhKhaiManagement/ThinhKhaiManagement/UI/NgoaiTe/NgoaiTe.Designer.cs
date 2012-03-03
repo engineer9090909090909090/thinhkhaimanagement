@@ -52,6 +52,7 @@
             this.dataGridViewNT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewNT.Location = new System.Drawing.Point(13, 84);
             this.dataGridViewNT.Name = "dataGridViewNT";
+            this.dataGridViewNT.ReadOnly = true;
             this.dataGridViewNT.Size = new System.Drawing.Size(378, 257);
             this.dataGridViewNT.TabIndex = 0;
             this.dataGridViewNT.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNT_CellDoubleClick);

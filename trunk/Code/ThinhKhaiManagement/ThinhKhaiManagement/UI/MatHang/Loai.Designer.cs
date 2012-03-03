@@ -120,6 +120,7 @@
             this.dataGridViewLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLoai.Location = new System.Drawing.Point(9, 78);
             this.dataGridViewLoai.Name = "dataGridViewLoai";
+            this.dataGridViewLoai.ReadOnly = true;
             this.dataGridViewLoai.Size = new System.Drawing.Size(378, 257);
             this.dataGridViewLoai.TabIndex = 14;
             this.dataGridViewLoai.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLoai_CellDoubleClick);
