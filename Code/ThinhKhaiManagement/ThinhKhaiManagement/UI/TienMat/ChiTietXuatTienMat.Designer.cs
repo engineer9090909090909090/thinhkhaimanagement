@@ -40,8 +40,8 @@
             this.groupBoxXemChiTietXuatTienMat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxXemChiTietXuatTienMat.Controls.Add(this.dateTimePickerNgayXuatTienMat);
             this.groupBoxXemChiTietXuatTienMat.Controls.Add(this.dataGridViewChiTietXuatTienMat);
-            this.groupBoxXemChiTietXuatTienMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxXemChiTietXuatTienMat.Location = new System.Drawing.Point(8, 3);
+            this.groupBoxXemChiTietXuatTienMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxXemChiTietXuatTienMat.Location = new System.Drawing.Point(9, 3);
             this.groupBoxXemChiTietXuatTienMat.Name = "groupBoxXemChiTietXuatTienMat";
             this.groupBoxXemChiTietXuatTienMat.Size = new System.Drawing.Size(432, 310);
             this.groupBoxXemChiTietXuatTienMat.TabIndex = 16;
