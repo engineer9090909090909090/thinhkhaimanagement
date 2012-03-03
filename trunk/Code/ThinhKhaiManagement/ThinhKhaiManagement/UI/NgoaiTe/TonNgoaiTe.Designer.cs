@@ -34,6 +34,8 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.labelHeaderTồnNgoaiTe = new System.Windows.Forms.Label();
             this.dataGridViewTonNgoaiTe = new System.Windows.Forms.DataGridView();
             this.buttonCapNhatTonNgoaiTe = new System.Windows.Forms.Button();
+            this.labelTGV = new System.Windows.Forms.Label();
+            this.labelTongGiaVon = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTonNgoaiTe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.labelNgayTonNgoaiTe.AutoSize = true;
             this.labelNgayTonNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayTonNgoaiTe.ForeColor = System.Drawing.Color.Blue;
-            this.labelNgayTonNgoaiTe.Location = new System.Drawing.Point(9, 9);
+            this.labelNgayTonNgoaiTe.Location = new System.Drawing.Point(9, 17);
             this.labelNgayTonNgoaiTe.Name = "labelNgayTonNgoaiTe";
             this.labelNgayTonNgoaiTe.Size = new System.Drawing.Size(76, 15);
             this.labelNgayTonNgoaiTe.TabIndex = 2;
@@ -55,7 +57,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.labelHeaderTồnNgoaiTe.AutoSize = true;
             this.labelHeaderTồnNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeaderTồnNgoaiTe.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHeaderTồnNgoaiTe.Location = new System.Drawing.Point(160, 36);
+            this.labelHeaderTồnNgoaiTe.Location = new System.Drawing.Point(157, 28);
             this.labelHeaderTồnNgoaiTe.Name = "labelHeaderTồnNgoaiTe";
             this.labelHeaderTồnNgoaiTe.Size = new System.Drawing.Size(254, 31);
             this.labelHeaderTồnNgoaiTe.TabIndex = 3;
@@ -70,7 +72,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.dataGridViewTonNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewTonNgoaiTe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTonNgoaiTe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewTonNgoaiTe.Location = new System.Drawing.Point(12, 82);
+            this.dataGridViewTonNgoaiTe.Location = new System.Drawing.Point(12, 111);
             this.dataGridViewTonNgoaiTe.Name = "dataGridViewTonNgoaiTe";
             this.dataGridViewTonNgoaiTe.ReadOnly = true;
             this.dataGridViewTonNgoaiTe.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -80,7 +82,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             // 
             // buttonCapNhatTonNgoaiTe
             // 
-            this.buttonCapNhatTonNgoaiTe.Location = new System.Drawing.Point(484, 46);
+            this.buttonCapNhatTonNgoaiTe.Location = new System.Drawing.Point(489, 36);
             this.buttonCapNhatTonNgoaiTe.Name = "buttonCapNhatTonNgoaiTe";
             this.buttonCapNhatTonNgoaiTe.Size = new System.Drawing.Size(75, 23);
             this.buttonCapNhatTonNgoaiTe.TabIndex = 5;
@@ -88,11 +90,37 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.buttonCapNhatTonNgoaiTe.UseVisualStyleBackColor = true;
             this.buttonCapNhatTonNgoaiTe.Click += new System.EventHandler(this.buttonCapNhatTonNgoaiTe_Click);
             // 
+            // labelTGV
+            // 
+            this.labelTGV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTGV.AutoSize = true;
+            this.labelTGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTGV.ForeColor = System.Drawing.Color.Blue;
+            this.labelTGV.Location = new System.Drawing.Point(271, 80);
+            this.labelTGV.Name = "labelTGV";
+            this.labelTGV.Size = new System.Drawing.Size(24, 16);
+            this.labelTGV.TabIndex = 13;
+            this.labelTGV.Text = "##";
+            // 
+            // labelTongGiaVon
+            // 
+            this.labelTongGiaVon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTongGiaVon.AutoSize = true;
+            this.labelTongGiaVon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongGiaVon.ForeColor = System.Drawing.Color.Maroon;
+            this.labelTongGiaVon.Location = new System.Drawing.Point(12, 80);
+            this.labelTongGiaVon.Name = "labelTongGiaVon";
+            this.labelTongGiaVon.Size = new System.Drawing.Size(103, 16);
+            this.labelTongGiaVon.TabIndex = 12;
+            this.labelTongGiaVon.Text = "Tổng Giá Vốn";
+            // 
             // TonNgoaiTe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 357);
+            this.ClientSize = new System.Drawing.Size(576, 387);
+            this.Controls.Add(this.labelTGV);
+            this.Controls.Add(this.labelTongGiaVon);
             this.Controls.Add(this.buttonCapNhatTonNgoaiTe);
             this.Controls.Add(this.dataGridViewTonNgoaiTe);
             this.Controls.Add(this.labelHeaderTồnNgoaiTe);
@@ -113,10 +141,12 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         #endregion
 
-        private System.Windows.Forms.Label labelNgayTonNgoaiTe;
         public System.Windows.Forms.Label labelHeaderTồnNgoaiTe;
         public System.Windows.Forms.DataGridView dataGridViewTonNgoaiTe;
-        private System.Windows.Forms.Button buttonCapNhatTonNgoaiTe;
+        public System.Windows.Forms.Label labelNgayTonNgoaiTe;
+        public System.Windows.Forms.Button buttonCapNhatTonNgoaiTe;
+        public System.Windows.Forms.Label labelTGV;
+        public System.Windows.Forms.Label labelTongGiaVon;
 
 
 

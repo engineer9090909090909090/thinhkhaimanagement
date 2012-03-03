@@ -43,6 +43,8 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             dataGridViewTonNgoaiTe.Columns[4].ValueType = typeof(Decimal);
             dataGridViewTonNgoaiTe.Columns[4].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
             dataGridViewTonNgoaiTe.Columns[4].DefaultCellStyle.Format = "N2";
+
+            labelTGV.Text = labelTGV.Text = String.Format("{0:0.00}", CalculateTotal());
         }
 
         private void TonNgoaiTe_Activated(object sender, EventArgs e)
@@ -87,6 +89,17 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                                                 (int)ExecuteType.Query);
         }
 
+        private decimal CalculateTotal() 
+        { 
+            decimal k = 0;
+            for (int i = 0; i < dataGridViewTonNgoaiTe.Rows.Count;i++ )
+            {
+                k += (decimal)dataGridViewTonNgoaiTe.Rows[i].Cells[3].Value *
+                    (decimal)dataGridViewTonNgoaiTe.Rows[i].Cells[4].Value;
+            }
+            return k;
+        }
+
         #endregion
 
         #region public methods
@@ -95,6 +108,14 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         {
             // cap nhat lieu vao luoi
             dataGridViewTonNgoaiTe.DataSource = ShowTonNgoaiTe();
+            dataGridViewTonNgoaiTe.Columns[3].ValueType = typeof(Decimal);
+            dataGridViewTonNgoaiTe.Columns[3].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewTonNgoaiTe.Columns[3].DefaultCellStyle.Format = "N2";
+
+            dataGridViewTonNgoaiTe.Columns[4].ValueType = typeof(Decimal);
+            dataGridViewTonNgoaiTe.Columns[4].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewTonNgoaiTe.Columns[4].DefaultCellStyle.Format = "N2";
+            labelTGV.Text = labelTGV.Text = String.Format("{0:0,0.00}", CalculateTotal());
         }
 
         #endregion
