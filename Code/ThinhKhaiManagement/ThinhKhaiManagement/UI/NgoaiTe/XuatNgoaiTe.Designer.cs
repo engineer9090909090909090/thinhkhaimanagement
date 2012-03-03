@@ -142,6 +142,7 @@
             // 
             this.radSpinEditorSoLuongXuatNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSoLuongXuatNgoaiTe.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorSoLuongXuatNgoaiTe.DecimalPlaces = 2;
             this.radSpinEditorSoLuongXuatNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorSoLuongXuatNgoaiTe.Location = new System.Drawing.Point(148, 58);
             this.radSpinEditorSoLuongXuatNgoaiTe.Maximum = new decimal(new int[] {
@@ -165,6 +166,7 @@
             // 
             this.radSpinEditorDonGiaXuatNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorDonGiaXuatNgoaiTe.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorDonGiaXuatNgoaiTe.DecimalPlaces = 2;
             this.radSpinEditorDonGiaXuatNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorDonGiaXuatNgoaiTe.Location = new System.Drawing.Point(148, 88);
             this.radSpinEditorDonGiaXuatNgoaiTe.Maximum = new decimal(new int[] {
