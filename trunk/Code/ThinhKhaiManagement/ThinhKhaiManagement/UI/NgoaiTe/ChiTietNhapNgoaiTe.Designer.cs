@@ -40,7 +40,7 @@
             this.groupBoxXemChiTietNhapNgoaiTe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxXemChiTietNhapNgoaiTe.Controls.Add(this.dateTimePickerNgayNhapNgoaiTe);
             this.groupBoxXemChiTietNhapNgoaiTe.Controls.Add(this.dataGridViewChiTietNhapNgoaiTe);
-            this.groupBoxXemChiTietNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxXemChiTietNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxXemChiTietNhapNgoaiTe.Location = new System.Drawing.Point(5, 12);
             this.groupBoxXemChiTietNhapNgoaiTe.Name = "groupBoxXemChiTietNhapNgoaiTe";
             this.groupBoxXemChiTietNhapNgoaiTe.Size = new System.Drawing.Size(656, 310);
