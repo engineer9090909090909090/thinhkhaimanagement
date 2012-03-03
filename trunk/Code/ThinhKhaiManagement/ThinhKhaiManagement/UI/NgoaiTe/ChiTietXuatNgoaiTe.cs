@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using ThinhKhaiManagement.Common;
 using DatabaseAccesser;
 using System.Collections.ObjectModel;
+using System.Globalization;
 
 namespace ThinhKhaiManagement.UI.NgoaiTe
 {
@@ -36,31 +37,45 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         private void dataGridViewChiTietXuatNgoaiTe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            xuatNgoaiTe.radSpinEditorSoLuongXuatNgoaiTe.Maximum = xuatNgoaiTe.radSpinEditorSoLuongXuatNgoaiTe.Maximum + (decimal)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
-
-            xuatNgoaiTe.textBoxMaLoaiNgoaiTeXuat.Text = dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[1].Value.ToString();
-            xuatNgoaiTe.textBoxTenLoaiNgoaiTeXuat.Text = dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[2].Value.ToString();
-            xuatNgoaiTe.radSpinEditorSoLuongXuatNgoaiTe.Value = (decimal)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
-            xuatNgoaiTe.SoLuongOld = (decimal)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
-            xuatNgoaiTe.radSpinEditorDonGiaXuatNgoaiTe.Value = (decimal)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[4].Value;
-            xuatNgoaiTe.textBoxGhiChuXuatNgoaiTe.Text = dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[6].Value.ToString();
-            xuatNgoaiTe.Ngay = (DateTime)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[5].Value;
-            xuatNgoaiTe.labelHeaderXuatNgoaiTe.Text = "Sửa Phiếu Xuất Ngoại Tệ";
-            xuatNgoaiTe.buttonLuuXuatNgoaiTe.Text = "Cập nhật";
-            xuatNgoaiTe.MaXuatNgoaiTe = Convert.ToInt32(dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[0].Value);
-            
-
-            this.Dispose();
+            if (e.RowIndex >= 0)
+            {
+                xuatNgoaiTe.radSpinEditorSoLuongXuatNgoaiTe.Maximum = xuatNgoaiTe.radSpinEditorSoLuongXuatNgoaiTe.Maximum + (decimal)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
+                xuatNgoaiTe.textBoxMaLoaiNgoaiTeXuat.Text = dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[1].Value.ToString();
+                xuatNgoaiTe.textBoxTenLoaiNgoaiTeXuat.Text = dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[2].Value.ToString();
+                xuatNgoaiTe.radSpinEditorSoLuongXuatNgoaiTe.Value = (decimal)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
+                xuatNgoaiTe.SoLuongOld = (decimal)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
+                xuatNgoaiTe.radSpinEditorDonGiaXuatNgoaiTe.Value = (decimal)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[4].Value;
+                xuatNgoaiTe.textBoxGhiChuXuatNgoaiTe.Text = dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[6].Value.ToString();
+                xuatNgoaiTe.Ngay = (DateTime)dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[5].Value;
+                xuatNgoaiTe.labelHeaderXuatNgoaiTe.Text = "Sửa Phiếu Xuất Ngoại Tệ";
+                xuatNgoaiTe.buttonLuuXuatNgoaiTe.Text = "Cập nhật";
+                xuatNgoaiTe.MaXuatNgoaiTe = Convert.ToInt32(dataGridViewChiTietXuatNgoaiTe.Rows[e.RowIndex].Cells[0].Value);
+                this.Dispose();
+            }
         }
 
         private void ChiTietXuatNgoaiTe_Load(object sender, EventArgs e)
         {
             dataGridViewChiTietXuatNgoaiTe.DataSource = ShowXuatNgoaiTeByNgayAndMaNT(dateTimePickerNgayXuatNgoaiTe.Value,Int32.Parse(xuatNgoaiTe.textBoxMaLoaiNgoaiTeXuat.Text));
+            dataGridViewChiTietXuatNgoaiTe.Columns[3].ValueType = typeof(Decimal);
+            dataGridViewChiTietXuatNgoaiTe.Columns[3].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietXuatNgoaiTe.Columns[3].DefaultCellStyle.Format = "N2";
+
+            dataGridViewChiTietXuatNgoaiTe.Columns[4].ValueType = typeof(Decimal);
+            dataGridViewChiTietXuatNgoaiTe.Columns[4].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietXuatNgoaiTe.Columns[4].DefaultCellStyle.Format = "N2";
         }
 
         private void dateTimePickerNgayXuatNgoaiTe_ValueChanged(object sender, EventArgs e)
         {
             dataGridViewChiTietXuatNgoaiTe.DataSource = ShowXuatNgoaiTeByNgayAndMaNT(dateTimePickerNgayXuatNgoaiTe.Value, Int32.Parse(xuatNgoaiTe.textBoxMaLoaiNgoaiTeXuat.Text));
+            dataGridViewChiTietXuatNgoaiTe.Columns[3].ValueType = typeof(Decimal);
+            dataGridViewChiTietXuatNgoaiTe.Columns[3].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietXuatNgoaiTe.Columns[3].DefaultCellStyle.Format = "N2";
+
+            dataGridViewChiTietXuatNgoaiTe.Columns[4].ValueType = typeof(Decimal);
+            dataGridViewChiTietXuatNgoaiTe.Columns[4].DefaultCellStyle.FormatProvider = CultureInfo.CreateSpecificCulture("en-US");
+            dataGridViewChiTietXuatNgoaiTe.Columns[4].DefaultCellStyle.Format = "N2";
         }
 
         #endregion
