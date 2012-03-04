@@ -56,13 +56,13 @@
             // 
             this.labelTT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTT.AutoSize = true;
-            this.labelTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTT.ForeColor = System.Drawing.Color.Blue;
-            this.labelTT.Location = new System.Drawing.Point(276, 19);
+            this.labelTT.Location = new System.Drawing.Point(276, 13);
             this.labelTT.Name = "labelTT";
-            this.labelTT.Size = new System.Drawing.Size(24, 16);
+            this.labelTT.Size = new System.Drawing.Size(55, 24);
             this.labelTT.TabIndex = 16;
-            this.labelTT.Text = "##";
+            this.labelTT.Text = "00.00";
             // 
             // labelTongThu
             // 

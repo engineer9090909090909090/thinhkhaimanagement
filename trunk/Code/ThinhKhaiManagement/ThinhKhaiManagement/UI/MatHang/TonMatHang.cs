@@ -34,13 +34,15 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         private void buttonXemToanBo_Click(object sender, EventArgs e)
         {
+            buttonXoaHet_Click(sender, e);
             dataGridViewXem.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
                 StoreProcedureNames.constTonMatHang_GetAll,
                 new Collection<KeyValuePair<object, int>>(),
                 (int)ExecuteType.Query);
             ResetCollummFormat();
             labelTSL.Text = (dataGridViewXem.Rows.Count).ToString();
-
+            labelTTiH.Text = String.Format("{0:0,0.00}", CalculateTotalTienHot());
+            labelTTC.Text = String.Format("{0:0,0.00}", CalculateTotalTienCong());
             labelTGV.Text = String.Format("{0:0,0.00}", CalculateTotal());
         }
 
@@ -59,6 +61,66 @@ namespace ThinhKhaiManagement.UI.MatHang
                     (decimal)dataGridViewXem.Rows[i].Cells[9].Value +
                     (decimal)dataGridViewXem.Rows[i].Cells[6].Value +
                     (decimal)dataGridViewXem.Rows[i].Cells[7].Value;
+            }
+            return k;
+        }
+
+        private decimal CalculateTotalTrongLuong()
+        {
+            decimal k = 0;
+            for (int i = 0; i < dataGridViewXem.Rows.Count; i++)
+            {
+                if (dataGridViewXem.Rows[i].Cells[0].Value == null)
+                    break;
+
+                k = k +
+                    (decimal)dataGridViewXem.Rows[i].Cells[4].Value;
+                   
+            }
+            return k;
+        }
+
+        private decimal CalculateTotalTruHot()
+        {
+            decimal k = 0;
+            for (int i = 0; i < dataGridViewXem.Rows.Count; i++)
+            {
+                if (dataGridViewXem.Rows[i].Cells[0].Value == null)
+                    break;
+
+                k = k +
+                    (decimal)dataGridViewXem.Rows[i].Cells[5].Value;
+
+            }
+            return k;
+        }
+
+        private decimal CalculateTotalTienHot()
+        {
+            decimal k = 0;
+            for (int i = 0; i < dataGridViewXem.Rows.Count; i++)
+            {
+                if (dataGridViewXem.Rows[i].Cells[0].Value == null)
+                    break;
+
+                k = k +
+                    (decimal)dataGridViewXem.Rows[i].Cells[6].Value;
+
+            }
+            return k;
+        }
+
+        private decimal CalculateTotalTienCong()
+        {
+            decimal k = 0;
+            for (int i = 0; i < dataGridViewXem.Rows.Count; i++)
+            {
+                if (dataGridViewXem.Rows[i].Cells[0].Value == null)
+                    break;
+
+                k = k +
+                    (decimal)dataGridViewXem.Rows[i].Cells[7].Value;
+
             }
             return k;
         }
@@ -111,23 +173,29 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         private void buttonLoc_Click(object sender, EventArgs e)
         {
+            buttonXoaHet_Click(sender, e);
             dataGridViewXem.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                StoreProcedureNames.constTonMatHang_GetByCondition,
-                new Collection<KeyValuePair<object, int>>() { 
+                    StoreProcedureNames.constTonMatHang_GetByCondition,
+                    new Collection<KeyValuePair<object, int>>() { 
                     new KeyValuePair<object,int>(comboBoxChatLieu.SelectedValue==null?"NULL":comboBoxChatLieu.SelectedValue,(int)ParameterType.NonString),
                     new KeyValuePair<object,int>(comboBoxLoaiMatHang.SelectedValue==null?"NULL":comboBoxLoaiMatHang.SelectedValue,(int)ParameterType.NonString),
                 },
-                (int)ExecuteType.Query);
-            
-                DataTable tb= (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
-                StoreProcedureNames.constTonMatHang_Count,
-                new Collection<KeyValuePair<object, int>>() { 
-                    new KeyValuePair<object,int>(comboBoxChatLieu.SelectedValue==null?"NULL":comboBoxChatLieu.SelectedValue,(int)ParameterType.NonString),
-                    new KeyValuePair<object,int>(comboBoxLoaiMatHang.SelectedValue==null?"NULL":comboBoxLoaiMatHang.SelectedValue,(int)ParameterType.NonString),
-                },
-                (int)ExecuteType.Query);
-                labelTSL.Text = tb.Rows[0][0].ToString();
+                    (int)ExecuteType.Query);
+            labelTSL.Text = (dataGridViewXem.Rows.Count).ToString();
+            labelTGV.Text = String.Format("{0:0,0.00}", CalculateTotal());
+            if (string.IsNullOrEmpty(comboBoxChatLieu.Text))
+            {
                 labelTGV.Text = String.Format("{0:0,0.00}", CalculateTotal());
+                labelTTC.Text = String.Format("{0:0,0.00}", CalculateTotalTienCong());
+
+            }
+            else 
+            {
+                labelTGV.Text = String.Format("{0:0,0.00}", CalculateTotal());
+                labelTTC.Text = String.Format("{0:0,0.00}", CalculateTotalTienCong());
+                labelTTL.Text = String.Format("{0:0,0.00}", CalculateTotalTrongLuong());
+                labelTTH.Text = String.Format("{0:0,0.00}", CalculateTotalTruHot());
+            }
         }
 
         private void buttonKiemTra_Click(object sender, EventArgs e)
@@ -151,6 +219,16 @@ namespace ThinhKhaiManagement.UI.MatHang
             x = e.RowIndex;
             textBoxMaMatHang.Text = dataGridViewXem.Rows[x].Cells[0].Value.ToString();
             textBoxTenMatHang.Text = dataGridViewXem.Rows[x].Cells[3].Value.ToString();
+        }
+
+        private void buttonXoaHet_Click(object sender, EventArgs e)
+        {
+            labelTSL.Text = "00.00";
+            labelTTL.Text = "00.00";
+            labelTTH.Text = "00.00";
+            labelTTiH.Text = "00.00";
+            labelTTC.Text = "00.00";
+            labelTGV.Text = "00.00";
         }
     }
 }

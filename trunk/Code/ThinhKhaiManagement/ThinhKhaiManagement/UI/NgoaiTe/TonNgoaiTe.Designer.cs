@@ -95,13 +95,13 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             // 
             this.labelTGV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTGV.AutoSize = true;
-            this.labelTGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTGV.ForeColor = System.Drawing.Color.Blue;
-            this.labelTGV.Location = new System.Drawing.Point(271, 80);
+            this.labelTGV.Location = new System.Drawing.Point(159, 74);
             this.labelTGV.Name = "labelTGV";
-            this.labelTGV.Size = new System.Drawing.Size(24, 16);
+            this.labelTGV.Size = new System.Drawing.Size(55, 24);
             this.labelTGV.TabIndex = 13;
-            this.labelTGV.Text = "##";
+            this.labelTGV.Text = "00.00";
             // 
             // labelTongGiaVon
             // 
