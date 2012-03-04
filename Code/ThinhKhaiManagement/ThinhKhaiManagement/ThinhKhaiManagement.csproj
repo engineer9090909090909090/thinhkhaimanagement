@@ -37,15 +37,24 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DatabaseAccesser">
       <HintPath>..\References\DatabaseAccesser.dll</HintPath>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="RadControlSpy, Version=2009.2.9.701, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -102,6 +111,12 @@
     <Compile Include="UI\MatHang\Loai.Designer.cs">
       <DependentUpon>Loai.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\NgoaiTe\InPhieuTonNgoaiTe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NgoaiTe\InPhieuTonNgoaiTe.Designer.cs">
+      <DependentUpon>InPhieuTonNgoaiTe.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\NgoaiTe\NgoaiTe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +158,12 @@
     </Compile>
     <Compile Include="UI\NgoaiTe\NhapNgoaiTe.Designer.cs">
       <DependentUpon>NhapNgoaiTe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NgoaiTe\RPTonNgoaiTe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTonNgoaiTe.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\NgoaiTe\TonNgoaiTe.cs">
       <SubType>Form</SubType>
@@ -199,6 +220,9 @@
     <EmbeddedResource Include="UI\MatHang\Loai.resx">
       <DependentUpon>Loai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\NgoaiTe\InPhieuTonNgoaiTe.resx">
+      <DependentUpon>InPhieuTonNgoaiTe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\NgoaiTe\NgoaiTe.resx">
       <DependentUpon>NgoaiTe.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +243,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NgoaiTe\NhapNgoaiTe.resx">
       <DependentUpon>NhapNgoaiTe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NgoaiTe\RPTonNgoaiTe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTonNgoaiTe.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NgoaiTe\TonNgoaiTe.resx">
       <DependentUpon>TonNgoaiTe.cs</DependentUpon>
@@ -248,7 +276,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
