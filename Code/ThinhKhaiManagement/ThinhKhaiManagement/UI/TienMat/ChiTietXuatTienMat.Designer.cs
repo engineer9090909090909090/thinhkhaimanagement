@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBoxXemChiTietXuatTienMat = new System.Windows.Forms.GroupBox();
-            this.dateTimePickerNgayXuatTienMat = new System.Windows.Forms.DateTimePicker();
-            this.dataGridViewChiTietXuatTienMat = new System.Windows.Forms.DataGridView();
             this.labelTC = new System.Windows.Forms.Label();
             this.labelTongChi = new System.Windows.Forms.Label();
+            this.dateTimePickerNgayXuatTienMat = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewChiTietXuatTienMat = new System.Windows.Forms.DataGridView();
             this.groupBoxXemChiTietXuatTienMat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietXuatTienMat)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,30 @@
             this.groupBoxXemChiTietXuatTienMat.TabIndex = 16;
             this.groupBoxXemChiTietXuatTienMat.TabStop = false;
             this.groupBoxXemChiTietXuatTienMat.Text = "Chi Tiết";
+            // 
+            // labelTC
+            // 
+            this.labelTC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTC.AutoSize = true;
+            this.labelTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTC.ForeColor = System.Drawing.Color.Blue;
+            this.labelTC.Location = new System.Drawing.Point(252, 13);
+            this.labelTC.Name = "labelTC";
+            this.labelTC.Size = new System.Drawing.Size(55, 24);
+            this.labelTC.TabIndex = 18;
+            this.labelTC.Text = "00.00";
+            // 
+            // labelTongChi
+            // 
+            this.labelTongChi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTongChi.AutoSize = true;
+            this.labelTongChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongChi.ForeColor = System.Drawing.Color.Maroon;
+            this.labelTongChi.Location = new System.Drawing.Point(163, 19);
+            this.labelTongChi.Name = "labelTongChi";
+            this.labelTongChi.Size = new System.Drawing.Size(70, 16);
+            this.labelTongChi.TabIndex = 17;
+            this.labelTongChi.Text = "Tổng Chi";
             // 
             // dateTimePickerNgayXuatTienMat
             // 
@@ -80,30 +104,6 @@
             this.dataGridViewChiTietXuatTienMat.Size = new System.Drawing.Size(409, 258);
             this.dataGridViewChiTietXuatTienMat.TabIndex = 13;
             this.dataGridViewChiTietXuatTienMat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChiTietXuatTienMat_CellDoubleClick);
-            // 
-            // labelTC
-            // 
-            this.labelTC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTC.AutoSize = true;
-            this.labelTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTC.ForeColor = System.Drawing.Color.Blue;
-            this.labelTC.Location = new System.Drawing.Point(253, 19);
-            this.labelTC.Name = "labelTC";
-            this.labelTC.Size = new System.Drawing.Size(24, 16);
-            this.labelTC.TabIndex = 18;
-            this.labelTC.Text = "##";
-            // 
-            // labelTongChi
-            // 
-            this.labelTongChi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTongChi.AutoSize = true;
-            this.labelTongChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTongChi.ForeColor = System.Drawing.Color.Maroon;
-            this.labelTongChi.Location = new System.Drawing.Point(163, 19);
-            this.labelTongChi.Name = "labelTongChi";
-            this.labelTongChi.Size = new System.Drawing.Size(70, 16);
-            this.labelTongChi.TabIndex = 17;
-            this.labelTongChi.Text = "Tổng Chi";
             // 
             // ChiTietXuatTienMat
             // 
