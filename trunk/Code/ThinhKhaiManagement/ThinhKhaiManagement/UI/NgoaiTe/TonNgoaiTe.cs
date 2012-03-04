@@ -120,6 +120,12 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         #endregion
 
+        private void buttonIn_Click(object sender, EventArgs e)
+        {
+            InPhieuTonNgoaiTe inPhieuTonNgoaiTe = new InPhieuTonNgoaiTe();
+            inPhieuTonNgoaiTe.ShowDialog();
+        }
+
 
       
 

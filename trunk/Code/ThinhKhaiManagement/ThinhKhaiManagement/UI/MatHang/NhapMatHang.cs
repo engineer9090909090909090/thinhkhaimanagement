@@ -65,6 +65,8 @@ namespace ThinhKhaiManagement.UI.MatHang
             radSpinEditorTruHot.Value = 0;
             radSpinEditorTienHot.Value = 0;
             radSpinEditorTienCong.Value = 0;
+            radSpinEditorTienHotBan.Value = 0;
+            radSpinEditorTienCongBan.Value = 0;
             radSpinEditorDonGia.Value = 0;
             radSpinEditorTyGiaUSD.Value = 1;
             radSpinEditorThanhTien.Value = 0;
