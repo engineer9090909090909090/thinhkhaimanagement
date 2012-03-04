@@ -210,7 +210,7 @@ namespace ThinhKhaiManagement.UI.MatHang
             }
 
             //7
-            if (radSpinEditorTruHot.Value > 0 && (radSpinEditorTienHot.Value == 0 || radSpinEditorTienCong.Value == 0))
+            if (radSpinEditorTruHot.Value > 0 && radSpinEditorTienCong.Value == 0)
             {
                 errorProvider_NhapMatHang.SetError(radSpinEditorTruHot, "Mời nhập tiền công và tiền hột");
                 flag = 0;
