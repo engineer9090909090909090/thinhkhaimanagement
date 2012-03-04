@@ -41,7 +41,7 @@
             this.groupBoxXemChiTietNhapNgoaiTe.Controls.Add(this.dateTimePickerNgayNhapNgoaiTe);
             this.groupBoxXemChiTietNhapNgoaiTe.Controls.Add(this.dataGridViewChiTietNhapNgoaiTe);
             this.groupBoxXemChiTietNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxXemChiTietNhapNgoaiTe.Location = new System.Drawing.Point(5, 12);
+            this.groupBoxXemChiTietNhapNgoaiTe.Location = new System.Drawing.Point(12, 15);
             this.groupBoxXemChiTietNhapNgoaiTe.Name = "groupBoxXemChiTietNhapNgoaiTe";
             this.groupBoxXemChiTietNhapNgoaiTe.Size = new System.Drawing.Size(656, 310);
             this.groupBoxXemChiTietNhapNgoaiTe.TabIndex = 15;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 334);
+            this.ClientSize = new System.Drawing.Size(673, 330);
             this.Controls.Add(this.groupBoxXemChiTietNhapNgoaiTe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
