@@ -132,7 +132,7 @@
             this.labelTGV.AutoSize = true;
             this.labelTGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTGV.ForeColor = System.Drawing.Color.Blue;
-            this.labelTGV.Location = new System.Drawing.Point(330, 119);
+            this.labelTGV.Location = new System.Drawing.Point(276, 119);
             this.labelTGV.Name = "labelTGV";
             this.labelTGV.Size = new System.Drawing.Size(24, 16);
             this.labelTGV.TabIndex = 9;
@@ -156,7 +156,7 @@
             this.labelTongGiaVon.AutoSize = true;
             this.labelTongGiaVon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongGiaVon.ForeColor = System.Drawing.Color.Maroon;
-            this.labelTongGiaVon.Location = new System.Drawing.Point(167, 119);
+            this.labelTongGiaVon.Location = new System.Drawing.Point(157, 119);
             this.labelTongGiaVon.Name = "labelTongGiaVon";
             this.labelTongGiaVon.Size = new System.Drawing.Size(103, 16);
             this.labelTongGiaVon.TabIndex = 8;
@@ -168,7 +168,7 @@
             this.labelTSL.AutoSize = true;
             this.labelTSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTSL.ForeColor = System.Drawing.Color.Blue;
-            this.labelTSL.Location = new System.Drawing.Point(330, 89);
+            this.labelTSL.Location = new System.Drawing.Point(276, 89);
             this.labelTSL.Name = "labelTSL";
             this.labelTSL.Size = new System.Drawing.Size(24, 16);
             this.labelTSL.TabIndex = 5;
@@ -315,7 +315,7 @@
             this.labelGV.AutoSize = true;
             this.labelGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGV.ForeColor = System.Drawing.Color.Blue;
-            this.labelGV.Location = new System.Drawing.Point(278, 115);
+            this.labelGV.Location = new System.Drawing.Point(195, 115);
             this.labelGV.Name = "labelGV";
             this.labelGV.Size = new System.Drawing.Size(24, 16);
             this.labelGV.TabIndex = 11;
