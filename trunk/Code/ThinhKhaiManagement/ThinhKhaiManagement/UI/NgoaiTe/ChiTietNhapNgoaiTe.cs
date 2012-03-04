@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ThinhKhaiManagement.Common;
 using DatabaseAccesser;
 using System.Globalization;
+using System.Data.SqlClient;
 
 namespace ThinhKhaiManagement.UI.NgoaiTe
 {
@@ -49,7 +50,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         private void dateTimePickerNgayNhapNgoaiTe_ValueChanged(object sender, EventArgs e)
         {
-            dataGridViewChiTietNhapNgoaiTe.DataSource = ShowNhapNgoaiTeByNgay(dateTimePickerNgayNhapNgoaiTe.Value);
+            ChiTietNhapNgoaiTe_Load(sender, e);
         }
 
         private void dataGridViewChiTietNhapNgoaiTe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
