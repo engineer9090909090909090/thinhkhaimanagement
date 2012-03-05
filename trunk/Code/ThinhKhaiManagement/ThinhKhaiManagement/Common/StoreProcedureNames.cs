@@ -94,5 +94,8 @@ namespace ThinhKhaiManagement.Common
         public const string constXuatMatHang_ShowSoldByNgay = "XuatMatHang_ShowSoldByNgay";
 
         public const string constXuatMatHang_CancelByMaMH = "XuatMatHang_CancelByMaMH";
+
+        // Loi Nhuan
+        public const string constLoiNhuan_CalculateByCondition = "LoiNhuan_CalculateByCondition";
     }
 }

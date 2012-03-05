@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using ThinhKhaiManagement.UI.NgoaiTe;
 using ThinhKhaiManagement.UI.TienMat;
 using ThinhKhaiManagement.UI.MatHang;
+using ThinhKhaiManagement.UI.LoiNhuan;
 
 namespace ThinhKhaiManagement.UI
 {
@@ -100,6 +101,13 @@ namespace ThinhKhaiManagement.UI
         private void toolStripMenuItemTonHangThau_Click(object sender, EventArgs e)
         {
             MessageBox.Show("trong quá trình phát triển");
+        }
+
+        private void lợiNhuậnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoiNhuan.LoiNhuan loiNhuan = new LoiNhuan.LoiNhuan();
+            loiNhuan.MdiParent = this;
+            loiNhuan.Show();
         }
     }
 }
