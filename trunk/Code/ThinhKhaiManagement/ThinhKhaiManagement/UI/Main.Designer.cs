@@ -85,8 +85,8 @@
             this.toolStripMenuItemNgoaiTe,
             this.toolStripMenuItemMatHang,
             this.toolStripMenuItemHangThau,
-            this.toolStripMenuItemTienMat,
             this.toolStripSeparator1,
+            this.toolStripMenuItemTienMat,
             this.lợiNhuậnToolStripMenuItem});
             this.toolStripMenuItemQuanLy.Name = "toolStripMenuItemQuanLy";
             this.toolStripMenuItemQuanLy.Size = new System.Drawing.Size(63, 20);
@@ -191,21 +191,21 @@
             // toolStripMenuItemNhapHangThau
             // 
             this.toolStripMenuItemNhapHangThau.Name = "toolStripMenuItemNhapHangThau";
-            this.toolStripMenuItemNhapHangThau.Size = new System.Drawing.Size(103, 22);
+            this.toolStripMenuItemNhapHangThau.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemNhapHangThau.Text = "Nhập";
             this.toolStripMenuItemNhapHangThau.Click += new System.EventHandler(this.toolStripMenuItemNhapHangThau_Click);
             // 
             // toolStripMenuItemXuatHangThau
             // 
             this.toolStripMenuItemXuatHangThau.Name = "toolStripMenuItemXuatHangThau";
-            this.toolStripMenuItemXuatHangThau.Size = new System.Drawing.Size(103, 22);
+            this.toolStripMenuItemXuatHangThau.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemXuatHangThau.Text = "Xuất";
             this.toolStripMenuItemXuatHangThau.Click += new System.EventHandler(this.toolStripMenuItemXuatHangThau_Click);
             // 
             // toolStripMenuItemTonHangThau
             // 
             this.toolStripMenuItemTonHangThau.Name = "toolStripMenuItemTonHangThau";
-            this.toolStripMenuItemTonHangThau.Size = new System.Drawing.Size(103, 22);
+            this.toolStripMenuItemTonHangThau.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemTonHangThau.Text = "Tồn";
             this.toolStripMenuItemTonHangThau.Click += new System.EventHandler(this.toolStripMenuItemTonHangThau_Click);
             // 
