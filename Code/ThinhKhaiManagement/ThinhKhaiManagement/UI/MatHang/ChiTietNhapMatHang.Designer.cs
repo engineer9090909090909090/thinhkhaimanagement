@@ -83,8 +83,6 @@
             this.ClientSize = new System.Drawing.Size(943, 384);
             this.Controls.Add(this.groupBoxXemChiTietNhapMatHang);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "ChiTietNhapMatHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Nhập Mặt Hàng";

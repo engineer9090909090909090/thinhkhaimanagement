@@ -27,6 +27,7 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         private void ChiTietNhapMatHang_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             dataGridViewChiTietNhapMatHang.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
                                                                     StoreProcedureNames.constNhapMatHang_ShowByNgay,
                                                                     new Collection<KeyValuePair<object, int>> { 
