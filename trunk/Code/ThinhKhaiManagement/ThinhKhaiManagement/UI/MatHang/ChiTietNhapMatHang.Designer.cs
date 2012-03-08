@@ -37,11 +37,13 @@
             // 
             // groupBoxXemChiTietNhapMatHang
             // 
-            this.groupBoxXemChiTietNhapMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxXemChiTietNhapMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxXemChiTietNhapMatHang.Controls.Add(this.dateTimePickerNgayNhapMatHang);
             this.groupBoxXemChiTietNhapMatHang.Controls.Add(this.dataGridViewChiTietNhapMatHang);
             this.groupBoxXemChiTietNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxXemChiTietNhapMatHang.Location = new System.Drawing.Point(12, 9);
+            this.groupBoxXemChiTietNhapMatHang.Location = new System.Drawing.Point(12, 12);
             this.groupBoxXemChiTietNhapMatHang.Name = "groupBoxXemChiTietNhapMatHang";
             this.groupBoxXemChiTietNhapMatHang.Size = new System.Drawing.Size(919, 368);
             this.groupBoxXemChiTietNhapMatHang.TabIndex = 16;
@@ -50,7 +52,9 @@
             // 
             // dateTimePickerNgayNhapMatHang
             // 
-            this.dateTimePickerNgayNhapMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerNgayNhapMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerNgayNhapMatHang.CustomFormat = "dd-MM-yyyy";
             this.dateTimePickerNgayNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayNhapMatHang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -65,7 +69,9 @@
             this.dataGridViewChiTietNhapMatHang.AllowUserToAddRows = false;
             this.dataGridViewChiTietNhapMatHang.AllowUserToDeleteRows = false;
             this.dataGridViewChiTietNhapMatHang.AllowUserToResizeRows = false;
-            this.dataGridViewChiTietNhapMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewChiTietNhapMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewChiTietNhapMatHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChiTietNhapMatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewChiTietNhapMatHang.Location = new System.Drawing.Point(6, 49);
