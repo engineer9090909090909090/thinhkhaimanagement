@@ -39,7 +39,9 @@
             // 
             // groupBoxXemChiTietNhapTienMat
             // 
-            this.groupBoxXemChiTietNhapTienMat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxXemChiTietNhapTienMat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxXemChiTietNhapTienMat.Controls.Add(this.labelTT);
             this.groupBoxXemChiTietNhapTienMat.Controls.Add(this.labelTongThu);
             this.groupBoxXemChiTietNhapTienMat.Controls.Add(this.dateTimePickerNgayNhapTienMat);
@@ -54,7 +56,9 @@
             // 
             // labelTT
             // 
-            this.labelTT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTT.AutoSize = true;
             this.labelTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTT.ForeColor = System.Drawing.Color.Blue;
@@ -66,7 +70,9 @@
             // 
             // labelTongThu
             // 
-            this.labelTongThu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTongThu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTongThu.AutoSize = true;
             this.labelTongThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongThu.ForeColor = System.Drawing.Color.Maroon;
@@ -78,7 +84,6 @@
             // 
             // dateTimePickerNgayNhapTienMat
             // 
-            this.dateTimePickerNgayNhapTienMat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerNgayNhapTienMat.CustomFormat = "dd-MM-yyyy";
             this.dateTimePickerNgayNhapTienMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayNhapTienMat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -94,7 +99,9 @@
             this.dataGridViewChiTietNhapTienMat.AllowUserToDeleteRows = false;
             this.dataGridViewChiTietNhapTienMat.AllowUserToResizeColumns = false;
             this.dataGridViewChiTietNhapTienMat.AllowUserToResizeRows = false;
-            this.dataGridViewChiTietNhapTienMat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewChiTietNhapTienMat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewChiTietNhapTienMat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChiTietNhapTienMat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewChiTietNhapTienMat.Location = new System.Drawing.Point(16, 46);
@@ -112,8 +119,6 @@
             this.ClientSize = new System.Drawing.Size(509, 322);
             this.Controls.Add(this.groupBoxXemChiTietNhapTienMat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "ChiTietNhapTienMat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Nhập Tiền Mặt";

@@ -27,6 +27,7 @@ namespace ThinhKhaiManagement.UI.TienMat
 
         private void ChiTietNhapTienMat_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             dataGridViewChiTietNhapTienMat.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
                                                                     StoreProcedureNames.constNhapTienMat_ShowByNgay,
                                                                     new Collection<KeyValuePair<object, int>>{
