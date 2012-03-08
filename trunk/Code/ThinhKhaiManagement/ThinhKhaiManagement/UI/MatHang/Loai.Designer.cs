@@ -43,7 +43,7 @@
             // 
             // buttonLS
             // 
-            this.buttonLS.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonLS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLS.Location = new System.Drawing.Point(303, 39);
             this.buttonLS.Name = "buttonLS";
@@ -55,7 +55,9 @@
             // 
             // labelKTDD
             // 
-            this.labelKTDD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelKTDD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.labelKTDD.AutoSize = true;
             this.labelKTDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKTDD.Location = new System.Drawing.Point(17, 46);
@@ -66,7 +68,9 @@
             // 
             // labelTenLoai
             // 
-            this.labelTenLoai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTenLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTenLoai.AutoSize = true;
             this.labelTenLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTenLoai.Location = new System.Drawing.Point(17, 14);
@@ -77,7 +81,7 @@
             // 
             // buttonLuu
             // 
-            this.buttonLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLuu.Location = new System.Drawing.Point(303, 9);
             this.buttonLuu.Name = "buttonLuu";
@@ -89,7 +93,9 @@
             // 
             // textBoxLoai
             // 
-            this.textBoxLoai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLoai.Location = new System.Drawing.Point(129, 11);
             this.textBoxLoai.Name = "textBoxLoai";
@@ -102,7 +108,9 @@
             // 
             // textBoxKTDD
             // 
-            this.textBoxKTDD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxKTDD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxKTDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKTDD.Location = new System.Drawing.Point(129, 43);
             this.textBoxKTDD.Name = "textBoxKTDD";
@@ -115,7 +123,9 @@
             this.dataGridViewLoai.AllowUserToDeleteRows = false;
             this.dataGridViewLoai.AllowUserToResizeColumns = false;
             this.dataGridViewLoai.AllowUserToResizeRows = false;
-            this.dataGridViewLoai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLoai.Location = new System.Drawing.Point(9, 78);
@@ -138,8 +148,6 @@
             this.Controls.Add(this.textBoxKTDD);
             this.Controls.Add(this.dataGridViewLoai);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Loai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loại";
