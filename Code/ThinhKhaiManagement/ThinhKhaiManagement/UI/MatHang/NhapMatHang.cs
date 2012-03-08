@@ -25,6 +25,8 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         DataAccess dataaccess;
 
+        List<object> Caches;
+
         #endregion
 
         #region handle event
@@ -33,6 +35,7 @@ namespace ThinhKhaiManagement.UI.MatHang
         {
             InitializeComponent();
             dataaccess = new DataAccess();
+            Caches = new List<object>();
         }
 
         private void NhapMatHang_Load(object sender, EventArgs e)
@@ -74,6 +77,9 @@ namespace ThinhKhaiManagement.UI.MatHang
             buttonLuuNhapMatHang.Text = "Lưu";
             Stt = 0;
             textBoxMaMatHang.Focus();
+
+            if (checkBoxNho.Checked)
+                LoadCache();
         }
 
         private void buttonXemChiTietNhapMatHang_Click(object sender, EventArgs e)
@@ -377,6 +383,36 @@ namespace ThinhKhaiManagement.UI.MatHang
             }
         }
 
+        private void SaveCache()
+        { 
+            Caches.Add(comboBoxChatLieu.SelectedIndex);
+            Caches.Add(comboBoxLoaiMatHang.SelectedIndex);
+            Caches.Add(textBoxTenMatHang.Text);
+            Caches.Add(radSpinEditorTrongLuong.Value);
+            Caches.Add(radSpinEditorDonGia.Value);
+            Caches.Add(radSpinEditorTruHot.Value);
+            Caches.Add(radSpinEditorTienHot.Value);
+            Caches.Add(radSpinEditorTienHotBan.Value);
+            Caches.Add(radSpinEditorTienCong.Value);
+            Caches.Add(radSpinEditorTienHotBan.Value);
+            Caches.Add(radSpinEditorTyGiaUSD.Value);
+        }
+
+        private void LoadCache()
+        {
+            comboBoxChatLieu.SelectedIndex = (int)Caches[0];
+            comboBoxLoaiMatHang.SelectedIndex = (int)Caches[1];
+            textBoxTenMatHang.Text = Caches[2].ToString();
+            radSpinEditorTrongLuong.Value = (decimal)Caches[3];
+            radSpinEditorDonGia.Value = (decimal)Caches[4];
+            radSpinEditorTruHot.Value = (decimal)Caches[5];
+            radSpinEditorTienHot.Value = (decimal)Caches[6];
+            radSpinEditorTienHotBan.Value = (decimal)Caches[7];
+            radSpinEditorTienCong.Value = (decimal)Caches[8];
+            radSpinEditorTienCongBan.Value = (decimal)Caches[9];
+            radSpinEditorTyGiaUSD.Value = (decimal)Caches[10];
+        }
+
         #endregion
 
         #region public methods
@@ -391,6 +427,19 @@ namespace ThinhKhaiManagement.UI.MatHang
         }
 
         #endregion
+
+        private void checkBoxNho_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxNho.Checked)
+            {
+                SaveCache();
+            }
+            else
+            {
+                Caches.Clear();
+            }
+
+        }
 
     }
 }
