@@ -38,7 +38,9 @@
             // 
             // groupBoxXemChiTietNhapMatHang
             // 
-            this.groupBoxXemChiTietNhapMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxXemChiTietNhapMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxXemChiTietNhapMatHang.Controls.Add(this.buttonHuyPhieu);
             this.groupBoxXemChiTietNhapMatHang.Controls.Add(this.dataGridViewChiTietXuatMatHang);
             this.groupBoxXemChiTietNhapMatHang.Controls.Add(this.dateTimePickerNgayXuatMatHang);
@@ -52,6 +54,7 @@
             // 
             // buttonHuyPhieu
             // 
+            this.buttonHuyPhieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonHuyPhieu.Location = new System.Drawing.Point(825, 26);
             this.buttonHuyPhieu.Name = "buttonHuyPhieu";
             this.buttonHuyPhieu.Size = new System.Drawing.Size(75, 23);
@@ -65,7 +68,9 @@
             this.dataGridViewChiTietXuatMatHang.AllowUserToAddRows = false;
             this.dataGridViewChiTietXuatMatHang.AllowUserToDeleteRows = false;
             this.dataGridViewChiTietXuatMatHang.AllowUserToResizeRows = false;
-            this.dataGridViewChiTietXuatMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewChiTietXuatMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewChiTietXuatMatHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChiTietXuatMatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewChiTietXuatMatHang.Location = new System.Drawing.Point(6, 56);
@@ -76,7 +81,9 @@
             // 
             // dateTimePickerNgayXuatMatHang
             // 
-            this.dateTimePickerNgayXuatMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerNgayXuatMatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerNgayXuatMatHang.CustomFormat = "dd-MM-yyyy";
             this.dateTimePickerNgayXuatMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayXuatMatHang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -93,8 +100,6 @@
             this.ClientSize = new System.Drawing.Size(924, 391);
             this.Controls.Add(this.groupBoxXemChiTietNhapMatHang);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "ChiTietXuatMatHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Xuất Mặt Hàng";
