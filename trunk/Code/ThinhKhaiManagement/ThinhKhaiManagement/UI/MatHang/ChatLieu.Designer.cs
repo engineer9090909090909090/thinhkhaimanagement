@@ -43,9 +43,9 @@
             // 
             // buttonLS
             // 
-            this.buttonLS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLS.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLS.Location = new System.Drawing.Point(313, 39);
+            this.buttonLS.Location = new System.Drawing.Point(313, 44);
             this.buttonLS.Name = "buttonLS";
             this.buttonLS.Size = new System.Drawing.Size(75, 26);
             this.buttonLS.TabIndex = 13;
@@ -55,22 +55,18 @@
             // 
             // textBoxKTDD
             // 
-            this.textBoxKTDD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxKTDD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxKTDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKTDD.Location = new System.Drawing.Point(127, 43);
+            this.textBoxKTDD.Location = new System.Drawing.Point(127, 48);
             this.textBoxKTDD.Name = "textBoxKTDD";
             this.textBoxKTDD.Size = new System.Drawing.Size(131, 22);
             this.textBoxKTDD.TabIndex = 12;
             // 
             // textBoxTCL
             // 
-            this.textBoxTCL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxTCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTCL.Location = new System.Drawing.Point(127, 11);
+            this.textBoxTCL.Location = new System.Drawing.Point(127, 16);
             this.textBoxTCL.Name = "textBoxTCL";
             this.textBoxTCL.Size = new System.Drawing.Size(131, 22);
             this.textBoxTCL.TabIndex = 11;
@@ -81,12 +77,10 @@
             // 
             // labelKTDD
             // 
-            this.labelKTDD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelKTDD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelKTDD.AutoSize = true;
             this.labelKTDD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKTDD.Location = new System.Drawing.Point(27, 46);
+            this.labelKTDD.Location = new System.Drawing.Point(27, 51);
             this.labelKTDD.Name = "labelKTDD";
             this.labelKTDD.Size = new System.Drawing.Size(96, 16);
             this.labelKTDD.TabIndex = 10;
@@ -94,12 +88,10 @@
             // 
             // labelTenCL
             // 
-            this.labelTenCL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTenCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTenCL.AutoSize = true;
             this.labelTenCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenCL.Location = new System.Drawing.Point(27, 14);
+            this.labelTenCL.Location = new System.Drawing.Point(27, 19);
             this.labelTenCL.Name = "labelTenCL";
             this.labelTenCL.Size = new System.Drawing.Size(90, 16);
             this.labelTenCL.TabIndex = 9;
@@ -107,9 +99,9 @@
             // 
             // buttonLuu
             // 
-            this.buttonLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLuu.Location = new System.Drawing.Point(313, 9);
+            this.buttonLuu.Location = new System.Drawing.Point(313, 14);
             this.buttonLuu.Name = "buttonLuu";
             this.buttonLuu.Size = new System.Drawing.Size(75, 26);
             this.buttonLuu.TabIndex = 8;
@@ -123,12 +115,10 @@
             this.dataGridViewCL.AllowUserToDeleteRows = false;
             this.dataGridViewCL.AllowUserToResizeColumns = false;
             this.dataGridViewCL.AllowUserToResizeRows = false;
-            this.dataGridViewCL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewCL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCL.Location = new System.Drawing.Point(19, 78);
+            this.dataGridViewCL.Location = new System.Drawing.Point(19, 83);
             this.dataGridViewCL.Name = "dataGridViewCL";
             this.dataGridViewCL.ReadOnly = true;
             this.dataGridViewCL.Size = new System.Drawing.Size(378, 257);
@@ -140,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(416, 344);
+            this.ClientSize = new System.Drawing.Size(416, 355);
             this.Controls.Add(this.buttonLS);
             this.Controls.Add(this.textBoxKTDD);
             this.Controls.Add(this.textBoxTCL);
@@ -149,6 +139,8 @@
             this.Controls.Add(this.buttonLuu);
             this.Controls.Add(this.dataGridViewCL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ChatLieu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chất Liệu";
