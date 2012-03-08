@@ -26,6 +26,7 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         private void Loai_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             dataGridViewLoai.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
                 StoreProcedureNames.constLoaiMatHang_GetAll,
                 new Collection<KeyValuePair<object, int>>(),
