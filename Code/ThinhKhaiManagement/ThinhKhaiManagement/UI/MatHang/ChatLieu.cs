@@ -26,6 +26,7 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         private void ChatLieu_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             dataGridViewCL.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
                 StoreProcedureNames.constChatLieu_GetAll,
                 new Collection<KeyValuePair<object, int>>(),
