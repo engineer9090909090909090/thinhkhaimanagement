@@ -86,6 +86,26 @@ namespace ThinhKhaiManagement.UI.MatHang
             }
         }
 
+        private void buttonLamSach_Click(object sender, EventArgs e)
+        {
+            textBoxMaMH.Text = string.Empty;
+            textBoxTenMatHang.Text = string.Empty;
+            radSpinEditorTrongLuong.Value = 0;
+            radSpinEditorTruHot.Value = 0;
+            radSpinEditorTienHot.Value = 0;
+            radSpinEditorTienCong.Value = 0;
+            radSpinEditorDonGia.Value = 0;
+            radSpinEditorTyGiaUSD.Value = 1;
+            radSpinEditorKhuyenMai.Value = 0;
+            radSpinEditorThanhTien.Value = 0;
+        }
+
+        private void buttonXemChiTiet_Click(object sender, EventArgs e)
+        {
+            ChiTietXuatMatHang chiTietXuatMatHang = new ChiTietXuatMatHang();
+            chiTietXuatMatHang.ShowDialog();
+        }
+
         #endregion
 
         #region private methods
@@ -143,7 +163,7 @@ namespace ThinhKhaiManagement.UI.MatHang
                 new Collection<KeyValuePair<object, int>> { 
                     new KeyValuePair<object,int>(DateTime.Today,(int)ParameterType.String),
                     new KeyValuePair<object,int>(radSpinEditorThanhTien.Value,(int)ParameterType.NonString),
-                    new KeyValuePair<object,int>("XMH",(int)ParameterType.String),
+                    new KeyValuePair<object,int>(string.Format("XMH : {0}-{1}",textBoxMaMH.Text,textBoxTenMatHang.Text),(int)ParameterType.String),
                     new KeyValuePair<object,int>(textBoxMaMH.Text,(int)ParameterType.String),
                 },
                 (int)ExecuteType.NonQuery,
@@ -165,26 +185,6 @@ namespace ThinhKhaiManagement.UI.MatHang
         }
 
         #endregion
-
-        private void buttonLamSach_Click(object sender, EventArgs e)
-        {
-            textBoxMaMH.Text = string.Empty;
-            textBoxTenMatHang.Text = string.Empty;
-            radSpinEditorTrongLuong.Value = 0;
-            radSpinEditorTruHot.Value = 0;
-            radSpinEditorTienHot.Value = 0;
-            radSpinEditorTienCong.Value = 0;
-            radSpinEditorDonGia.Value = 0;
-            radSpinEditorTyGiaUSD.Value = 1;
-            radSpinEditorKhuyenMai.Value = 0;
-            radSpinEditorThanhTien.Value = 0;
-        }
-
-        private void buttonXemChiTiet_Click(object sender, EventArgs e)
-        {
-            ChiTietXuatMatHang chiTietXuatMatHang = new ChiTietXuatMatHang();
-            chiTietXuatMatHang.ShowDialog();
-        }
 
         #region public methods
 

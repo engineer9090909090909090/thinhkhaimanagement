@@ -272,7 +272,7 @@ namespace ThinhKhaiManagement.UI.MatHang
                                         new Collection<KeyValuePair<object, int>>{
                                                     new KeyValuePair<object,int>(DateTime.Today,(int)ParameterType.String),
                                                     new KeyValuePair<object,int>(radSpinEditorThanhTien.Value,(int)ParameterType.NonString),
-                                                    new KeyValuePair<object,int>("NMH",(int)ParameterType.String),
+                                                    new KeyValuePair<object,int>(string.Format("NMH : {0}-{1}",textBoxMaMatHang.Text,textBoxTenMatHang.Text),(int)ParameterType.String),
                                                     new KeyValuePair<object,int>(textBoxMaMatHang.Text,(int)ParameterType.NonString),
                                                 },
                                         (int)ExecuteType.NonQuery,
@@ -352,7 +352,7 @@ namespace ThinhKhaiManagement.UI.MatHang
                                         new Collection<KeyValuePair<object, int>>{
                                                     new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
                                                     new KeyValuePair<object,int>(radSpinEditorThanhTien.Value,(int)ParameterType.NonString),
-                                                    new KeyValuePair<object,int>("NMH",(int)ParameterType.String),
+                                                    new KeyValuePair<object,int>(string.Format("NMH : {0}-{1}",textBoxMaMatHang.Text,textBoxTenMatHang.Text),(int)ParameterType.String),
                                                     new KeyValuePair<object,int>(textBoxMaMatHang.Text,(int)ParameterType.NonString),
                                                 },
                                         (int)ExecuteType.NonQuery,
