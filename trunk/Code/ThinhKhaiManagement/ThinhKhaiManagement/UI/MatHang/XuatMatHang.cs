@@ -19,6 +19,8 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         DataAccess dataaccess;
 
+        DataTable tempTable;
+
         #endregion
 
         #region handle event
@@ -27,6 +29,17 @@ namespace ThinhKhaiManagement.UI.MatHang
         {
             InitializeComponent();
             dataaccess = new DataAccess();
+            tempTable  = new DataTable();
+            tempTable.Columns.Add("MaMH",typeof(String));
+            tempTable.Columns.Add("TenMH", typeof(String));
+            tempTable.Columns.Add("Vang", typeof(String));
+            tempTable.Columns.Add("TrongLuong", typeof(Decimal));
+            tempTable.Columns.Add("TruHot",typeof(Decimal));
+            tempTable.Columns.Add("DonGia", typeof(Decimal));
+            tempTable.Columns.Add("TyGiaUSD", typeof(Decimal));
+            tempTable.Columns.Add("TienHot", typeof(Decimal));
+            tempTable.Columns.Add("TienCong", typeof(Decimal));
+            tempTable.Columns.Add("ThanhTien", typeof(Decimal));
         }
 
         private void XuatMatHang_Load(object sender, EventArgs e)
@@ -78,6 +91,22 @@ namespace ThinhKhaiManagement.UI.MatHang
                 if (Save())
                 {
                     MessageBox.Show("Xuất Mặt Hàng Thành Công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataRow row = tempTable.NewRow();
+                    row[0] = textBoxMaMH.Text;
+                    row[1] = textBoxTenMatHang.Text;
+                    row[2] = ((DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                                StoreProcedureNames.constMatHang_GetTenByMa,
+                                new Collection<KeyValuePair<object, int>> { new KeyValuePair<object, int>(textBoxMaMH.Text, (int)ParameterType.String) },
+                                (int)ExecuteType.Query)).Rows[0][0].ToString();
+                    row[3] = radSpinEditorTrongLuong.Value;
+                    row[4] = radSpinEditorTruHot.Value;
+                    row[5] = radSpinEditorDonGia.Value;
+                    row[6] = radSpinEditorTyGiaUSD.Value;
+                    row[7] = radSpinEditorTienHot.Value;
+                    row[8] = radSpinEditorTienCong.Value;
+                    row[9] = radSpinEditorThanhTien.Value;
+                    tempTable.Rows.Add(row);
+                    dataGridViewChiTietHoaDon.DataSource = tempTable;
                 }
                 else
                 {
@@ -185,6 +214,15 @@ namespace ThinhKhaiManagement.UI.MatHang
         }
 
         #endregion
+
+        private void buttonXuatHoaDon_Click(object sender, EventArgs e)
+        {
+            ThinhKhaiDataSet ds = new ThinhKhaiDataSet();
+            ds.Tables["HoaDon"].Merge(tempTable);
+            HoaDon hd = new HoaDon();
+            hd.ReportDataSet = ds;
+            hd.ShowDialog();
+        }
 
         #region public methods
 
