@@ -82,7 +82,7 @@
             this.radSpinEditorTruHot.BackColor = System.Drawing.Color.White;
             this.radSpinEditorTruHot.DecimalPlaces = 2;
             this.radSpinEditorTruHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorTruHot.Location = new System.Drawing.Point(171, 219);
+            this.radSpinEditorTruHot.Location = new System.Drawing.Point(171, 210);
             this.radSpinEditorTruHot.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -106,7 +106,7 @@
             this.radSpinEditorTrongLuong.BackColor = System.Drawing.Color.White;
             this.radSpinEditorTrongLuong.DecimalPlaces = 2;
             this.radSpinEditorTrongLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorTrongLuong.Location = new System.Drawing.Point(171, 155);
+            this.radSpinEditorTrongLuong.Location = new System.Drawing.Point(171, 146);
             this.radSpinEditorTrongLuong.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -130,7 +130,7 @@
             this.labelHeaderNhapMatHang.AutoSize = true;
             this.labelHeaderNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeaderNhapMatHang.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHeaderNhapMatHang.Location = new System.Drawing.Point(69, 24);
+            this.labelHeaderNhapMatHang.Location = new System.Drawing.Point(69, 36);
             this.labelHeaderNhapMatHang.Name = "labelHeaderNhapMatHang";
             this.labelHeaderNhapMatHang.Size = new System.Drawing.Size(279, 31);
             this.labelHeaderNhapMatHang.TabIndex = 17;
@@ -140,7 +140,7 @@
             // 
             this.buttonXemChiTietNhapMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonXemChiTietNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXemChiTietNhapMatHang.Location = new System.Drawing.Point(237, 471);
+            this.buttonXemChiTietNhapMatHang.Location = new System.Drawing.Point(237, 454);
             this.buttonXemChiTietNhapMatHang.Name = "buttonXemChiTietNhapMatHang";
             this.buttonXemChiTietNhapMatHang.Size = new System.Drawing.Size(105, 24);
             this.buttonXemChiTietNhapMatHang.TabIndex = 16;
@@ -152,7 +152,7 @@
             // 
             this.buttonLamSachNhapMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLamSachNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLamSachNhapMatHang.Location = new System.Drawing.Point(123, 471);
+            this.buttonLamSachNhapMatHang.Location = new System.Drawing.Point(123, 454);
             this.buttonLamSachNhapMatHang.Name = "buttonLamSachNhapMatHang";
             this.buttonLamSachNhapMatHang.Size = new System.Drawing.Size(92, 24);
             this.buttonLamSachNhapMatHang.TabIndex = 15;
@@ -164,7 +164,7 @@
             // 
             this.buttonLuuNhapMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLuuNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLuuNhapMatHang.Location = new System.Drawing.Point(34, 471);
+            this.buttonLuuNhapMatHang.Location = new System.Drawing.Point(34, 454);
             this.buttonLuuNhapMatHang.Name = "buttonLuuNhapMatHang";
             this.buttonLuuNhapMatHang.Size = new System.Drawing.Size(67, 24);
             this.buttonLuuNhapMatHang.TabIndex = 14;
@@ -176,7 +176,7 @@
             // 
             this.textBoxTenMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxTenMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTenMatHang.Location = new System.Drawing.Point(171, 127);
+            this.textBoxTenMatHang.Location = new System.Drawing.Point(171, 118);
             this.textBoxTenMatHang.Name = "textBoxTenMatHang";
             this.textBoxTenMatHang.Size = new System.Drawing.Size(171, 22);
             this.textBoxTenMatHang.TabIndex = 4;
@@ -215,9 +215,9 @@
             this.groupBoxNhapPhieu.Controls.Add(this.labelChatLieu);
             this.groupBoxNhapPhieu.Controls.Add(this.labelLoaiMaMH);
             this.groupBoxNhapPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxNhapPhieu.Location = new System.Drawing.Point(6, 58);
+            this.groupBoxNhapPhieu.Location = new System.Drawing.Point(6, 76);
             this.groupBoxNhapPhieu.Name = "groupBoxNhapPhieu";
-            this.groupBoxNhapPhieu.Size = new System.Drawing.Size(387, 507);
+            this.groupBoxNhapPhieu.Size = new System.Drawing.Size(387, 489);
             this.groupBoxNhapPhieu.TabIndex = 19;
             this.groupBoxNhapPhieu.TabStop = false;
             this.groupBoxNhapPhieu.Text = "Nhập Phiếu";
@@ -226,7 +226,7 @@
             // 
             this.checkBoxNho.AutoSize = true;
             this.checkBoxNho.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxNho.Location = new System.Drawing.Point(171, 439);
+            this.checkBoxNho.Location = new System.Drawing.Point(171, 431);
             this.checkBoxNho.Name = "checkBoxNho";
             this.checkBoxNho.Size = new System.Drawing.Size(85, 17);
             this.checkBoxNho.TabIndex = 20;
@@ -240,7 +240,7 @@
             this.radSpinEditorTienHotBan.BackColor = System.Drawing.Color.White;
             this.radSpinEditorTienHotBan.DecimalPlaces = 2;
             this.radSpinEditorTienHotBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorTienHotBan.Location = new System.Drawing.Point(171, 279);
+            this.radSpinEditorTienHotBan.Location = new System.Drawing.Point(171, 270);
             this.radSpinEditorTienHotBan.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -263,7 +263,7 @@
             this.labelTienHotBan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTienHotBan.AutoSize = true;
             this.labelTienHotBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTienHotBan.Location = new System.Drawing.Point(31, 279);
+            this.labelTienHotBan.Location = new System.Drawing.Point(31, 270);
             this.labelTienHotBan.Name = "labelTienHotBan";
             this.labelTienHotBan.Size = new System.Drawing.Size(86, 16);
             this.labelTienHotBan.TabIndex = 27;
@@ -276,7 +276,7 @@
             this.radSpinEditorThanhTien.DecimalPlaces = 2;
             this.radSpinEditorThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorThanhTien.ForeColor = System.Drawing.Color.Maroon;
-            this.radSpinEditorThanhTien.Location = new System.Drawing.Point(171, 403);
+            this.radSpinEditorThanhTien.Location = new System.Drawing.Point(171, 394);
             this.radSpinEditorThanhTien.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -302,7 +302,7 @@
             this.radSpinEditorTienCongBan.BackColor = System.Drawing.Color.White;
             this.radSpinEditorTienCongBan.DecimalPlaces = 2;
             this.radSpinEditorTienCongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorTienCongBan.Location = new System.Drawing.Point(171, 341);
+            this.radSpinEditorTienCongBan.Location = new System.Drawing.Point(171, 332);
             this.radSpinEditorTienCongBan.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -325,7 +325,7 @@
             this.labelTienCongBan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTienCongBan.AutoSize = true;
             this.labelTienCongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTienCongBan.Location = new System.Drawing.Point(31, 346);
+            this.labelTienCongBan.Location = new System.Drawing.Point(31, 337);
             this.labelTienCongBan.Name = "labelTienCongBan";
             this.labelTienCongBan.Size = new System.Drawing.Size(97, 16);
             this.labelTienCongBan.TabIndex = 26;
@@ -337,7 +337,7 @@
             this.labelThanhTien.AutoSize = true;
             this.labelThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelThanhTien.ForeColor = System.Drawing.Color.Maroon;
-            this.labelThanhTien.Location = new System.Drawing.Point(31, 411);
+            this.labelThanhTien.Location = new System.Drawing.Point(31, 402);
             this.labelThanhTien.Name = "labelThanhTien";
             this.labelThanhTien.Size = new System.Drawing.Size(86, 16);
             this.labelThanhTien.TabIndex = 25;
@@ -349,7 +349,7 @@
             this.radSpinEditorDonGia.BackColor = System.Drawing.Color.White;
             this.radSpinEditorDonGia.DecimalPlaces = 2;
             this.radSpinEditorDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorDonGia.Location = new System.Drawing.Point(171, 188);
+            this.radSpinEditorDonGia.Location = new System.Drawing.Point(171, 179);
             this.radSpinEditorDonGia.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -372,7 +372,7 @@
             this.labelTruHot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTruHot.AutoSize = true;
             this.labelTruHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTruHot.Location = new System.Drawing.Point(31, 219);
+            this.labelTruHot.Location = new System.Drawing.Point(31, 210);
             this.labelTruHot.Name = "labelTruHot";
             this.labelTruHot.Size = new System.Drawing.Size(52, 16);
             this.labelTruHot.TabIndex = 18;
@@ -384,7 +384,7 @@
             this.radSpinEditorTyGiaUSD.BackColor = System.Drawing.Color.White;
             this.radSpinEditorTyGiaUSD.DecimalPlaces = 2;
             this.radSpinEditorTyGiaUSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorTyGiaUSD.Location = new System.Drawing.Point(171, 373);
+            this.radSpinEditorTyGiaUSD.Location = new System.Drawing.Point(171, 364);
             this.radSpinEditorTyGiaUSD.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -418,7 +418,7 @@
             this.radSpinEditorTienCong.BackColor = System.Drawing.Color.White;
             this.radSpinEditorTienCong.DecimalPlaces = 2;
             this.radSpinEditorTienCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorTienCong.Location = new System.Drawing.Point(171, 310);
+            this.radSpinEditorTienCong.Location = new System.Drawing.Point(171, 301);
             this.radSpinEditorTienCong.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -442,7 +442,7 @@
             this.radSpinEditorTienHot.BackColor = System.Drawing.Color.White;
             this.radSpinEditorTienHot.DecimalPlaces = 2;
             this.radSpinEditorTienHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorTienHot.Location = new System.Drawing.Point(171, 249);
+            this.radSpinEditorTienHot.Location = new System.Drawing.Point(171, 240);
             this.radSpinEditorTienHot.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -465,7 +465,7 @@
             this.labelTyGiaUSD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTyGiaUSD.AutoSize = true;
             this.labelTyGiaUSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTyGiaUSD.Location = new System.Drawing.Point(31, 378);
+            this.labelTyGiaUSD.Location = new System.Drawing.Point(31, 369);
             this.labelTyGiaUSD.Name = "labelTyGiaUSD";
             this.labelTyGiaUSD.Size = new System.Drawing.Size(80, 16);
             this.labelTyGiaUSD.TabIndex = 24;
@@ -477,7 +477,7 @@
             this.comboBoxLoaiMatHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLoaiMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLoaiMatHang.FormattingEnabled = true;
-            this.comboBoxLoaiMatHang.Location = new System.Drawing.Point(171, 89);
+            this.comboBoxLoaiMatHang.Location = new System.Drawing.Point(171, 80);
             this.comboBoxLoaiMatHang.Name = "comboBoxLoaiMatHang";
             this.comboBoxLoaiMatHang.Size = new System.Drawing.Size(171, 24);
             this.comboBoxLoaiMatHang.TabIndex = 3;
@@ -487,7 +487,7 @@
             this.labelDonGia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDonGia.AutoSize = true;
             this.labelDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDonGia.Location = new System.Drawing.Point(31, 193);
+            this.labelDonGia.Location = new System.Drawing.Point(31, 184);
             this.labelDonGia.Name = "labelDonGia";
             this.labelDonGia.Size = new System.Drawing.Size(56, 16);
             this.labelDonGia.TabIndex = 21;
@@ -496,7 +496,7 @@
             // textBoxMaMatHang
             // 
             this.textBoxMaMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxMaMatHang.Location = new System.Drawing.Point(171, 20);
+            this.textBoxMaMatHang.Location = new System.Drawing.Point(171, 11);
             this.textBoxMaMatHang.Name = "textBoxMaMatHang";
             this.textBoxMaMatHang.ReadOnly = true;
             this.textBoxMaMatHang.Size = new System.Drawing.Size(171, 20);
@@ -507,7 +507,7 @@
             this.labelTienCong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTienCong.AutoSize = true;
             this.labelTienCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTienCong.Location = new System.Drawing.Point(31, 310);
+            this.labelTienCong.Location = new System.Drawing.Point(31, 301);
             this.labelTienCong.Name = "labelTienCong";
             this.labelTienCong.Size = new System.Drawing.Size(70, 16);
             this.labelTienCong.TabIndex = 20;
@@ -518,7 +518,7 @@
             this.labelTienHot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTienHot.AutoSize = true;
             this.labelTienHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTienHot.Location = new System.Drawing.Point(31, 249);
+            this.labelTienHot.Location = new System.Drawing.Point(31, 240);
             this.labelTienHot.Name = "labelTienHot";
             this.labelTienHot.Size = new System.Drawing.Size(59, 16);
             this.labelTienHot.TabIndex = 19;
@@ -529,7 +529,7 @@
             this.labelTrongLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTrongLuong.AutoSize = true;
             this.labelTrongLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTrongLuong.Location = new System.Drawing.Point(31, 160);
+            this.labelTrongLuong.Location = new System.Drawing.Point(31, 151);
             this.labelTrongLuong.Name = "labelTrongLuong";
             this.labelTrongLuong.Size = new System.Drawing.Size(84, 16);
             this.labelTrongLuong.TabIndex = 17;
@@ -541,7 +541,7 @@
             this.comboBoxChatLieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChatLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxChatLieu.FormattingEnabled = true;
-            this.comboBoxChatLieu.Location = new System.Drawing.Point(171, 54);
+            this.comboBoxChatLieu.Location = new System.Drawing.Point(171, 45);
             this.comboBoxChatLieu.Name = "comboBoxChatLieu";
             this.comboBoxChatLieu.Size = new System.Drawing.Size(171, 24);
             this.comboBoxChatLieu.TabIndex = 2;
@@ -551,7 +551,7 @@
             this.labelTenMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTenMatHang.AutoSize = true;
             this.labelTenMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenMatHang.Location = new System.Drawing.Point(31, 130);
+            this.labelTenMatHang.Location = new System.Drawing.Point(31, 121);
             this.labelTenMatHang.Name = "labelTenMatHang";
             this.labelTenMatHang.Size = new System.Drawing.Size(93, 16);
             this.labelTenMatHang.TabIndex = 16;
@@ -562,7 +562,7 @@
             this.labelLoaiMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLoaiMatHang.AutoSize = true;
             this.labelLoaiMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoaiMatHang.Location = new System.Drawing.Point(31, 92);
+            this.labelLoaiMatHang.Location = new System.Drawing.Point(31, 83);
             this.labelLoaiMatHang.Name = "labelLoaiMatHang";
             this.labelLoaiMatHang.Size = new System.Drawing.Size(95, 16);
             this.labelLoaiMatHang.TabIndex = 15;
@@ -573,7 +573,7 @@
             this.labelChatLieu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelChatLieu.AutoSize = true;
             this.labelChatLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChatLieu.Location = new System.Drawing.Point(31, 57);
+            this.labelChatLieu.Location = new System.Drawing.Point(31, 48);
             this.labelChatLieu.Name = "labelChatLieu";
             this.labelChatLieu.Size = new System.Drawing.Size(63, 16);
             this.labelChatLieu.TabIndex = 14;
@@ -584,7 +584,7 @@
             this.labelLoaiMaMH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLoaiMaMH.AutoSize = true;
             this.labelLoaiMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoaiMaMH.Location = new System.Drawing.Point(31, 24);
+            this.labelLoaiMaMH.Location = new System.Drawing.Point(31, 15);
             this.labelLoaiMaMH.Name = "labelLoaiMaMH";
             this.labelLoaiMaMH.Size = new System.Drawing.Size(88, 16);
             this.labelLoaiMaMH.TabIndex = 13;
@@ -596,7 +596,7 @@
             this.labelNgayNhapNgoaiTe.AutoSize = true;
             this.labelNgayNhapNgoaiTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayNhapNgoaiTe.ForeColor = System.Drawing.Color.Blue;
-            this.labelNgayNhapNgoaiTe.Location = new System.Drawing.Point(12, 9);
+            this.labelNgayNhapNgoaiTe.Location = new System.Drawing.Point(3, 9);
             this.labelNgayNhapNgoaiTe.Name = "labelNgayNhapNgoaiTe";
             this.labelNgayNhapNgoaiTe.Size = new System.Drawing.Size(76, 15);
             this.labelNgayNhapNgoaiTe.TabIndex = 18;
