@@ -99,6 +99,7 @@ namespace ThinhKhaiManagement.UI.MatHang
                 tran.Rollback();
             }
             con.Close();
+            ChiTietXuatMatHang_Load(sender, e);
         }
 
         private void ResetCollummFormat()
