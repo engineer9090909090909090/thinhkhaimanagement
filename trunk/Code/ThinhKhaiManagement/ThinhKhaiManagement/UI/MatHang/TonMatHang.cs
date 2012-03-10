@@ -10,6 +10,8 @@ using ThinhKhaiManagement.Common;
 using DatabaseAccesser;
 using System.Collections.ObjectModel;
 using System.Globalization;
+using System.Data.SqlClient;
+using ThinhKhaiManagement.Reports;
 
 namespace ThinhKhaiManagement.UI.MatHang
 {
@@ -230,5 +232,14 @@ namespace ThinhKhaiManagement.UI.MatHang
             labelTTC.Text = "00.00";
             labelTGV.Text = "00.00";
         }
+
+        private void buttonInPhieu_Click(object sender, EventArgs e)
+        {
+            InPhieuTonMathang inPhieuTonMatHang = new InPhieuTonMathang();
+            ThinhKhaiDataSet ds = new ThinhKhaiDataSet();
+            ds.Tables["TonMatHang"].Merge((DataTable)dataGridViewXem.DataSource);
+            inPhieuTonMatHang.ReportDataSet = ds;
+            inPhieuTonMatHang.ShowDialog();
+        }
     }
-}
+} 

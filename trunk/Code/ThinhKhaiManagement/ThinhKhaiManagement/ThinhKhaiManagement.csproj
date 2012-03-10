@@ -79,6 +79,17 @@
   <ItemGroup>
     <Compile Include="Common\StaticMethods.cs" />
     <Compile Include="Common\StoreProcedureNames.cs" />
+    <Compile Include="Reports\TonMatHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TonMatHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThinhKhaiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThinhKhaiDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\LoiNhuan\Lợi Nhuận.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,17 +122,17 @@
     <Compile Include="UI\MatHang\ChiTietXuatMatHang.Designer.cs">
       <DependentUpon>ChiTietXuatMatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\MatHang\InPhieuTonMathang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MatHang\InPhieuTonMathang.Designer.cs">
+      <DependentUpon>InPhieuTonMathang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MatHang\Loai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\MatHang\Loai.Designer.cs">
       <DependentUpon>Loai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\NgoaiTe\InPhieuTonNgoaiTe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\NgoaiTe\InPhieuTonNgoaiTe.Designer.cs">
-      <DependentUpon>InPhieuTonNgoaiTe.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\NgoaiTe\NgoaiTe.cs">
       <SubType>Form</SubType>
@@ -165,12 +176,6 @@
     <Compile Include="UI\NgoaiTe\NhapNgoaiTe.Designer.cs">
       <DependentUpon>NhapNgoaiTe.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\NgoaiTe\RPTonNgoaiTe.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RPTonNgoaiTe.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="UI\NgoaiTe\TonNgoaiTe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +206,10 @@
     <Compile Include="UI\TienMat\TienMat.Designer.cs">
       <DependentUpon>TienMat.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\TonMatHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TonMatHang.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\LoiNhuan\Lợi Nhuận.resx">
       <DependentUpon>Lợi Nhuận.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,11 +235,11 @@
     <EmbeddedResource Include="UI\MatHang\ChiTietXuatMatHang.resx">
       <DependentUpon>ChiTietXuatMatHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\MatHang\InPhieuTonMathang.resx">
+      <DependentUpon>InPhieuTonMathang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MatHang\Loai.resx">
       <DependentUpon>Loai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\NgoaiTe\InPhieuTonNgoaiTe.resx">
-      <DependentUpon>InPhieuTonNgoaiTe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NgoaiTe\NgoaiTe.resx">
       <DependentUpon>NgoaiTe.cs</DependentUpon>
@@ -252,10 +261,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NgoaiTe\NhapNgoaiTe.resx">
       <DependentUpon>NhapNgoaiTe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\NgoaiTe\RPTonNgoaiTe.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RPTonNgoaiTe.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NgoaiTe\TonNgoaiTe.resx">
       <DependentUpon>TonNgoaiTe.cs</DependentUpon>
@@ -284,6 +289,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ThinhKhaiDataSet.xsc">
+      <DependentUpon>ThinhKhaiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ThinhKhaiDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThinhKhaiDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ThinhKhaiDataSet.xss">
+      <DependentUpon>ThinhKhaiDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

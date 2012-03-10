@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ThinhKhaiDataSet" targetNamespace="http://tempuri.org/ThinhKhaiDataSet.xsd" xmlns:mstns="http://tempuri.org/ThinhKhaiDataSet.xsd" xmlns="http://tempuri.org/ThinhKhaiDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ThinhKhaiDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ThinhKhaiDataSet" msprop:Generator_UserDSName="ThinhKhaiDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TonMatHang" msprop:Generator_TableClassName="TonMatHangDataTable" msprop:Generator_TableVarName="tableTonMatHang" msprop:Generator_TablePropName="TonMatHang" msprop:Generator_RowDeletingName="TonMatHangRowDeleting" msprop:Generator_UserTableName="TonMatHang" msprop:Generator_RowChangingName="TonMatHangRowChanging" msprop:Generator_RowEvHandlerName="TonMatHangRowChangeEventHandler" msprop:Generator_RowDeletedName="TonMatHangRowDeleted" msprop:Generator_RowEvArgName="TonMatHangRowChangeEvent" msprop:Generator_RowChangedName="TonMatHangRowChanged" msprop:Generator_RowClassName="TonMatHangRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mã_x0020_MH" msprop:Generator_ColumnVarNameInTable="columnMã_MH" msprop:Generator_ColumnPropNameInRow="Mã_MH" msprop:Generator_ColumnPropNameInTable="Mã_MHColumn" msprop:Generator_UserColumnName="Mã MH" type="xs:string" minOccurs="0" />
+              <xs:element name="Mã_x0020_CL" msprop:Generator_ColumnVarNameInTable="columnMã_CL" msprop:Generator_ColumnPropNameInRow="Mã_CL" msprop:Generator_ColumnPropNameInTable="Mã_CLColumn" msprop:Generator_UserColumnName="Mã CL" type="xs:long" minOccurs="0" />
+              <xs:element name="Mã_x0020_LMH" msprop:Generator_ColumnVarNameInTable="columnMã_LMH" msprop:Generator_ColumnPropNameInRow="Mã_LMH" msprop:Generator_ColumnPropNameInTable="Mã_LMHColumn" msprop:Generator_UserColumnName="Mã LMH" type="xs:long" minOccurs="0" />
+              <xs:element name="Tên_x0020_MH" msprop:Generator_ColumnVarNameInTable="columnTên_MH" msprop:Generator_ColumnPropNameInRow="Tên_MH" msprop:Generator_ColumnPropNameInTable="Tên_MHColumn" msprop:Generator_UserColumnName="Tên MH" type="xs:string" minOccurs="0" />
+              <xs:element name="Trọng_x0020_lượng" msprop:Generator_ColumnVarNameInTable="columnTrọng_lượng" msprop:Generator_ColumnPropNameInRow="Trọng_lượng" msprop:Generator_ColumnPropNameInTable="Trọng_lượngColumn" msprop:Generator_UserColumnName="Trọng lượng" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Trừ_x0020_hột" msprop:Generator_ColumnVarNameInTable="columnTrừ_hột" msprop:Generator_ColumnPropNameInRow="Trừ_hột" msprop:Generator_ColumnPropNameInTable="Trừ_hộtColumn" msprop:Generator_UserColumnName="Trừ hột" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tiền_x0020_hột" msprop:Generator_ColumnVarNameInTable="columnTiền_hột" msprop:Generator_ColumnPropNameInRow="Tiền_hột" msprop:Generator_ColumnPropNameInTable="Tiền_hộtColumn" msprop:Generator_UserColumnName="Tiền hột" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tiền_x0020_công" msprop:Generator_ColumnVarNameInTable="columnTiền_công" msprop:Generator_ColumnPropNameInRow="Tiền_công" msprop:Generator_ColumnPropNameInTable="Tiền_côngColumn" msprop:Generator_UserColumnName="Tiền công" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Đơn_x0020_giá" msprop:Generator_ColumnVarNameInTable="columnĐơn_giá" msprop:Generator_ColumnPropNameInRow="Đơn_giá" msprop:Generator_ColumnPropNameInTable="Đơn_giáColumn" msprop:Generator_UserColumnName="Đơn giá" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TG_x0020_USD" msprop:Generator_ColumnVarNameInTable="columnTG_USD" msprop:Generator_ColumnPropNameInRow="TG_USD" msprop:Generator_ColumnPropNameInTable="TG_USDColumn" msprop:Generator_UserColumnName="TG USD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Ngày_x0020_nhập" msprop:Generator_ColumnVarNameInTable="columnNgày_nhập" msprop:Generator_ColumnPropNameInRow="Ngày_nhập" msprop:Generator_ColumnPropNameInTable="Ngày_nhậpColumn" msprop:Generator_UserColumnName="Ngày nhập" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="STT" msprop:Generator_ColumnVarNameInTable="columnSTT" msprop:Generator_ColumnPropNameInRow="STT" msprop:Generator_ColumnPropNameInTable="STTColumn" msprop:Generator_UserColumnName="STT" type="xs:long" minOccurs="0" />
+              <xs:element name="Công_x0020_Xuất" msprop:Generator_ColumnVarNameInTable="columnCông_Xuất" msprop:Generator_ColumnPropNameInRow="Công_Xuất" msprop:Generator_ColumnPropNameInTable="Công_XuấtColumn" msprop:Generator_UserColumnName="Công Xuất" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Hột_x0020_Xuất" msprop:Generator_ColumnVarNameInTable="columnHột_Xuất" msprop:Generator_ColumnPropNameInRow="Hột_Xuất" msprop:Generator_ColumnPropNameInTable="Hột_XuấtColumn" msprop:Generator_UserColumnName="Hột Xuất" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -36,7 +36,6 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.buttonCapNhatTonNgoaiTe = new System.Windows.Forms.Button();
             this.labelTGV = new System.Windows.Forms.Label();
             this.labelTongGiaVon = new System.Windows.Forms.Label();
-            this.buttonIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTonNgoaiTe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,22 +114,11 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             this.labelTongGiaVon.TabIndex = 12;
             this.labelTongGiaVon.Text = "Tổng Giá Vốn";
             // 
-            // buttonIn
-            // 
-            this.buttonIn.Location = new System.Drawing.Point(489, 72);
-            this.buttonIn.Name = "buttonIn";
-            this.buttonIn.Size = new System.Drawing.Size(75, 23);
-            this.buttonIn.TabIndex = 14;
-            this.buttonIn.Text = "In Phiếu";
-            this.buttonIn.UseVisualStyleBackColor = true;
-            this.buttonIn.Click += new System.EventHandler(this.buttonIn_Click);
-            // 
             // TonNgoaiTe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 387);
-            this.Controls.Add(this.buttonIn);
             this.Controls.Add(this.labelTGV);
             this.Controls.Add(this.labelTongGiaVon);
             this.Controls.Add(this.buttonCapNhatTonNgoaiTe);
@@ -159,7 +147,6 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
         public System.Windows.Forms.Button buttonCapNhatTonNgoaiTe;
         public System.Windows.Forms.Label labelTGV;
         public System.Windows.Forms.Label labelTongGiaVon;
-        private System.Windows.Forms.Button buttonIn;
 
 
 

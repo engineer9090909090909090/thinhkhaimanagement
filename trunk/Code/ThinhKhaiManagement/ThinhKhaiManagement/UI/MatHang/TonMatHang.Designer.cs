@@ -59,6 +59,7 @@
             this.labelTTC = new System.Windows.Forms.Label();
             this.labelTongTienCong = new System.Windows.Forms.Label();
             this.buttonXoaHet = new System.Windows.Forms.Button();
+            this.buttonInPhieu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXem)).BeginInit();
             this.groupBoxLoc.SuspendLayout();
             this.groupBoxKiemTraVonTungMatHang.SuspendLayout();
@@ -444,11 +445,22 @@
             this.buttonXoaHet.UseVisualStyleBackColor = true;
             this.buttonXoaHet.Click += new System.EventHandler(this.buttonXoaHet_Click);
             // 
+            // buttonInPhieu
+            // 
+            this.buttonInPhieu.Location = new System.Drawing.Point(680, 39);
+            this.buttonInPhieu.Name = "buttonInPhieu";
+            this.buttonInPhieu.Size = new System.Drawing.Size(75, 23);
+            this.buttonInPhieu.TabIndex = 19;
+            this.buttonInPhieu.Text = "In Phiếu";
+            this.buttonInPhieu.UseVisualStyleBackColor = true;
+            this.buttonInPhieu.Click += new System.EventHandler(this.buttonInPhieu_Click);
+            // 
             // TonMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 594);
+            this.Controls.Add(this.buttonInPhieu);
             this.Controls.Add(this.buttonXoaHet);
             this.Controls.Add(this.labelTTC);
             this.Controls.Add(this.labelTongTienCong);
@@ -517,5 +529,6 @@
         private System.Windows.Forms.Label labelTTC;
         private System.Windows.Forms.Label labelTongTienCong;
         private System.Windows.Forms.Button buttonXoaHet;
+        private System.Windows.Forms.Button buttonInPhieu;
     }
 }
