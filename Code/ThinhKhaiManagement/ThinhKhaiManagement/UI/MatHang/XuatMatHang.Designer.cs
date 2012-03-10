@@ -58,6 +58,9 @@
             this.buttonLuu = new System.Windows.Forms.Button();
             this.radSpinEditorTyGiaUSD = new Telerik.WinControls.UI.RadSpinEditor();
             this.labelTyGiaUSD = new System.Windows.Forms.Label();
+            this.dataGridViewChiTietHoaDon = new System.Windows.Forms.DataGridView();
+            this.groupBoxChiTietXuatHang = new System.Windows.Forms.GroupBox();
+            this.buttonXuatHoaDon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTrongLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTruHot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTienHot)).BeginInit();
@@ -68,6 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDonGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorThanhTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTyGiaUSD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietHoaDon)).BeginInit();
+            this.groupBoxChiTietXuatHang.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelHeaderXuatMatHang
@@ -76,7 +81,7 @@
             this.labelHeaderXuatMatHang.AutoSize = true;
             this.labelHeaderXuatMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeaderXuatMatHang.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHeaderXuatMatHang.Location = new System.Drawing.Point(74, 32);
+            this.labelHeaderXuatMatHang.Location = new System.Drawing.Point(305, 27);
             this.labelHeaderXuatMatHang.Name = "labelHeaderXuatMatHang";
             this.labelHeaderXuatMatHang.Size = new System.Drawing.Size(270, 31);
             this.labelHeaderXuatMatHang.TabIndex = 19;
@@ -88,7 +93,7 @@
             this.labelNgayXuatMatHang.AutoSize = true;
             this.labelNgayXuatMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayXuatMatHang.ForeColor = System.Drawing.Color.Blue;
-            this.labelNgayXuatMatHang.Location = new System.Drawing.Point(15, 3);
+            this.labelNgayXuatMatHang.Location = new System.Drawing.Point(9, 9);
             this.labelNgayXuatMatHang.Name = "labelNgayXuatMatHang";
             this.labelNgayXuatMatHang.Size = new System.Drawing.Size(76, 15);
             this.labelNgayXuatMatHang.TabIndex = 20;
@@ -330,7 +335,7 @@
             this.groupBoxThanhToan.Controls.Add(this.radSpinEditorTruHot);
             this.groupBoxThanhToan.Controls.Add(this.radSpinEditorTienHot);
             this.groupBoxThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxThanhToan.Location = new System.Drawing.Point(12, 66);
+            this.groupBoxThanhToan.Location = new System.Drawing.Point(12, 77);
             this.groupBoxThanhToan.Name = "groupBoxThanhToan";
             this.groupBoxThanhToan.Size = new System.Drawing.Size(375, 415);
             this.groupBoxThanhToan.TabIndex = 11;
@@ -536,11 +541,43 @@
             this.labelTyGiaUSD.TabIndex = 66;
             this.labelTyGiaUSD.Text = "Tỷ Giá USD";
             // 
+            // dataGridViewChiTietHoaDon
+            // 
+            this.dataGridViewChiTietHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewChiTietHoaDon.Location = new System.Drawing.Point(13, 50);
+            this.dataGridViewChiTietHoaDon.Name = "dataGridViewChiTietHoaDon";
+            this.dataGridViewChiTietHoaDon.Size = new System.Drawing.Size(445, 355);
+            this.dataGridViewChiTietHoaDon.TabIndex = 21;
+            // 
+            // groupBoxChiTietXuatHang
+            // 
+            this.groupBoxChiTietXuatHang.Controls.Add(this.buttonXuatHoaDon);
+            this.groupBoxChiTietXuatHang.Controls.Add(this.dataGridViewChiTietHoaDon);
+            this.groupBoxChiTietXuatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxChiTietXuatHang.Location = new System.Drawing.Point(393, 77);
+            this.groupBoxChiTietXuatHang.Name = "groupBoxChiTietXuatHang";
+            this.groupBoxChiTietXuatHang.Size = new System.Drawing.Size(467, 415);
+            this.groupBoxChiTietXuatHang.TabIndex = 22;
+            this.groupBoxChiTietXuatHang.TabStop = false;
+            this.groupBoxChiTietXuatHang.Text = "Chi Tiết Xuất Hàng";
+            // 
+            // buttonXuatHoaDon
+            // 
+            this.buttonXuatHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXuatHoaDon.Location = new System.Drawing.Point(13, 21);
+            this.buttonXuatHoaDon.Name = "buttonXuatHoaDon";
+            this.buttonXuatHoaDon.Size = new System.Drawing.Size(98, 23);
+            this.buttonXuatHoaDon.TabIndex = 22;
+            this.buttonXuatHoaDon.Text = "Xuất Hóa Đơn";
+            this.buttonXuatHoaDon.UseVisualStyleBackColor = true;
+            this.buttonXuatHoaDon.Click += new System.EventHandler(this.buttonXuatHoaDon_Click);
+            // 
             // XuatMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 493);
+            this.ClientSize = new System.Drawing.Size(869, 493);
+            this.Controls.Add(this.groupBoxChiTietXuatHang);
             this.Controls.Add(this.groupBoxThanhToan);
             this.Controls.Add(this.labelHeaderXuatMatHang);
             this.Controls.Add(this.labelNgayXuatMatHang);
@@ -562,6 +599,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDonGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorThanhTien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTyGiaUSD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietHoaDon)).EndInit();
+            this.groupBoxChiTietXuatHang.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,5 +637,8 @@
         public Telerik.WinControls.UI.RadSpinEditor radSpinEditorTyGiaUSD;
         private System.Windows.Forms.Label labelTyGiaUSD;
         private System.Windows.Forms.Label labelSpliter;
+        private System.Windows.Forms.GroupBox groupBoxChiTietXuatHang;
+        private System.Windows.Forms.Button buttonXuatHoaDon;
+        private System.Windows.Forms.DataGridView dataGridViewChiTietHoaDon;
     }
 }
