@@ -60,6 +60,11 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         private void buttonLamSachNhapMatHang_Click(object sender, EventArgs e)
         {
+            Caches.Clear();
+            if (checkBoxNho.Checked)
+            {
+                SaveCache();
+            }
             textBoxMaMatHang.Text = string.Empty;
             comboBoxChatLieu.SelectedIndex = 0;
             comboBoxLoaiMatHang.SelectedIndex = 0;
@@ -77,9 +82,7 @@ namespace ThinhKhaiManagement.UI.MatHang
             buttonLuuNhapMatHang.Text = "Lưu";
             Stt = 0;
             textBoxMaMatHang.Focus();
-
-            if (checkBoxNho.Checked)
-                LoadCache();
+            LoadCache();
         }
 
         private void buttonXemChiTietNhapMatHang_Click(object sender, EventArgs e)
@@ -218,12 +221,12 @@ namespace ThinhKhaiManagement.UI.MatHang
             //7
             if (radSpinEditorTruHot.Value > 0 && radSpinEditorTienCong.Value == 0)
             {
-                errorProvider_NhapMatHang.SetError(radSpinEditorTruHot, "Mời nhập tiền công và tiền hột");
+                errorProvider_NhapMatHang.SetError(radSpinEditorTienCong, "Mời nhập tiền công hay tiền hột");
                 flag = 0;
             }
             else
             {
-                errorProvider_NhapMatHang.SetError(radSpinEditorTruHot,string.Empty);
+                errorProvider_NhapMatHang.SetError(radSpinEditorTienCong, string.Empty);
                 flag++;
             }
 
@@ -394,23 +397,26 @@ namespace ThinhKhaiManagement.UI.MatHang
             Caches.Add(radSpinEditorTienHot.Value);
             Caches.Add(radSpinEditorTienHotBan.Value);
             Caches.Add(radSpinEditorTienCong.Value);
-            Caches.Add(radSpinEditorTienHotBan.Value);
+            Caches.Add(radSpinEditorTienCongBan.Value);
             Caches.Add(radSpinEditorTyGiaUSD.Value);
         }
 
         private void LoadCache()
         {
-            comboBoxChatLieu.SelectedIndex = (int)Caches[0];
-            comboBoxLoaiMatHang.SelectedIndex = (int)Caches[1];
-            textBoxTenMatHang.Text = Caches[2].ToString();
-            radSpinEditorTrongLuong.Value = (decimal)Caches[3];
-            radSpinEditorDonGia.Value = (decimal)Caches[4];
-            radSpinEditorTruHot.Value = (decimal)Caches[5];
-            radSpinEditorTienHot.Value = (decimal)Caches[6];
-            radSpinEditorTienHotBan.Value = (decimal)Caches[7];
-            radSpinEditorTienCong.Value = (decimal)Caches[8];
-            radSpinEditorTienCongBan.Value = (decimal)Caches[9];
-            radSpinEditorTyGiaUSD.Value = (decimal)Caches[10];
+            if (Caches.Count > 0)
+            {
+                comboBoxChatLieu.SelectedIndex = (int)Caches[0];
+                comboBoxLoaiMatHang.SelectedIndex = (int)Caches[1];
+                textBoxTenMatHang.Text = Caches[2].ToString();
+                radSpinEditorTrongLuong.Value = (decimal)Caches[3];
+                radSpinEditorDonGia.Value = (decimal)Caches[4];
+                radSpinEditorTruHot.Value = (decimal)Caches[5];
+                radSpinEditorTienHot.Value = (decimal)Caches[6];
+                radSpinEditorTienHotBan.Value = (decimal)Caches[7];
+                radSpinEditorTienCong.Value = (decimal)Caches[8];
+                radSpinEditorTienCongBan.Value = (decimal)Caches[9];
+                radSpinEditorTyGiaUSD.Value = (decimal)Caches[10];
+            }
         }
 
         #endregion
@@ -427,19 +433,6 @@ namespace ThinhKhaiManagement.UI.MatHang
         }
 
         #endregion
-
-        private void checkBoxNho_CheckedChanged(object sender, EventArgs e)
-        {
-            if(checkBoxNho.Checked)
-            {
-                SaveCache();
-            }
-            else
-            {
-                Caches.Clear();
-            }
-
-        }
 
     }
 }

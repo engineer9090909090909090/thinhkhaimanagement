@@ -232,7 +232,6 @@
             this.checkBoxNho.TabIndex = 20;
             this.checkBoxNho.Text = "Nhớ Chi Tiết";
             this.checkBoxNho.UseVisualStyleBackColor = true;
-            this.checkBoxNho.CheckedChanged += new System.EventHandler(this.checkBoxNho_CheckedChanged);
             // 
             // radSpinEditorTienHotBan
             // 
