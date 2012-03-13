@@ -81,7 +81,7 @@ namespace ThinhKhaiManagement.UI.MatHang
             labelHeaderNhapMatHang.Text = "Phiếu Nhập Mặt Hàng";
             buttonLuuNhapMatHang.Text = "Lưu";
             Stt = 0;
-            textBoxMaMatHang.Focus();
+            textBoxTenMatHang.Focus();
             LoadCache();
         }
 
