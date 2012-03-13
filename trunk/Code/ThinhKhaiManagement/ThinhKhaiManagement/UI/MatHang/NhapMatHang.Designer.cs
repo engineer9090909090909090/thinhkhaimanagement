@@ -130,7 +130,7 @@
             this.labelHeaderNhapMatHang.AutoSize = true;
             this.labelHeaderNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeaderNhapMatHang.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHeaderNhapMatHang.Location = new System.Drawing.Point(69, 36);
+            this.labelHeaderNhapMatHang.Location = new System.Drawing.Point(57, 36);
             this.labelHeaderNhapMatHang.Name = "labelHeaderNhapMatHang";
             this.labelHeaderNhapMatHang.Size = new System.Drawing.Size(279, 31);
             this.labelHeaderNhapMatHang.TabIndex = 17;
@@ -152,9 +152,9 @@
             // 
             this.buttonLamSachNhapMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLamSachNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLamSachNhapMatHang.Location = new System.Drawing.Point(123, 454);
+            this.buttonLamSachNhapMatHang.Location = new System.Drawing.Point(133, 454);
             this.buttonLamSachNhapMatHang.Name = "buttonLamSachNhapMatHang";
-            this.buttonLamSachNhapMatHang.Size = new System.Drawing.Size(92, 24);
+            this.buttonLamSachNhapMatHang.Size = new System.Drawing.Size(100, 24);
             this.buttonLamSachNhapMatHang.TabIndex = 15;
             this.buttonLamSachNhapMatHang.Text = "Làm Sạch";
             this.buttonLamSachNhapMatHang.UseVisualStyleBackColor = true;
@@ -166,7 +166,7 @@
             this.buttonLuuNhapMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLuuNhapMatHang.Location = new System.Drawing.Point(34, 454);
             this.buttonLuuNhapMatHang.Name = "buttonLuuNhapMatHang";
-            this.buttonLuuNhapMatHang.Size = new System.Drawing.Size(67, 24);
+            this.buttonLuuNhapMatHang.Size = new System.Drawing.Size(94, 24);
             this.buttonLuuNhapMatHang.TabIndex = 14;
             this.buttonLuuNhapMatHang.Text = "Lưu";
             this.buttonLuuNhapMatHang.UseVisualStyleBackColor = true;
