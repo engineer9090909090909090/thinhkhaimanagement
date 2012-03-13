@@ -25,6 +25,8 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
 
         public decimal DonGiaOld { get; set; }
 
+        public int MaNgoaiTe { get; set; }
+
         #endregion
 
         #region Variables and Constants
@@ -225,6 +227,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
                                                     ref sqlTransaction);
 
                 Collection<KeyValuePair<object, int>> c2 = new Collection<KeyValuePair<object, int>>(){
+            new KeyValuePair<object,int>(MaNgoaiTe,(int)ParameterType.NonString),
             new KeyValuePair<object,int>(comboBoxLoaiNgoaiTeNhap.SelectedValue, (int)ParameterType.NonString),
             new KeyValuePair<object,int>(SoLuongOld, (int)ParameterType.NonString),
             new KeyValuePair<object,int>(DonGiaOld, (int)ParameterType.NonString),

@@ -58,6 +58,7 @@ namespace ThinhKhaiManagement.UI.NgoaiTe
             if (e.RowIndex >= 0)
             {
                 nhapNgoaiTeObject.comboBoxLoaiNgoaiTeNhap.SelectedValue = dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[1].Value.ToString();
+                nhapNgoaiTeObject.MaNgoaiTe = Convert.ToInt32(dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[1].Value);
                 nhapNgoaiTeObject.radSpinEditorSoLuongNhapNgoaiTe.Value = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
                 nhapNgoaiTeObject.radSpinEditorDonGiaNhapNgoaiTe.Value = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[4].Value;
                 nhapNgoaiTeObject.SoLuongOld = (decimal)dataGridViewChiTietNhapNgoaiTe.Rows[e.RowIndex].Cells[3].Value;
