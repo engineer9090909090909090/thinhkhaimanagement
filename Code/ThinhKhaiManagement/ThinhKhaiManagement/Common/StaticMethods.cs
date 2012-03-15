@@ -11,6 +11,7 @@ namespace ThinhKhaiManagement.Common
     public static class StaticMethods
     {
         const string constDateFormat = "Ngày {0}, Tháng {1}, Năm {2}";
+        const string constTimeFormat = "{0} {1}";
         const string constconnectionName = "ThinhKhaiConnection";
 
         public static string ShowDate()
@@ -19,6 +20,13 @@ namespace ThinhKhaiManagement.Common
                 DateTime.Today.Day.ToString(),
                 DateTime.Today.Month.ToString(),
                 DateTime.Today.Year.ToString());
+        }
+
+        public static string ShowTime()
+        {
+            return string.Format(constTimeFormat,
+                DateTime.Now.ToString("hh:mm:ss"),
+                DateTime.Now.ToString("tt"));
         }
 
         public static SqlConnection ShowSqlConnection()
