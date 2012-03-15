@@ -10,6 +10,7 @@ using ThinhKhaiManagement.UI.NgoaiTe;
 using ThinhKhaiManagement.UI.TienMat;
 using ThinhKhaiManagement.UI.MatHang;
 using ThinhKhaiManagement.UI.LoiNhuan;
+using ThinhKhaiManagement.UI.XuLyGia;
 
 namespace ThinhKhaiManagement.UI
 {
@@ -108,6 +109,13 @@ namespace ThinhKhaiManagement.UI
             LoiNhuan.LoiNhuan loiNhuan = new LoiNhuan.LoiNhuan();
             loiNhuan.MdiParent = this;
             loiNhuan.Show();
+        }
+
+        private void xửLýGiáVàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XuLyGiaVang xuLyGiaVang = new XuLyGiaVang();
+            xuLyGiaVang.MdiParent = this;
+            xuLyGiaVang.Show();
         }
     }
 }

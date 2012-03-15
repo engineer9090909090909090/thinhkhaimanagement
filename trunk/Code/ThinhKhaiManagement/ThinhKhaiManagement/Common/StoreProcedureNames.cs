@@ -99,5 +99,8 @@ namespace ThinhKhaiManagement.Common
 
         // Loi Nhuan
         public const string constLoiNhuan_CalculateByCondition = "LoiNhuan_CalculateByCondition";
+
+        //GiaVang
+        public const string constGiaVang_Insert = "GiaVang_Insert";
     }
 }
