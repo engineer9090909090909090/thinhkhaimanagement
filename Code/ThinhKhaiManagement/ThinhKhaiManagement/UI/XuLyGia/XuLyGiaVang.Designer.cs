@@ -141,7 +141,7 @@
             this.radSpinEditor95.ShowBorder = true;
             this.radSpinEditor95.ShowUpDownButtons = false;
             this.radSpinEditor95.Size = new System.Drawing.Size(304, 21);
-            this.radSpinEditor95.TabIndex = 2;
+            this.radSpinEditor95.TabIndex = 3;
             this.radSpinEditor95.Text = "radSpinEditor2";
             this.radSpinEditor95.ThousandsSeparator = true;
             // 
@@ -164,7 +164,7 @@
             this.radSpinEditorSJCHeSo.ShowBorder = true;
             this.radSpinEditorSJCHeSo.ShowUpDownButtons = false;
             this.radSpinEditorSJCHeSo.Size = new System.Drawing.Size(54, 21);
-            this.radSpinEditorSJCHeSo.TabIndex = 0;
+            this.radSpinEditorSJCHeSo.TabIndex = 2;
             this.radSpinEditorSJCHeSo.Text = "radSpinEditor2";
             this.radSpinEditorSJCHeSo.ThousandsSeparator = true;
             // 
@@ -610,7 +610,7 @@
             this.buttonXuLy.Location = new System.Drawing.Point(12, 437);
             this.buttonXuLy.Name = "buttonXuLy";
             this.buttonXuLy.Size = new System.Drawing.Size(75, 23);
-            this.buttonXuLy.TabIndex = 13;
+            this.buttonXuLy.TabIndex = 4;
             this.buttonXuLy.Text = "Xử Lý";
             this.buttonXuLy.UseVisualStyleBackColor = true;
             this.buttonXuLy.Click += new System.EventHandler(this.buttonXuLy_Click);
@@ -620,7 +620,7 @@
             this.buttonXemLichSu.Location = new System.Drawing.Point(385, 436);
             this.buttonXemLichSu.Name = "buttonXemLichSu";
             this.buttonXemLichSu.Size = new System.Drawing.Size(82, 23);
-            this.buttonXemLichSu.TabIndex = 14;
+            this.buttonXemLichSu.TabIndex = 6;
             this.buttonXemLichSu.Text = "Xem Lịch Sử";
             this.buttonXemLichSu.UseVisualStyleBackColor = true;
             this.buttonXemLichSu.Click += new System.EventHandler(this.buttonXemLichSu_Click);
@@ -630,7 +630,7 @@
             this.buttonLuu.Location = new System.Drawing.Point(93, 437);
             this.buttonLuu.Name = "buttonLuu";
             this.buttonLuu.Size = new System.Drawing.Size(75, 23);
-            this.buttonLuu.TabIndex = 13;
+            this.buttonLuu.TabIndex = 5;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = true;
             this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
