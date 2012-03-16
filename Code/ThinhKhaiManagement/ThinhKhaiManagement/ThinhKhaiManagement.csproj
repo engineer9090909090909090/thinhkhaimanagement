@@ -82,6 +82,18 @@
   <ItemGroup>
     <Compile Include="Common\StaticMethods.cs" />
     <Compile Include="Common\StoreProcedureNames.cs" />
+    <Compile Include="Reports\DonGiaVang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DonGiaVang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\XuLyGia\InPhieuXuLyGiaVang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\XuLyGia\InPhieuXuLyGiaVang.Designer.cs">
+      <DependentUpon>InPhieuXuLyGiaVang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\HoaDon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -221,12 +233,25 @@
     <Compile Include="UI\TienMat\TienMat.Designer.cs">
       <DependentUpon>TienMat.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\XuLyGia\ChiTietXuLyGiaVang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\XuLyGia\ChiTietXuLyGiaVang.Designer.cs">
+      <DependentUpon>ChiTietXuLyGiaVang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\XuLyGia\XuLyGiaVang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\XuLyGia\XuLyGiaVang.Designer.cs">
       <DependentUpon>XuLyGiaVang.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\DonGiaVang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DonGiaVang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\XuLyGia\InPhieuXuLyGiaVang.resx">
+      <DependentUpon>InPhieuXuLyGiaVang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\HoaDon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>HoaDon.cs</LastGenOutput>
@@ -304,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TienMat\TienMat.resx">
       <DependentUpon>TienMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\XuLyGia\ChiTietXuLyGiaVang.resx">
+      <DependentUpon>ChiTietXuLyGiaVang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\XuLyGia\XuLyGiaVang.resx">
       <DependentUpon>XuLyGiaVang.cs</DependentUpon>

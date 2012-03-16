@@ -130,5 +130,11 @@ namespace ThinhKhaiManagement.UI.XuLyGia
             }
             return rs;
         }
+
+        private void buttonXemLichSu_Click(object sender, EventArgs e)
+        {
+            LichSuXuLyGiaVang lichSuXuLyGiaVang = new LichSuXuLyGiaVang();
+            lichSuXuLyGiaVang.ShowDialog();
+        }
     }
 }
