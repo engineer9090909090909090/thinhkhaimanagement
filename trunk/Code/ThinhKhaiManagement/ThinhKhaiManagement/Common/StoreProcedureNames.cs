@@ -102,5 +102,7 @@ namespace ThinhKhaiManagement.Common
 
         //GiaVang
         public const string constGiaVang_Insert = "GiaVang_Insert";
+
+        public const string constGiaVang_ShowByNgay = "GiaVang_ShowByNgay";
     }
 }

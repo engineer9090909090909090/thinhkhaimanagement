@@ -48,6 +48,23 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="GiaVang" msprop:Generator_TableClassName="GiaVangDataTable" msprop:Generator_TableVarName="tableGiaVang" msprop:Generator_TablePropName="GiaVang" msprop:Generator_RowDeletingName="GiaVangRowDeleting" msprop:Generator_UserTableName="GiaVang" msprop:Generator_RowChangingName="GiaVangRowChanging" msprop:Generator_RowEvHandlerName="GiaVangRowChangeEventHandler" msprop:Generator_RowDeletedName="GiaVangRowDeleted" msprop:Generator_RowEvArgName="GiaVangRowChangeEvent" msprop:Generator_RowChangedName="GiaVangRowChanged" msprop:Generator_RowClassName="GiaVangRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ngay" msprop:Generator_ColumnVarNameInTable="columnNgay" msprop:Generator_ColumnPropNameInRow="Ngay" msprop:Generator_ColumnPropNameInTable="NgayColumn" msprop:Generator_UserColumnName="Ngay" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SJCMua" msprop:Generator_ColumnVarNameInTable="columnSJCMua" msprop:Generator_ColumnPropNameInRow="SJCMua" msprop:Generator_ColumnPropNameInTable="SJCMuaColumn" msprop:Generator_UserColumnName="SJCMua" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SJCBan" msprop:Generator_ColumnVarNameInTable="columnSJCBan" msprop:Generator_ColumnPropNameInRow="SJCBan" msprop:Generator_ColumnPropNameInTable="SJCBanColumn" msprop:Generator_UserColumnName="SJCBan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0039_999Mua" msprop:Generator_ColumnVarNameInTable="column9999Mua" msprop:Generator_ColumnPropNameInRow="_9999Mua" msprop:Generator_ColumnPropNameInTable="_9999MuaColumn" msprop:Generator_UserColumnName="9999Mua" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0039_999Ban" msprop:Generator_ColumnVarNameInTable="column9999Ban" msprop:Generator_ColumnPropNameInRow="_9999Ban" msprop:Generator_ColumnPropNameInTable="_9999BanColumn" msprop:Generator_UserColumnName="9999Ban" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NTMua" msprop:Generator_ColumnVarNameInTable="columnNTMua" msprop:Generator_ColumnPropNameInRow="NTMua" msprop:Generator_ColumnPropNameInTable="NTMuaColumn" msprop:Generator_UserColumnName="NTMua" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NTBan" msprop:Generator_ColumnVarNameInTable="columnNTBan" msprop:Generator_ColumnPropNameInRow="NTBan" msprop:Generator_ColumnPropNameInTable="NTBanColumn" msprop:Generator_UserColumnName="NTBan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0037_5Mua" msprop:Generator_ColumnVarNameInTable="column75Mua" msprop:Generator_ColumnPropNameInRow="_75Mua" msprop:Generator_ColumnPropNameInTable="_75MuaColumn" msprop:Generator_UserColumnName="75Mua" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0037_5Ban" msprop:Generator_ColumnVarNameInTable="column75Ban" msprop:Generator_ColumnPropNameInRow="_75Ban" msprop:Generator_ColumnPropNameInTable="_75BanColumn" msprop:Generator_UserColumnName="75Ban" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0037_0Mua" msprop:Generator_ColumnVarNameInTable="column70Mua" msprop:Generator_ColumnPropNameInRow="_70Mua" msprop:Generator_ColumnPropNameInTable="_70MuaColumn" msprop:Generator_UserColumnName="70Mua" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0037_0Ban" msprop:Generator_ColumnVarNameInTable="column70Ban" msprop:Generator_ColumnPropNameInRow="_70Ban" msprop:Generator_ColumnPropNameInTable="_70BanColumn" msprop:Generator_UserColumnName="70Ban" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>
