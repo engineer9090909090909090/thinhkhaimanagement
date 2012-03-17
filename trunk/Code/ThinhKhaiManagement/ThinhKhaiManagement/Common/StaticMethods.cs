@@ -5,6 +5,9 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Windows.Forms;
+using System.Data;
+using System.Collections.ObjectModel;
+using DatabaseAccesser;
 
 namespace ThinhKhaiManagement.Common
 {
@@ -32,6 +35,32 @@ namespace ThinhKhaiManagement.Common
         public static SqlConnection ShowSqlConnection()
         {
             return new SqlConnection(ConfigurationManager.ConnectionStrings[constconnectionName].ConnectionString);
+        }
+
+        public static Dictionary<string,decimal> GiaVangHienTai()
+        { 
+            DataAccess dataaccess = new DataAccess();
+            DataTable tb = (DataTable)dataaccess.Access(ShowSqlConnection(),
+                StoreProcedureNames.constGiaVang_ShowLasted,
+                new Collection<KeyValuePair<object, int>>(),
+            (int)ExecuteType.Query);
+
+            if(tb.Rows.Count > 0)
+            {
+                Dictionary<string, decimal> rs = new Dictionary<string, decimal> { 
+                    {Constants.constNuTrang,(decimal)tb.Rows[0][7]},
+                    {Constants.const75,(decimal)tb.Rows[0][9]},
+                    {Constants.const70,(decimal)tb.Rows[0][11]}
+                };
+                return rs;
+            }
+
+            Dictionary<string, decimal> blankrs = new Dictionary<string, decimal> { 
+                    {Constants.constNuTrang,0},
+                    {Constants.const75,0},
+                    {Constants.const70,0}
+                };
+            return blankrs;
         }
     }
 

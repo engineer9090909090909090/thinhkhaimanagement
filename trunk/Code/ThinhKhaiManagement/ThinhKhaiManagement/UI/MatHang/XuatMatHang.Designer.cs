@@ -61,6 +61,8 @@
             this.dataGridViewChiTietHoaDon = new System.Windows.Forms.DataGridView();
             this.groupBoxChiTietXuatHang = new System.Windows.Forms.GroupBox();
             this.buttonXuatHoaDon = new System.Windows.Forms.Button();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.giáĐềNghịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTrongLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTruHot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTienHot)).BeginInit();
@@ -73,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTyGiaUSD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietHoaDon)).BeginInit();
             this.groupBoxChiTietXuatHang.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelHeaderXuatMatHang
@@ -309,6 +312,7 @@
             // groupBoxThanhToan
             // 
             this.groupBoxThanhToan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxThanhToan.ContextMenuStrip = this.contextMenuStrip;
             this.groupBoxThanhToan.Controls.Add(this.labelSpliter);
             this.groupBoxThanhToan.Controls.Add(this.labelMaMH);
             this.groupBoxThanhToan.Controls.Add(this.labelTenMH);
@@ -572,6 +576,20 @@
             this.buttonXuatHoaDon.UseVisualStyleBackColor = true;
             this.buttonXuatHoaDon.Click += new System.EventHandler(this.buttonXuatHoaDon_Click);
             // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.giáĐềNghịToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.Size = new System.Drawing.Size(135, 26);
+            // 
+            // giáĐềNghịToolStripMenuItem
+            // 
+            this.giáĐềNghịToolStripMenuItem.Name = "giáĐềNghịToolStripMenuItem";
+            this.giáĐềNghịToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.giáĐềNghịToolStripMenuItem.Text = "Giá đề nghị";
+            this.giáĐềNghịToolStripMenuItem.Click += new System.EventHandler(this.giáĐềNghịToolStripMenuItem_Click);
+            // 
             // XuatMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,6 +619,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTyGiaUSD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietHoaDon)).EndInit();
             this.groupBoxChiTietXuatHang.ResumeLayout(false);
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,5 +659,7 @@
         private System.Windows.Forms.GroupBox groupBoxChiTietXuatHang;
         private System.Windows.Forms.Button buttonXuatHoaDon;
         private System.Windows.Forms.DataGridView dataGridViewChiTietHoaDon;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem giáĐềNghịToolStripMenuItem;
     }
 }
