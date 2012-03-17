@@ -19,6 +19,8 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         DataAccess dataaccess;
 
+        Dictionary<string,decimal> listDonGia;
+
         DataTable tempTable;
 
         #endregion
@@ -28,6 +30,7 @@ namespace ThinhKhaiManagement.UI.MatHang
         public XuatMatHang()
         {
             InitializeComponent();
+            listDonGia  = StaticMethods.GiaVangHienTai();
             dataaccess = new DataAccess();
             tempTable  = new DataTable();
             tempTable.Columns.Add("MaMH",typeof(String));
@@ -50,12 +53,16 @@ namespace ThinhKhaiManagement.UI.MatHang
         private void buttonTim_Click(object sender, EventArgs e)
         {
             FillDataToBill();
+            BindDonGiaByChatLieu();
         }
 
         private void textBoxMaMH_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
+            {
                 FillDataToBill();
+                BindDonGiaByChatLieu();
+            }
         }
 
         private void buttonThanhTien_Click(object sender, EventArgs e)
@@ -139,6 +146,37 @@ namespace ThinhKhaiManagement.UI.MatHang
 
         #region private methods
 
+        private void BindDonGiaByChatLieu()
+        {
+            if (!string.IsNullOrEmpty(textBoxMaMH.Text))
+            {
+                if (textBoxMaMH.Text.Substring(0, 1) == "N")
+                {
+                    radSpinEditorDonGia.Value = listDonGia[Constants.constNuTrang];
+                    labelDonGia.Text = "Đơn Giá(giá đề nghị)";
+                }
+                else if (textBoxMaMH.Text.Substring(0, 1) == "S")
+                {
+                    radSpinEditorDonGia.Value = listDonGia[Constants.const75];
+                    labelDonGia.Text = "Đơn Giá(giá đề nghị)";
+                }
+                else if (textBoxMaMH.Text.Substring(0, 1) == "O")
+                {
+                    radSpinEditorDonGia.Value = listDonGia[Constants.const70];
+                    labelDonGia.Text = "Đơn Giá(giá đề nghị)";
+                }
+                else
+                    radSpinEditorDonGia.Value = 0;
+
+                radSpinEditorDonGia.ValueChanged += new EventHandler(radSpinEditorDonGia_ValueChanged);
+            }
+        }
+
+        public void radSpinEditorDonGia_ValueChanged(object sender, EventArgs e)
+        {
+            labelDonGia.Text = "Đơn Giá";
+        }
+
         private void FillDataToBill()
         {
             try
@@ -158,10 +196,14 @@ namespace ThinhKhaiManagement.UI.MatHang
                     radSpinEditorTienCong.Value = (decimal)tb.Rows[0][13];
                 }
                 else
+                {
                     MessageBox.Show("Mặt hàng này không tồn tại", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBoxMaMH.Text = string.Empty;
+                }
             }
             catch (Exception ex)
             {
+                textBoxMaMH.Text = string.Empty;
                 MessageBox.Show(string.Format("#Message: {0} \n#StackTrace: {1}", ex.Message, ex.StackTrace),
                "Lỗi hệ thống",
                MessageBoxButtons.OK,
@@ -222,6 +264,11 @@ namespace ThinhKhaiManagement.UI.MatHang
             HoaDon hd = new HoaDon();
             hd.ReportDataSet = ds;
             hd.ShowDialog();
+        }
+
+        private void giáĐềNghịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BindDonGiaByChatLieu();
         }
 
         #region public methods

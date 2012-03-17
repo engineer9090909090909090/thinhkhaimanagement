@@ -80,6 +80,7 @@
     <Reference Include="VisualStyleBuilder.Design, Version=2009.2.9.701, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\StaticMethods.cs" />
     <Compile Include="Common\StoreProcedureNames.cs" />
     <Compile Include="Reports\DonGiaVang.cs">
