@@ -92,9 +92,9 @@
             this.groupBoxLayGia.Controls.Add(this.labelHeSo);
             this.groupBoxLayGia.Controls.Add(this.labelSJCL);
             this.groupBoxLayGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxLayGia.Location = new System.Drawing.Point(12, 76);
+            this.groupBoxLayGia.Location = new System.Drawing.Point(18, 89);
             this.groupBoxLayGia.Name = "groupBoxLayGia";
-            this.groupBoxLayGia.Size = new System.Drawing.Size(455, 127);
+            this.groupBoxLayGia.Size = new System.Drawing.Size(325, 127);
             this.groupBoxLayGia.TabIndex = 0;
             this.groupBoxLayGia.TabStop = false;
             this.groupBoxLayGia.Text = "Lấy Giá";
@@ -104,7 +104,7 @@
             this.radSpinEditorSJCLBan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSJCLBan.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCLBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorSJCLBan.Location = new System.Drawing.Point(294, 24);
+            this.radSpinEditorSJCLBan.Location = new System.Drawing.Point(221, 24);
             this.radSpinEditorSJCLBan.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -117,7 +117,7 @@
             this.radSpinEditorSJCLBan.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditorSJCLBan.ShowBorder = true;
             this.radSpinEditorSJCLBan.ShowUpDownButtons = false;
-            this.radSpinEditorSJCLBan.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditorSJCLBan.Size = new System.Drawing.Size(78, 21);
             this.radSpinEditorSJCLBan.TabIndex = 1;
             this.radSpinEditorSJCLBan.Text = "radSpinEditor2";
             this.radSpinEditorSJCLBan.ThousandsSeparator = true;
@@ -127,7 +127,7 @@
             this.radSpinEditor95.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditor95.BackColor = System.Drawing.Color.White;
             this.radSpinEditor95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditor95.Location = new System.Drawing.Point(118, 88);
+            this.radSpinEditor95.Location = new System.Drawing.Point(122, 88);
             this.radSpinEditor95.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -140,7 +140,7 @@
             this.radSpinEditor95.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditor95.ShowBorder = true;
             this.radSpinEditor95.ShowUpDownButtons = false;
-            this.radSpinEditor95.Size = new System.Drawing.Size(304, 21);
+            this.radSpinEditor95.Size = new System.Drawing.Size(177, 21);
             this.radSpinEditor95.TabIndex = 3;
             this.radSpinEditor95.Text = "radSpinEditor2";
             this.radSpinEditor95.ThousandsSeparator = true;
@@ -150,7 +150,7 @@
             this.radSpinEditorSJCHeSo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSJCHeSo.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCHeSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorSJCHeSo.Location = new System.Drawing.Point(118, 55);
+            this.radSpinEditorSJCHeSo.Location = new System.Drawing.Point(122, 55);
             this.radSpinEditorSJCHeSo.Maximum = new decimal(new int[] {
             9,
             0,
@@ -173,7 +173,7 @@
             this.radSpinEditorSJCLMua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSJCLMua.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCLMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorSJCLMua.Location = new System.Drawing.Point(119, 24);
+            this.radSpinEditorSJCLMua.Location = new System.Drawing.Point(123, 24);
             this.radSpinEditorSJCLMua.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -186,7 +186,7 @@
             this.radSpinEditorSJCLMua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditorSJCLMua.ShowBorder = true;
             this.radSpinEditorSJCLMua.ShowUpDownButtons = false;
-            this.radSpinEditorSJCLMua.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditorSJCLMua.Size = new System.Drawing.Size(78, 21);
             this.radSpinEditorSJCLMua.TabIndex = 0;
             this.radSpinEditorSJCLMua.Text = "radSpinEditor2";
             this.radSpinEditorSJCLMua.ThousandsSeparator = true;
@@ -232,9 +232,9 @@
             this.groupBox2.Controls.Add(this.label9999);
             this.groupBox2.Controls.Add(this.labelSJCH);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 209);
+            this.groupBox2.Location = new System.Drawing.Point(18, 222);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(455, 212);
+            this.groupBox2.Size = new System.Drawing.Size(325, 212);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đơn Giá Hiện Tại";
@@ -253,15 +253,14 @@
             this.panelGiaVang.Controls.Add(this.radSpinEditor70Mua);
             this.panelGiaVang.Location = new System.Drawing.Point(98, 46);
             this.panelGiaVang.Name = "panelGiaVang";
-            this.panelGiaVang.Size = new System.Drawing.Size(351, 160);
+            this.panelGiaVang.Size = new System.Drawing.Size(216, 160);
             this.panelGiaVang.TabIndex = 13;
             // 
             // radSpinEditor70Ban
             // 
-            this.radSpinEditor70Ban.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditor70Ban.BackColor = System.Drawing.Color.White;
             this.radSpinEditor70Ban.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditor70Ban.Location = new System.Drawing.Point(196, 124);
+            this.radSpinEditor70Ban.Location = new System.Drawing.Point(119, 124);
             this.radSpinEditor70Ban.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -275,14 +274,13 @@
             this.radSpinEditor70Ban.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditor70Ban.ShowBorder = true;
             this.radSpinEditor70Ban.ShowUpDownButtons = false;
-            this.radSpinEditor70Ban.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditor70Ban.Size = new System.Drawing.Size(78, 21);
             this.radSpinEditor70Ban.TabIndex = 12;
             this.radSpinEditor70Ban.Text = "radSpinEditor2";
             this.radSpinEditor70Ban.ThousandsSeparator = true;
             // 
             // radSpinEditorSJCMua
             // 
-            this.radSpinEditorSJCMua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSJCMua.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorSJCMua.Location = new System.Drawing.Point(20, 9);
@@ -299,17 +297,16 @@
             this.radSpinEditorSJCMua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditorSJCMua.ShowBorder = true;
             this.radSpinEditorSJCMua.ShowUpDownButtons = false;
-            this.radSpinEditorSJCMua.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditorSJCMua.Size = new System.Drawing.Size(79, 21);
             this.radSpinEditorSJCMua.TabIndex = 3;
             this.radSpinEditorSJCMua.Text = "radSpinEditor2";
             this.radSpinEditorSJCMua.ThousandsSeparator = true;
             // 
             // radSpinEditor75Ban
             // 
-            this.radSpinEditor75Ban.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditor75Ban.BackColor = System.Drawing.Color.White;
             this.radSpinEditor75Ban.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditor75Ban.Location = new System.Drawing.Point(196, 97);
+            this.radSpinEditor75Ban.Location = new System.Drawing.Point(119, 97);
             this.radSpinEditor75Ban.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -323,14 +320,13 @@
             this.radSpinEditor75Ban.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditor75Ban.ShowBorder = true;
             this.radSpinEditor75Ban.ShowUpDownButtons = false;
-            this.radSpinEditor75Ban.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditor75Ban.Size = new System.Drawing.Size(78, 21);
             this.radSpinEditor75Ban.TabIndex = 10;
             this.radSpinEditor75Ban.Text = "radSpinEditor2";
             this.radSpinEditor75Ban.ThousandsSeparator = true;
             // 
             // radSpinEditor9999Mua
             // 
-            this.radSpinEditor9999Mua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditor9999Mua.BackColor = System.Drawing.Color.White;
             this.radSpinEditor9999Mua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditor9999Mua.Location = new System.Drawing.Point(20, 37);
@@ -347,17 +343,16 @@
             this.radSpinEditor9999Mua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditor9999Mua.ShowBorder = true;
             this.radSpinEditor9999Mua.ShowUpDownButtons = false;
-            this.radSpinEditor9999Mua.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditor9999Mua.Size = new System.Drawing.Size(79, 21);
             this.radSpinEditor9999Mua.TabIndex = 5;
             this.radSpinEditor9999Mua.Text = "radSpinEditor2";
             this.radSpinEditor9999Mua.ThousandsSeparator = true;
             // 
             // radSpinEditorNTBan
             // 
-            this.radSpinEditorNTBan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorNTBan.BackColor = System.Drawing.Color.White;
             this.radSpinEditorNTBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorNTBan.Location = new System.Drawing.Point(196, 67);
+            this.radSpinEditorNTBan.Location = new System.Drawing.Point(119, 67);
             this.radSpinEditorNTBan.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -371,14 +366,13 @@
             this.radSpinEditorNTBan.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditorNTBan.ShowBorder = true;
             this.radSpinEditorNTBan.ShowUpDownButtons = false;
-            this.radSpinEditorNTBan.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditorNTBan.Size = new System.Drawing.Size(78, 21);
             this.radSpinEditorNTBan.TabIndex = 8;
             this.radSpinEditorNTBan.Text = "radSpinEditor2";
             this.radSpinEditorNTBan.ThousandsSeparator = true;
             // 
             // radSpinEditorNTMua
             // 
-            this.radSpinEditorNTMua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorNTMua.BackColor = System.Drawing.Color.White;
             this.radSpinEditorNTMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditorNTMua.Location = new System.Drawing.Point(20, 67);
@@ -395,17 +389,16 @@
             this.radSpinEditorNTMua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditorNTMua.ShowBorder = true;
             this.radSpinEditorNTMua.ShowUpDownButtons = false;
-            this.radSpinEditorNTMua.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditorNTMua.Size = new System.Drawing.Size(79, 21);
             this.radSpinEditorNTMua.TabIndex = 7;
             this.radSpinEditorNTMua.Text = "radSpinEditor2";
             this.radSpinEditorNTMua.ThousandsSeparator = true;
             // 
             // radSpinEditor9999Ban
             // 
-            this.radSpinEditor9999Ban.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditor9999Ban.BackColor = System.Drawing.Color.White;
             this.radSpinEditor9999Ban.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditor9999Ban.Location = new System.Drawing.Point(196, 37);
+            this.radSpinEditor9999Ban.Location = new System.Drawing.Point(119, 37);
             this.radSpinEditor9999Ban.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -419,14 +412,13 @@
             this.radSpinEditor9999Ban.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditor9999Ban.ShowBorder = true;
             this.radSpinEditor9999Ban.ShowUpDownButtons = false;
-            this.radSpinEditor9999Ban.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditor9999Ban.Size = new System.Drawing.Size(78, 21);
             this.radSpinEditor9999Ban.TabIndex = 6;
             this.radSpinEditor9999Ban.Text = "radSpinEditor2";
             this.radSpinEditor9999Ban.ThousandsSeparator = true;
             // 
             // radSpinEditor75Mua
             // 
-            this.radSpinEditor75Mua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditor75Mua.BackColor = System.Drawing.Color.White;
             this.radSpinEditor75Mua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditor75Mua.Location = new System.Drawing.Point(21, 97);
@@ -443,17 +435,16 @@
             this.radSpinEditor75Mua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditor75Mua.ShowBorder = true;
             this.radSpinEditor75Mua.ShowUpDownButtons = false;
-            this.radSpinEditor75Mua.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditor75Mua.Size = new System.Drawing.Size(79, 21);
             this.radSpinEditor75Mua.TabIndex = 9;
             this.radSpinEditor75Mua.Text = "radSpinEditor2";
             this.radSpinEditor75Mua.ThousandsSeparator = true;
             // 
             // radSpinEditorSJCBan
             // 
-            this.radSpinEditorSJCBan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSJCBan.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorSJCBan.Location = new System.Drawing.Point(196, 9);
+            this.radSpinEditorSJCBan.Location = new System.Drawing.Point(119, 9);
             this.radSpinEditorSJCBan.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -467,14 +458,13 @@
             this.radSpinEditorSJCBan.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditorSJCBan.ShowBorder = true;
             this.radSpinEditorSJCBan.ShowUpDownButtons = false;
-            this.radSpinEditorSJCBan.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditorSJCBan.Size = new System.Drawing.Size(78, 21);
             this.radSpinEditorSJCBan.TabIndex = 4;
             this.radSpinEditorSJCBan.Text = "radSpinEditor2";
             this.radSpinEditorSJCBan.ThousandsSeparator = true;
             // 
             // radSpinEditor70Mua
             // 
-            this.radSpinEditor70Mua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditor70Mua.BackColor = System.Drawing.Color.White;
             this.radSpinEditor70Mua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSpinEditor70Mua.Location = new System.Drawing.Point(21, 124);
@@ -491,7 +481,7 @@
             this.radSpinEditor70Mua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditor70Mua.ShowBorder = true;
             this.radSpinEditor70Mua.ShowUpDownButtons = false;
-            this.radSpinEditor70Mua.Size = new System.Drawing.Size(128, 21);
+            this.radSpinEditor70Mua.Size = new System.Drawing.Size(79, 21);
             this.radSpinEditor70Mua.TabIndex = 11;
             this.radSpinEditor70Mua.Text = "radSpinEditor2";
             this.radSpinEditor70Mua.ThousandsSeparator = true;
@@ -510,7 +500,7 @@
             // 
             this.labelBan.AutoSize = true;
             this.labelBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBan.Location = new System.Drawing.Point(344, 27);
+            this.labelBan.Location = new System.Drawing.Point(236, 27);
             this.labelBan.Name = "labelBan";
             this.labelBan.Size = new System.Drawing.Size(35, 16);
             this.labelBan.TabIndex = 0;
@@ -530,7 +520,7 @@
             // 
             this.labelMua.AutoSize = true;
             this.labelMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMua.Location = new System.Drawing.Point(172, 27);
+            this.labelMua.Location = new System.Drawing.Point(135, 27);
             this.labelMua.Name = "labelMua";
             this.labelMua.Size = new System.Drawing.Size(37, 16);
             this.labelMua.TabIndex = 0;
@@ -571,7 +561,7 @@
             this.labelXuLyGiaVang.AutoSize = true;
             this.labelXuLyGiaVang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelXuLyGiaVang.ForeColor = System.Drawing.Color.Gold;
-            this.labelXuLyGiaVang.Location = new System.Drawing.Point(161, 48);
+            this.labelXuLyGiaVang.Location = new System.Drawing.Point(96, 61);
             this.labelXuLyGiaVang.Name = "labelXuLyGiaVang";
             this.labelXuLyGiaVang.Size = new System.Drawing.Size(176, 25);
             this.labelXuLyGiaVang.TabIndex = 2;
@@ -607,7 +597,7 @@
             // 
             // buttonXuLy
             // 
-            this.buttonXuLy.Location = new System.Drawing.Point(12, 437);
+            this.buttonXuLy.Location = new System.Drawing.Point(18, 449);
             this.buttonXuLy.Name = "buttonXuLy";
             this.buttonXuLy.Size = new System.Drawing.Size(75, 23);
             this.buttonXuLy.TabIndex = 4;
@@ -617,7 +607,7 @@
             // 
             // buttonXemLichSu
             // 
-            this.buttonXemLichSu.Location = new System.Drawing.Point(385, 436);
+            this.buttonXemLichSu.Location = new System.Drawing.Point(261, 449);
             this.buttonXemLichSu.Name = "buttonXemLichSu";
             this.buttonXemLichSu.Size = new System.Drawing.Size(82, 23);
             this.buttonXemLichSu.TabIndex = 6;
@@ -627,7 +617,7 @@
             // 
             // buttonLuu
             // 
-            this.buttonLuu.Location = new System.Drawing.Point(93, 437);
+            this.buttonLuu.Location = new System.Drawing.Point(99, 449);
             this.buttonLuu.Name = "buttonLuu";
             this.buttonLuu.Size = new System.Drawing.Size(75, 23);
             this.buttonLuu.TabIndex = 5;
@@ -639,7 +629,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 471);
+            this.ClientSize = new System.Drawing.Size(358, 481);
             this.Controls.Add(this.buttonXemLichSu);
             this.Controls.Add(this.buttonLuu);
             this.Controls.Add(this.buttonXuLy);
