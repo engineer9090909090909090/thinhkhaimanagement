@@ -163,7 +163,7 @@
             this.radSpinEditorSJCHeSo.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radSpinEditorSJCHeSo.ShowBorder = true;
             this.radSpinEditorSJCHeSo.ShowUpDownButtons = false;
-            this.radSpinEditorSJCHeSo.Size = new System.Drawing.Size(54, 21);
+            this.radSpinEditorSJCHeSo.Size = new System.Drawing.Size(79, 21);
             this.radSpinEditorSJCHeSo.TabIndex = 2;
             this.radSpinEditorSJCHeSo.Text = "radSpinEditor2";
             this.radSpinEditorSJCHeSo.ThousandsSeparator = true;
