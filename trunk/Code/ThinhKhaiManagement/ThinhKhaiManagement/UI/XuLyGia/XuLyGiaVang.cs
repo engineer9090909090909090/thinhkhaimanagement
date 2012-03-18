@@ -10,6 +10,7 @@ using ThinhKhaiManagement.Common;
 using Telerik.WinControls.UI;
 using DatabaseAccesser;
 using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace ThinhKhaiManagement.UI.XuLyGia
 {
@@ -37,7 +38,13 @@ namespace ThinhKhaiManagement.UI.XuLyGia
 
         private void buttonXuLy_Click(object sender, EventArgs e)
         {
-            XuLy();
+            if (radSpinEditorSJCLMua.Value.ToString().Length > 3 &&
+                radSpinEditorSJCLBan.Value.ToString().Length > 3 &&
+                radSpinEditorSJCHeSo.Value > 0 &&
+                radSpinEditor95.Value.ToString().Length > 3)
+                XuLy();
+            else
+                MessageBox.Show("Lấy giá không hợp lệ", "Thông Báo",  MessageBoxButtons.OK,MessageBoxIcon.Warning);
         }
 
         private void XuLy()
@@ -135,6 +142,15 @@ namespace ThinhKhaiManagement.UI.XuLyGia
         {
             LichSuXuLyGiaVang lichSuXuLyGiaVang = new LichSuXuLyGiaVang();
             lichSuXuLyGiaVang.ShowDialog();
+        }
+
+        private void buttonLayGiaTuDong_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            List<decimal> sjccantho = StaticMethods.ShowSJCCanTho();
+            radSpinEditorSJCLMua.Value = sjccantho[0] / 10;
+            radSpinEditorSJCLBan.Value = sjccantho[1] / 10;
+            this.Cursor = Cursors.Default;
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBoxLayGia = new System.Windows.Forms.GroupBox();
+            this.buttonLayGiaTuDong = new System.Windows.Forms.Button();
             this.radSpinEditorSJCLBan = new Telerik.WinControls.UI.RadSpinEditor();
             this.radSpinEditor95 = new Telerik.WinControls.UI.RadSpinEditor();
             this.radSpinEditorSJCHeSo = new Telerik.WinControls.UI.RadSpinEditor();
@@ -49,8 +50,11 @@
             this.radSpinEditor75Mua = new Telerik.WinControls.UI.RadSpinEditor();
             this.radSpinEditorSJCBan = new Telerik.WinControls.UI.RadSpinEditor();
             this.radSpinEditor70Mua = new Telerik.WinControls.UI.RadSpinEditor();
+            this.buttonXemLichSu = new System.Windows.Forms.Button();
             this.label70 = new System.Windows.Forms.Label();
+            this.buttonLuu = new System.Windows.Forms.Button();
             this.labelBan = new System.Windows.Forms.Label();
+            this.buttonXuLy = new System.Windows.Forms.Button();
             this.label75 = new System.Windows.Forms.Label();
             this.labelMua = new System.Windows.Forms.Label();
             this.labelNT = new System.Windows.Forms.Label();
@@ -60,9 +64,6 @@
             this.labelNgayHienTai = new System.Windows.Forms.Label();
             this.labelGioHienTai = new System.Windows.Forms.Label();
             this.timerXuLyGiaVang = new System.Windows.Forms.Timer(this.components);
-            this.buttonXuLy = new System.Windows.Forms.Button();
-            this.buttonXemLichSu = new System.Windows.Forms.Button();
-            this.buttonLuu = new System.Windows.Forms.Button();
             this.groupBoxLayGia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorSJCLBan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditor95)).BeginInit();
@@ -84,6 +85,7 @@
             // 
             // groupBoxLayGia
             // 
+            this.groupBoxLayGia.Controls.Add(this.buttonLayGiaTuDong);
             this.groupBoxLayGia.Controls.Add(this.radSpinEditorSJCLBan);
             this.groupBoxLayGia.Controls.Add(this.radSpinEditor95);
             this.groupBoxLayGia.Controls.Add(this.radSpinEditorSJCHeSo);
@@ -91,20 +93,32 @@
             this.groupBoxLayGia.Controls.Add(this.label95);
             this.groupBoxLayGia.Controls.Add(this.labelHeSo);
             this.groupBoxLayGia.Controls.Add(this.labelSJCL);
-            this.groupBoxLayGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxLayGia.Location = new System.Drawing.Point(18, 89);
+            this.groupBoxLayGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxLayGia.ForeColor = System.Drawing.Color.Black;
+            this.groupBoxLayGia.Location = new System.Drawing.Point(18, 65);
             this.groupBoxLayGia.Name = "groupBoxLayGia";
-            this.groupBoxLayGia.Size = new System.Drawing.Size(325, 127);
+            this.groupBoxLayGia.Size = new System.Drawing.Size(325, 152);
             this.groupBoxLayGia.TabIndex = 0;
             this.groupBoxLayGia.TabStop = false;
             this.groupBoxLayGia.Text = "Lấy Giá";
+            // 
+            // buttonLayGiaTuDong
+            // 
+            this.buttonLayGiaTuDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLayGiaTuDong.Location = new System.Drawing.Point(28, 117);
+            this.buttonLayGiaTuDong.Name = "buttonLayGiaTuDong";
+            this.buttonLayGiaTuDong.Size = new System.Drawing.Size(268, 27);
+            this.buttonLayGiaTuDong.TabIndex = 21;
+            this.buttonLayGiaTuDong.Text = "Lấy Giá Tự Động";
+            this.buttonLayGiaTuDong.UseVisualStyleBackColor = true;
+            this.buttonLayGiaTuDong.Click += new System.EventHandler(this.buttonLayGiaTuDong_Click);
             // 
             // radSpinEditorSJCLBan
             // 
             this.radSpinEditorSJCLBan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSJCLBan.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCLBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorSJCLBan.Location = new System.Drawing.Point(221, 24);
+            this.radSpinEditorSJCLBan.Location = new System.Drawing.Point(218, 23);
             this.radSpinEditorSJCLBan.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -127,7 +141,7 @@
             this.radSpinEditor95.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditor95.BackColor = System.Drawing.Color.White;
             this.radSpinEditor95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditor95.Location = new System.Drawing.Point(122, 88);
+            this.radSpinEditor95.Location = new System.Drawing.Point(119, 87);
             this.radSpinEditor95.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -150,7 +164,7 @@
             this.radSpinEditorSJCHeSo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSJCHeSo.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCHeSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorSJCHeSo.Location = new System.Drawing.Point(122, 55);
+            this.radSpinEditorSJCHeSo.Location = new System.Drawing.Point(119, 54);
             this.radSpinEditorSJCHeSo.Maximum = new decimal(new int[] {
             9,
             0,
@@ -167,13 +181,18 @@
             this.radSpinEditorSJCHeSo.TabIndex = 2;
             this.radSpinEditorSJCHeSo.Text = "radSpinEditor2";
             this.radSpinEditorSJCHeSo.ThousandsSeparator = true;
+            this.radSpinEditorSJCHeSo.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             // 
             // radSpinEditorSJCLMua
             // 
             this.radSpinEditorSJCLMua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSpinEditorSJCLMua.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCLMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorSJCLMua.Location = new System.Drawing.Point(123, 24);
+            this.radSpinEditorSJCLMua.Location = new System.Drawing.Point(120, 23);
             this.radSpinEditorSJCLMua.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -195,7 +214,7 @@
             // 
             this.label95.AutoSize = true;
             this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label95.Location = new System.Drawing.Point(27, 93);
+            this.label95.Location = new System.Drawing.Point(27, 87);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(34, 16);
             this.label95.TabIndex = 0;
@@ -205,7 +224,7 @@
             // 
             this.labelHeSo.AutoSize = true;
             this.labelHeSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeSo.Location = new System.Drawing.Point(27, 60);
+            this.labelHeSo.Location = new System.Drawing.Point(27, 54);
             this.labelHeSo.Name = "labelHeSo";
             this.labelHeSo.Size = new System.Drawing.Size(46, 16);
             this.labelHeSo.TabIndex = 0;
@@ -215,7 +234,7 @@
             // 
             this.labelSJCL.AutoSize = true;
             this.labelSJCL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSJCL.Location = new System.Drawing.Point(27, 29);
+            this.labelSJCL.Location = new System.Drawing.Point(27, 23);
             this.labelSJCL.Name = "labelSJCL";
             this.labelSJCL.Size = new System.Drawing.Size(33, 16);
             this.labelSJCL.TabIndex = 0;
@@ -224,17 +243,20 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.panelGiaVang);
+            this.groupBox2.Controls.Add(this.buttonXemLichSu);
             this.groupBox2.Controls.Add(this.label70);
+            this.groupBox2.Controls.Add(this.buttonLuu);
             this.groupBox2.Controls.Add(this.labelBan);
+            this.groupBox2.Controls.Add(this.buttonXuLy);
             this.groupBox2.Controls.Add(this.label75);
             this.groupBox2.Controls.Add(this.labelMua);
             this.groupBox2.Controls.Add(this.labelNT);
             this.groupBox2.Controls.Add(this.label9999);
             this.groupBox2.Controls.Add(this.labelSJCH);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(18, 222);
+            this.groupBox2.Location = new System.Drawing.Point(18, 223);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(325, 212);
+            this.groupBox2.Size = new System.Drawing.Size(325, 276);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đơn Giá Hiện Tại";
@@ -260,6 +282,7 @@
             // 
             this.radSpinEditor70Ban.BackColor = System.Drawing.Color.White;
             this.radSpinEditor70Ban.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditor70Ban.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor70Ban.Location = new System.Drawing.Point(119, 124);
             this.radSpinEditor70Ban.Maximum = new decimal(new int[] {
             9999999,
@@ -272,6 +295,7 @@
             // 
             // 
             this.radSpinEditor70Ban.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditor70Ban.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor70Ban.ShowBorder = true;
             this.radSpinEditor70Ban.ShowUpDownButtons = false;
             this.radSpinEditor70Ban.Size = new System.Drawing.Size(78, 21);
@@ -283,6 +307,7 @@
             // 
             this.radSpinEditorSJCMua.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditorSJCMua.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorSJCMua.Location = new System.Drawing.Point(20, 9);
             this.radSpinEditorSJCMua.Maximum = new decimal(new int[] {
             9999999,
@@ -295,6 +320,7 @@
             // 
             // 
             this.radSpinEditorSJCMua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorSJCMua.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorSJCMua.ShowBorder = true;
             this.radSpinEditorSJCMua.ShowUpDownButtons = false;
             this.radSpinEditorSJCMua.Size = new System.Drawing.Size(79, 21);
@@ -306,6 +332,7 @@
             // 
             this.radSpinEditor75Ban.BackColor = System.Drawing.Color.White;
             this.radSpinEditor75Ban.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditor75Ban.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor75Ban.Location = new System.Drawing.Point(119, 97);
             this.radSpinEditor75Ban.Maximum = new decimal(new int[] {
             9999999,
@@ -318,6 +345,7 @@
             // 
             // 
             this.radSpinEditor75Ban.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditor75Ban.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor75Ban.ShowBorder = true;
             this.radSpinEditor75Ban.ShowUpDownButtons = false;
             this.radSpinEditor75Ban.Size = new System.Drawing.Size(78, 21);
@@ -329,6 +357,7 @@
             // 
             this.radSpinEditor9999Mua.BackColor = System.Drawing.Color.White;
             this.radSpinEditor9999Mua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditor9999Mua.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor9999Mua.Location = new System.Drawing.Point(20, 37);
             this.radSpinEditor9999Mua.Maximum = new decimal(new int[] {
             9999999,
@@ -341,6 +370,7 @@
             // 
             // 
             this.radSpinEditor9999Mua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditor9999Mua.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor9999Mua.ShowBorder = true;
             this.radSpinEditor9999Mua.ShowUpDownButtons = false;
             this.radSpinEditor9999Mua.Size = new System.Drawing.Size(79, 21);
@@ -352,6 +382,7 @@
             // 
             this.radSpinEditorNTBan.BackColor = System.Drawing.Color.White;
             this.radSpinEditorNTBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditorNTBan.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorNTBan.Location = new System.Drawing.Point(119, 67);
             this.radSpinEditorNTBan.Maximum = new decimal(new int[] {
             9999999,
@@ -364,6 +395,7 @@
             // 
             // 
             this.radSpinEditorNTBan.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorNTBan.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorNTBan.ShowBorder = true;
             this.radSpinEditorNTBan.ShowUpDownButtons = false;
             this.radSpinEditorNTBan.Size = new System.Drawing.Size(78, 21);
@@ -375,6 +407,7 @@
             // 
             this.radSpinEditorNTMua.BackColor = System.Drawing.Color.White;
             this.radSpinEditorNTMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditorNTMua.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorNTMua.Location = new System.Drawing.Point(20, 67);
             this.radSpinEditorNTMua.Maximum = new decimal(new int[] {
             9999999,
@@ -387,6 +420,7 @@
             // 
             // 
             this.radSpinEditorNTMua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorNTMua.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorNTMua.ShowBorder = true;
             this.radSpinEditorNTMua.ShowUpDownButtons = false;
             this.radSpinEditorNTMua.Size = new System.Drawing.Size(79, 21);
@@ -398,6 +432,7 @@
             // 
             this.radSpinEditor9999Ban.BackColor = System.Drawing.Color.White;
             this.radSpinEditor9999Ban.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditor9999Ban.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor9999Ban.Location = new System.Drawing.Point(119, 37);
             this.radSpinEditor9999Ban.Maximum = new decimal(new int[] {
             9999999,
@@ -410,6 +445,7 @@
             // 
             // 
             this.radSpinEditor9999Ban.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditor9999Ban.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor9999Ban.ShowBorder = true;
             this.radSpinEditor9999Ban.ShowUpDownButtons = false;
             this.radSpinEditor9999Ban.Size = new System.Drawing.Size(78, 21);
@@ -421,6 +457,7 @@
             // 
             this.radSpinEditor75Mua.BackColor = System.Drawing.Color.White;
             this.radSpinEditor75Mua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditor75Mua.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor75Mua.Location = new System.Drawing.Point(21, 97);
             this.radSpinEditor75Mua.Maximum = new decimal(new int[] {
             9999999,
@@ -433,6 +470,7 @@
             // 
             // 
             this.radSpinEditor75Mua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditor75Mua.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor75Mua.ShowBorder = true;
             this.radSpinEditor75Mua.ShowUpDownButtons = false;
             this.radSpinEditor75Mua.Size = new System.Drawing.Size(79, 21);
@@ -444,6 +482,7 @@
             // 
             this.radSpinEditorSJCBan.BackColor = System.Drawing.Color.White;
             this.radSpinEditorSJCBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditorSJCBan.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorSJCBan.Location = new System.Drawing.Point(119, 9);
             this.radSpinEditorSJCBan.Maximum = new decimal(new int[] {
             9999999,
@@ -456,6 +495,7 @@
             // 
             // 
             this.radSpinEditorSJCBan.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorSJCBan.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorSJCBan.ShowBorder = true;
             this.radSpinEditorSJCBan.ShowUpDownButtons = false;
             this.radSpinEditorSJCBan.Size = new System.Drawing.Size(78, 21);
@@ -467,6 +507,7 @@
             // 
             this.radSpinEditor70Mua.BackColor = System.Drawing.Color.White;
             this.radSpinEditor70Mua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditor70Mua.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor70Mua.Location = new System.Drawing.Point(21, 124);
             this.radSpinEditor70Mua.Maximum = new decimal(new int[] {
             9999999,
@@ -479,12 +520,23 @@
             // 
             // 
             this.radSpinEditor70Mua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditor70Mua.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor70Mua.ShowBorder = true;
             this.radSpinEditor70Mua.ShowUpDownButtons = false;
             this.radSpinEditor70Mua.Size = new System.Drawing.Size(79, 21);
             this.radSpinEditor70Mua.TabIndex = 11;
             this.radSpinEditor70Mua.Text = "radSpinEditor2";
             this.radSpinEditor70Mua.ThousandsSeparator = true;
+            // 
+            // buttonXemLichSu
+            // 
+            this.buttonXemLichSu.Location = new System.Drawing.Point(217, 229);
+            this.buttonXemLichSu.Name = "buttonXemLichSu";
+            this.buttonXemLichSu.Size = new System.Drawing.Size(97, 27);
+            this.buttonXemLichSu.TabIndex = 6;
+            this.buttonXemLichSu.Text = "Xem Lịch Sử";
+            this.buttonXemLichSu.UseVisualStyleBackColor = true;
+            this.buttonXemLichSu.Click += new System.EventHandler(this.buttonXemLichSu_Click);
             // 
             // label70
             // 
@@ -496,6 +548,16 @@
             this.label70.TabIndex = 0;
             this.label70.Text = "70%";
             // 
+            // buttonLuu
+            // 
+            this.buttonLuu.Location = new System.Drawing.Point(98, 229);
+            this.buttonLuu.Name = "buttonLuu";
+            this.buttonLuu.Size = new System.Drawing.Size(75, 27);
+            this.buttonLuu.TabIndex = 5;
+            this.buttonLuu.Text = "Lưu";
+            this.buttonLuu.UseVisualStyleBackColor = true;
+            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
+            // 
             // labelBan
             // 
             this.labelBan.AutoSize = true;
@@ -505,6 +567,16 @@
             this.labelBan.Size = new System.Drawing.Size(35, 16);
             this.labelBan.TabIndex = 0;
             this.labelBan.Text = "Bán";
+            // 
+            // buttonXuLy
+            // 
+            this.buttonXuLy.Location = new System.Drawing.Point(17, 229);
+            this.buttonXuLy.Name = "buttonXuLy";
+            this.buttonXuLy.Size = new System.Drawing.Size(75, 27);
+            this.buttonXuLy.TabIndex = 4;
+            this.buttonXuLy.Text = "Xử Lý";
+            this.buttonXuLy.UseVisualStyleBackColor = true;
+            this.buttonXuLy.Click += new System.EventHandler(this.buttonXuLy_Click);
             // 
             // label75
             // 
@@ -561,7 +633,7 @@
             this.labelXuLyGiaVang.AutoSize = true;
             this.labelXuLyGiaVang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelXuLyGiaVang.ForeColor = System.Drawing.Color.Gold;
-            this.labelXuLyGiaVang.Location = new System.Drawing.Point(96, 61);
+            this.labelXuLyGiaVang.Location = new System.Drawing.Point(96, 37);
             this.labelXuLyGiaVang.Name = "labelXuLyGiaVang";
             this.labelXuLyGiaVang.Size = new System.Drawing.Size(176, 25);
             this.labelXuLyGiaVang.TabIndex = 2;
@@ -583,7 +655,7 @@
             this.labelGioHienTai.AutoSize = true;
             this.labelGioHienTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGioHienTai.ForeColor = System.Drawing.Color.Blue;
-            this.labelGioHienTai.Location = new System.Drawing.Point(12, 33);
+            this.labelGioHienTai.Location = new System.Drawing.Point(276, 9);
             this.labelGioHienTai.Name = "labelGioHienTai";
             this.labelGioHienTai.Size = new System.Drawing.Size(67, 15);
             this.labelGioHienTai.TabIndex = 20;
@@ -595,49 +667,17 @@
             this.timerXuLyGiaVang.Interval = 1000;
             this.timerXuLyGiaVang.Tick += new System.EventHandler(this.timerXuLyGiaVang_Tick);
             // 
-            // buttonXuLy
-            // 
-            this.buttonXuLy.Location = new System.Drawing.Point(18, 449);
-            this.buttonXuLy.Name = "buttonXuLy";
-            this.buttonXuLy.Size = new System.Drawing.Size(75, 23);
-            this.buttonXuLy.TabIndex = 4;
-            this.buttonXuLy.Text = "Xử Lý";
-            this.buttonXuLy.UseVisualStyleBackColor = true;
-            this.buttonXuLy.Click += new System.EventHandler(this.buttonXuLy_Click);
-            // 
-            // buttonXemLichSu
-            // 
-            this.buttonXemLichSu.Location = new System.Drawing.Point(261, 449);
-            this.buttonXemLichSu.Name = "buttonXemLichSu";
-            this.buttonXemLichSu.Size = new System.Drawing.Size(82, 23);
-            this.buttonXemLichSu.TabIndex = 6;
-            this.buttonXemLichSu.Text = "Xem Lịch Sử";
-            this.buttonXemLichSu.UseVisualStyleBackColor = true;
-            this.buttonXemLichSu.Click += new System.EventHandler(this.buttonXemLichSu_Click);
-            // 
-            // buttonLuu
-            // 
-            this.buttonLuu.Location = new System.Drawing.Point(99, 449);
-            this.buttonLuu.Name = "buttonLuu";
-            this.buttonLuu.Size = new System.Drawing.Size(75, 23);
-            this.buttonLuu.TabIndex = 5;
-            this.buttonLuu.Text = "Lưu";
-            this.buttonLuu.UseVisualStyleBackColor = true;
-            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
-            // 
             // XuLyGiaVang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 481);
-            this.Controls.Add(this.buttonXemLichSu);
-            this.Controls.Add(this.buttonLuu);
-            this.Controls.Add(this.buttonXuLy);
+            this.ClientSize = new System.Drawing.Size(358, 504);
             this.Controls.Add(this.labelGioHienTai);
             this.Controls.Add(this.labelNgayHienTai);
             this.Controls.Add(this.labelXuLyGiaVang);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxLayGia);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -706,5 +746,6 @@
         private System.Windows.Forms.Label labelHeSo;
         private System.Windows.Forms.Button buttonLuu;
         private System.Windows.Forms.Panel panelGiaVang;
+        private System.Windows.Forms.Button buttonLayGiaTuDong;
     }
 }
