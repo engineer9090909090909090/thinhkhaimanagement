@@ -76,8 +76,8 @@ namespace ThinhKhaiManagement.Common
             //Get gia mua, gia ban from sjccantho.vn
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
             doc.Load("sjccantho.html");
-            decimal mua = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-angiang']/table/tr[td='SJC (999.9)']").SelectNodes("td")[1].InnerText);
-            decimal ban = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-angiang']/table/tr[td='SJC (999.9)']").SelectNodes("td")[2].InnerText);
+            decimal mua = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-cantho']/table/tr[td='SJC (999.9)']").SelectNodes("td")[1].InnerText);
+            decimal ban = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-cantho']/table/tr[td='SJC (999.9)']").SelectNodes("td")[2].InnerText);
             return new List<decimal> { {mua },{ban} };
         }
     
