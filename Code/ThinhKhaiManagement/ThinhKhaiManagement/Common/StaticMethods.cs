@@ -8,6 +8,10 @@ using System.Windows.Forms;
 using System.Data;
 using System.Collections.ObjectModel;
 using DatabaseAccesser;
+using System.Xml;
+using System.Net;
+using System.IO;
+
 
 namespace ThinhKhaiManagement.Common
 {
@@ -62,6 +66,21 @@ namespace ThinhKhaiManagement.Common
                 };
             return blankrs;
         }
+
+        public static List<decimal> ShowSJCCanTho()
+        {
+            //Parse http://sjccantho.vn to xml
+            WebClient webClient = new WebClient();
+            webClient.DownloadFile("http://sjccantho.vn", "sjccantho.html");
+
+            //Get gia mua, gia ban from sjccantho.vn
+            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+            doc.Load("sjccantho.html");
+            decimal mua = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-angiang']/table/tr[td='SJC (999.9)']").SelectNodes("td")[1].InnerText);
+            decimal ban = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-angiang']/table/tr[td='SJC (999.9)']").SelectNodes("td")[2].InnerText);
+            return new List<decimal> { {mua },{ban} };
+        }
+    
     }
 
     #region enums
