@@ -11,6 +11,7 @@ using DatabaseAccesser;
 using System.Xml;
 using System.Net;
 using System.IO;
+using System.Web;
 
 
 namespace ThinhKhaiManagement.Common
@@ -70,12 +71,17 @@ namespace ThinhKhaiManagement.Common
         public static List<decimal> ShowSJCCanTho()
         {
             //Parse http://sjccantho.vn to xml
-            WebClient webClient = new WebClient();
-            webClient.DownloadFile("http://sjccantho.vn", "sjccantho.html");
+            string temp;
+            HttpWebRequest httpWebRequest = WebRequest.Create("http://sjccantho.vn") as HttpWebRequest;
+            using (HttpWebResponse httpRespone = httpWebRequest.GetResponse() as HttpWebResponse)
+            {
+                StreamReader reader = new StreamReader(httpRespone.GetResponseStream());
+                temp = reader.ReadToEnd();
+            }
 
             //Get gia mua, gia ban from sjccantho.vn
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-            doc.Load("sjccantho.html");
+            doc.LoadHtml(temp);
             decimal mua = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-cantho']/table/tr[td='SJC (999.9)']").SelectNodes("td")[1].InnerText);
             decimal ban = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-cantho']/table/tr[td='SJC (999.9)']").SelectNodes("td")[2].InnerText);
             return new List<decimal> { {mua },{ban} };
