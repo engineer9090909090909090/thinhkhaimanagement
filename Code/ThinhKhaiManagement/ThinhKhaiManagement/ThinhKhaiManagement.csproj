@@ -92,6 +92,12 @@
       <DependentUpon>DonGiaVang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\TienMat\KiemTraTienMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TienMat\KiemTraTienMat.Designer.cs">
+      <DependentUpon>KiemTraTienMat.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\XuLyGia\InPhieuXuLyGiaVang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     <EmbeddedResource Include="Reports\DonGiaVang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DonGiaVang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TienMat\KiemTraTienMat.resx">
+      <DependentUpon>KiemTraTienMat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\XuLyGia\InPhieuXuLyGiaVang.resx">
       <DependentUpon>InPhieuXuLyGiaVang.cs</DependentUpon>
