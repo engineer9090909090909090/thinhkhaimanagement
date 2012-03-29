@@ -42,6 +42,19 @@ namespace ThinhKhaiManagement.UI.TienMat
             numericUpDown1kL.Enter += new EventHandler(ChonHet);
             numericUpDown5mL.Enter += new EventHandler(ChonHet);
             numericUpDown2mL.Enter += new EventHandler(ChonHet);
+
+            foreach (var a in panel3.Controls)
+            {
+                Label nm = (Label)a;
+                nm.ContextMenuStrip = contextMenuStrip1;
+                nm.MouseUp += new MouseEventHandler(nm_MouseUp);
+            }
+        }
+
+        private void nm_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                ((Label)sender).Focus();
         }
 
         private void ChonHet(object sender, EventArgs e)
@@ -95,6 +108,11 @@ namespace ThinhKhaiManagement.UI.TienMat
                 nm.Select(0, nm.Value.ToString().Length);
                 TongTien();
             }
+        }
+
+        private void Xoa(object sender, EventArgs e)
+        {
+            ((NumericUpDown)sender).Value = 0;
         }
 
         private void TongTien()
@@ -163,6 +181,7 @@ namespace ThinhKhaiManagement.UI.TienMat
             else
             {
                 MessageBox.Show("Xin mời đếm tiền trước", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                buttonLamLai_Click(sender, e);
             }
         }
 
@@ -175,6 +194,22 @@ namespace ThinhKhaiManagement.UI.TienMat
             labelTienMatMay.Text = "TM máy:";
             labelChenhLech.Text = "Chênh lệch:";
             numericUpDown500kL.Focus();
+        }
+
+        private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (var a in panel3.Controls)
+            {
+                if (((Label)a).Focused)
+                {
+                    string x = ((Label)a).Name;
+                    string y = x.Replace("label", "numericUpDown") + "T";
+                    ((NumericUpDown)panel1.Controls[y]).Value = 0;
+                    TongTien();
+                    break;
+                }
+                  
+            }
         }
     }
 }
