@@ -49,6 +49,7 @@
             this.labelNgayTienMat = new System.Windows.Forms.Label();
             this.labelHeaderThongTinTienMat = new System.Windows.Forms.Label();
             this.errorProviderTienMat = new System.Windows.Forms.ErrorProvider(this.components);
+            this.buttonKiemTra = new System.Windows.Forms.Button();
             this.groupBoxTon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXemTienMat)).BeginInit();
             this.groupBoxXuat.SuspendLayout();
@@ -137,6 +138,7 @@
             // groupBoxXuat
             // 
             this.groupBoxXuat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxXuat.Controls.Add(this.buttonKiemTra);
             this.groupBoxXuat.Controls.Add(this.buttonXemChiTiet);
             this.groupBoxXuat.Controls.Add(this.buttonLamSach);
             this.groupBoxXuat.Controls.Add(this.buttonLuu);
@@ -168,7 +170,7 @@
             // buttonLamSach
             // 
             this.buttonLamSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLamSach.Location = new System.Drawing.Point(118, 118);
+            this.buttonLamSach.Location = new System.Drawing.Point(106, 118);
             this.buttonLamSach.Name = "buttonLamSach";
             this.buttonLamSach.Size = new System.Drawing.Size(93, 28);
             this.buttonLamSach.TabIndex = 7;
@@ -179,7 +181,7 @@
             // buttonLuu
             // 
             this.buttonLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLuu.Location = new System.Drawing.Point(34, 118);
+            this.buttonLuu.Location = new System.Drawing.Point(25, 118);
             this.buttonLuu.Name = "buttonLuu";
             this.buttonLuu.Size = new System.Drawing.Size(75, 28);
             this.buttonLuu.TabIndex = 6;
@@ -289,6 +291,17 @@
             // 
             this.errorProviderTienMat.ContainerControl = this;
             // 
+            // buttonKiemTra
+            // 
+            this.buttonKiemTra.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonKiemTra.Location = new System.Drawing.Point(205, 118);
+            this.buttonKiemTra.Name = "buttonKiemTra";
+            this.buttonKiemTra.Size = new System.Drawing.Size(75, 28);
+            this.buttonKiemTra.TabIndex = 5;
+            this.buttonKiemTra.Text = "Kiểm Tra";
+            this.buttonKiemTra.UseVisualStyleBackColor = true;
+            this.buttonKiemTra.Click += new System.EventHandler(this.buttonKiemTra_Click);
+            // 
             // TienMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +352,7 @@
         public System.Windows.Forms.Button buttonXemChiTiet;
         public System.Windows.Forms.Button buttonLamSach;
         public System.Windows.Forms.Button buttonLuu;
+        private System.Windows.Forms.Button buttonKiemTra;
 
 
     }

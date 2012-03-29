@@ -106,6 +106,12 @@ namespace ThinhKhaiManagement.UI.TienMat
             buttonXem_Click(sender, e);
         }
 
+        private void buttonKiemTra_Click(object sender, EventArgs e)
+        {
+            KiemTraTienMat kiemTraTienMat = new KiemTraTienMat();
+            kiemTraTienMat.ShowDialog();
+        }
+
         #endregion
 
         #region private methods
