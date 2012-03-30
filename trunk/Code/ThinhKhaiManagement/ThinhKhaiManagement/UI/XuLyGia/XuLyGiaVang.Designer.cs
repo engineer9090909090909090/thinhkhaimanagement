@@ -129,6 +129,7 @@
             // 
             // 
             this.radSpinEditorSJCLBan.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorSJCLBan.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorSJCLBan.ShowBorder = true;
             this.radSpinEditorSJCLBan.ShowUpDownButtons = false;
             this.radSpinEditorSJCLBan.Size = new System.Drawing.Size(78, 21);
@@ -152,6 +153,7 @@
             // 
             // 
             this.radSpinEditor95.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditor95.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditor95.ShowBorder = true;
             this.radSpinEditor95.ShowUpDownButtons = false;
             this.radSpinEditor95.Size = new System.Drawing.Size(177, 21);
@@ -175,6 +177,7 @@
             // 
             // 
             this.radSpinEditorSJCHeSo.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorSJCHeSo.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorSJCHeSo.ShowBorder = true;
             this.radSpinEditorSJCHeSo.ShowUpDownButtons = false;
             this.radSpinEditorSJCHeSo.Size = new System.Drawing.Size(79, 21);
@@ -182,7 +185,7 @@
             this.radSpinEditorSJCHeSo.Text = "radSpinEditor2";
             this.radSpinEditorSJCHeSo.ThousandsSeparator = true;
             this.radSpinEditorSJCHeSo.Value = new decimal(new int[] {
-            2,
+            3,
             0,
             0,
             0});
@@ -203,6 +206,7 @@
             // 
             // 
             this.radSpinEditorSJCLMua.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorSJCLMua.RootElement.ForeColor = System.Drawing.Color.Black;
             this.radSpinEditorSJCLMua.ShowBorder = true;
             this.radSpinEditorSJCLMua.ShowUpDownButtons = false;
             this.radSpinEditorSJCLMua.Size = new System.Drawing.Size(78, 21);
