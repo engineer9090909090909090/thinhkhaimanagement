@@ -147,9 +147,9 @@ namespace ThinhKhaiManagement.UI.XuLyGia
         private void buttonLayGiaTuDong_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            List<decimal> sjccantho = StaticMethods.ShowSJCCanTho();
-            radSpinEditorSJCLMua.Value = sjccantho[0] / 10;
-            radSpinEditorSJCLBan.Value = sjccantho[1] / 10;
+            List<decimal> sjccantho = StaticMethods.ShowSJCInfo();
+            radSpinEditorSJCLMua.Value = sjccantho[0] / 1000;
+            radSpinEditorSJCLBan.Value = sjccantho[1] / 1000;
             this.Cursor = Cursors.Default;
         }
     }

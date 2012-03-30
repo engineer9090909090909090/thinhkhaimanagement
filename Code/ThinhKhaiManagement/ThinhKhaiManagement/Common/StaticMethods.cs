@@ -68,11 +68,11 @@ namespace ThinhKhaiManagement.Common
             return blankrs;
         }
 
-        public static List<decimal> ShowSJCCanTho()
+        public static List<decimal> ShowSJCInfo()
         {
-            //Parse http://sjccantho.vn to xml
+            //Get source from http://www.eximbank.com.vn/WebsiteExrate2011/ExchangeRate_vn_2011.aspx
             string temp;
-            HttpWebRequest httpWebRequest = WebRequest.Create("http://sjccantho.vn") as HttpWebRequest;
+            HttpWebRequest httpWebRequest = WebRequest.Create("http://www.eximbank.com.vn/WebsiteExrate2011/ExchangeRate_vn_2011.aspx") as HttpWebRequest;
             using (HttpWebResponse httpRespone = httpWebRequest.GetResponse() as HttpWebResponse)
             {
                 StreamReader reader = new StreamReader(httpRespone.GetResponseStream());
@@ -82,8 +82,8 @@ namespace ThinhKhaiManagement.Common
             //Get gia mua, gia ban from sjccantho.vn
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
             doc.LoadHtml(temp);
-            decimal mua = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-cantho']/table/tr[td='SJC (999.9)']").SelectNodes("td")[1].InnerText);
-            decimal ban = Convert.ToDecimal(doc.DocumentNode.SelectSingleNode("//div[@id='responsecontainer-cantho']/table/tr[td='SJC (999.9)']").SelectNodes("td")[2].InnerText);
+            decimal mua = Convert.ToDecimal(doc.GetElementbyId("GoldRateRepeater_ctl01_lblCSHBUYRT").InnerText);
+            decimal ban = Convert.ToDecimal(doc.GetElementbyId("GoldRateRepeater_ctl01_lblCSHSELLRT").InnerText);
             return new List<decimal> { {mua },{ban} };
         }
     
