@@ -61,17 +61,17 @@
             this.buttonXoaHet = new System.Windows.Forms.Button();
             this.buttonInPhieu = new System.Windows.Forms.Button();
             this.groupBoxLocTheoSTT = new System.Windows.Forms.GroupBox();
+            this.radSpinEditorDen = new Telerik.WinControls.UI.RadSpinEditor();
+            this.radSpinEditorTu = new Telerik.WinControls.UI.RadSpinEditor();
             this.buttonLoc2 = new System.Windows.Forms.Button();
             this.labelTu = new System.Windows.Forms.Label();
             this.labelDen = new System.Windows.Forms.Label();
-            this.radSpinEditorTu = new Telerik.WinControls.UI.RadSpinEditor();
-            this.radSpinEditorDen = new Telerik.WinControls.UI.RadSpinEditor();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXem)).BeginInit();
             this.groupBoxLoc.SuspendLayout();
             this.groupBoxKiemTraVonTungMatHang.SuspendLayout();
             this.groupBoxLocTheoSTT.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTu)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNgayTonMatHang
@@ -144,7 +144,7 @@
             this.buttonXemToanBo.Location = new System.Drawing.Point(134, 84);
             this.buttonXemToanBo.Name = "buttonXemToanBo";
             this.buttonXemToanBo.Size = new System.Drawing.Size(80, 24);
-            this.buttonXemToanBo.TabIndex = 6;
+            this.buttonXemToanBo.TabIndex = 5;
             this.buttonXemToanBo.Text = "Xem Toàn Bộ";
             this.buttonXemToanBo.UseVisualStyleBackColor = true;
             this.buttonXemToanBo.Click += new System.EventHandler(this.buttonXemToanBo_Click);
@@ -166,7 +166,7 @@
             this.buttonLoc.Location = new System.Drawing.Point(13, 84);
             this.buttonLoc.Name = "buttonLoc";
             this.buttonLoc.Size = new System.Drawing.Size(115, 24);
-            this.buttonLoc.TabIndex = 7;
+            this.buttonLoc.TabIndex = 4;
             this.buttonLoc.Text = "Xem Theo Điều Kiện";
             this.buttonLoc.UseVisualStyleBackColor = true;
             this.buttonLoc.Click += new System.EventHandler(this.buttonLoc_Click);
@@ -273,7 +273,7 @@
             this.buttonKiemTra.Location = new System.Drawing.Point(393, 32);
             this.buttonKiemTra.Name = "buttonKiemTra";
             this.buttonKiemTra.Size = new System.Drawing.Size(75, 23);
-            this.buttonKiemTra.TabIndex = 16;
+            this.buttonKiemTra.TabIndex = 9;
             this.buttonKiemTra.Text = "Kiểm Tra";
             this.buttonKiemTra.UseVisualStyleBackColor = true;
             this.buttonKiemTra.Click += new System.EventHandler(this.buttonKiemTra_Click);
@@ -425,7 +425,7 @@
             this.buttonXoaHet.Location = new System.Drawing.Point(703, 297);
             this.buttonXoaHet.Name = "buttonXoaHet";
             this.buttonXoaHet.Size = new System.Drawing.Size(54, 23);
-            this.buttonXoaHet.TabIndex = 18;
+            this.buttonXoaHet.TabIndex = 10;
             this.buttonXoaHet.Text = "Xóa Hết";
             this.buttonXoaHet.UseVisualStyleBackColor = true;
             this.buttonXoaHet.Click += new System.EventHandler(this.buttonXoaHet_Click);
@@ -455,39 +455,37 @@
             this.groupBoxLocTheoSTT.TabStop = false;
             this.groupBoxLocTheoSTT.Text = "Lọc Theo Số Thứ Tự";
             // 
-            // buttonLoc2
+            // radSpinEditorDen
             // 
-            this.buttonLoc2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonLoc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLoc2.Location = new System.Drawing.Point(6, 84);
-            this.buttonLoc2.Name = "buttonLoc2";
-            this.buttonLoc2.Size = new System.Drawing.Size(319, 24);
-            this.buttonLoc2.TabIndex = 7;
-            this.buttonLoc2.Text = "Xem Theo Điều Kiện";
-            this.buttonLoc2.UseVisualStyleBackColor = true;
-            this.buttonLoc2.Click += new System.EventHandler(this.buttonLoc2_Click);
+            this.radSpinEditorDen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radSpinEditorDen.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditorDen.Location = new System.Drawing.Point(62, 53);
+            this.radSpinEditorDen.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.radSpinEditorDen.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.radSpinEditorDen.Name = "radSpinEditorDen";
             // 
-            // labelTu
             // 
-            this.labelTu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTu.AutoSize = true;
-            this.labelTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTu.Location = new System.Drawing.Point(12, 23);
-            this.labelTu.Name = "labelTu";
-            this.labelTu.Size = new System.Drawing.Size(24, 16);
-            this.labelTu.TabIndex = 0;
-            this.labelTu.Text = "Từ";
             // 
-            // labelDen
-            // 
-            this.labelDen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelDen.AutoSize = true;
-            this.labelDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDen.Location = new System.Drawing.Point(12, 53);
-            this.labelDen.Name = "labelDen";
-            this.labelDen.Size = new System.Drawing.Size(32, 16);
-            this.labelDen.TabIndex = 1;
-            this.labelDen.Text = "Đến";
+            this.radSpinEditorDen.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorDen.ShowBorder = true;
+            this.radSpinEditorDen.ShowUpDownButtons = false;
+            this.radSpinEditorDen.Size = new System.Drawing.Size(263, 21);
+            this.radSpinEditorDen.TabIndex = 7;
+            this.radSpinEditorDen.Text = "radSpinEditor1";
+            this.radSpinEditorDen.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // radSpinEditorTu
             // 
@@ -513,7 +511,7 @@
             this.radSpinEditorTu.ShowBorder = true;
             this.radSpinEditorTu.ShowUpDownButtons = false;
             this.radSpinEditorTu.Size = new System.Drawing.Size(263, 21);
-            this.radSpinEditorTu.TabIndex = 8;
+            this.radSpinEditorTu.TabIndex = 6;
             this.radSpinEditorTu.Text = "radSpinEditor1";
             this.radSpinEditorTu.Value = new decimal(new int[] {
             1,
@@ -521,37 +519,39 @@
             0,
             0});
             // 
-            // radSpinEditorDen
+            // buttonLoc2
             // 
-            this.radSpinEditorDen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radSpinEditorDen.BackColor = System.Drawing.Color.White;
-            this.radSpinEditorDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radSpinEditorDen.Location = new System.Drawing.Point(62, 53);
-            this.radSpinEditorDen.Maximum = new decimal(new int[] {
-            -1530494977,
-            232830,
-            0,
-            0});
-            this.radSpinEditorDen.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.radSpinEditorDen.Name = "radSpinEditorDen";
+            this.buttonLoc2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonLoc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoc2.Location = new System.Drawing.Point(6, 84);
+            this.buttonLoc2.Name = "buttonLoc2";
+            this.buttonLoc2.Size = new System.Drawing.Size(319, 24);
+            this.buttonLoc2.TabIndex = 8;
+            this.buttonLoc2.Text = "Xem Theo Điều Kiện";
+            this.buttonLoc2.UseVisualStyleBackColor = true;
+            this.buttonLoc2.Click += new System.EventHandler(this.buttonLoc2_Click);
             // 
+            // labelTu
             // 
+            this.labelTu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTu.AutoSize = true;
+            this.labelTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTu.Location = new System.Drawing.Point(12, 23);
+            this.labelTu.Name = "labelTu";
+            this.labelTu.Size = new System.Drawing.Size(24, 16);
+            this.labelTu.TabIndex = 0;
+            this.labelTu.Text = "Từ";
             // 
-            this.radSpinEditorDen.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            this.radSpinEditorDen.ShowBorder = true;
-            this.radSpinEditorDen.ShowUpDownButtons = false;
-            this.radSpinEditorDen.Size = new System.Drawing.Size(263, 21);
-            this.radSpinEditorDen.TabIndex = 8;
-            this.radSpinEditorDen.Text = "radSpinEditor1";
-            this.radSpinEditorDen.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            // labelDen
+            // 
+            this.labelDen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelDen.AutoSize = true;
+            this.labelDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDen.Location = new System.Drawing.Point(12, 53);
+            this.labelDen.Name = "labelDen";
+            this.labelDen.Size = new System.Drawing.Size(32, 16);
+            this.labelDen.TabIndex = 1;
+            this.labelDen.Text = "Đến";
             // 
             // TonMatHang
             // 
@@ -592,8 +592,8 @@
             this.groupBoxKiemTraVonTungMatHang.PerformLayout();
             this.groupBoxLocTheoSTT.ResumeLayout(false);
             this.groupBoxLocTheoSTT.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
