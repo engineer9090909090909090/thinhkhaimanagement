@@ -241,5 +241,37 @@ namespace ThinhKhaiManagement.UI.MatHang
             inPhieuTonMatHang.ReportDataSet = ds;
             inPhieuTonMatHang.ShowDialog();
         }
+
+        private void buttonLoc2_Click(object sender, EventArgs e)
+        {
+            buttonXoaHet_Click(sender, e);
+            dataGridViewXem.DataSource = (DataTable)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                    string.Format(@"select 
+                                    MaMH as N'Mã MH',
+	                                MaCL as N'Mã CL',
+	                                MaLMH as N'Mã LMH',
+	                                TenMH as N'Tên MH',
+	                                TrongLuong as N'Trọng lượng',
+	                                TruHot as N'Trừ hột',
+	                                HotNhap as N'Tiền Hột',
+	                                CongNhap as N'Tiền Công',
+	                                DonGiaNhap as N'Đơn Giá',
+	                                TyGiaUSDNhap as N'TG USD',
+	                                NgayNhap as N'Ngày nhập',
+	                                STT as N'STT',
+	                                CongXuat as N'Công Xuất',
+	                                HotXuat as N'Hột Xuất'
+                                from MatHang
+                                where TrangThai =1
+                                and STT>={0} and STT<={1}",radSpinEditorTu.Value,radSpinEditorDen.Value),
+                    new Collection<KeyValuePair<object, int>>(),
+                    (int)ExecuteType.Query);
+            labelTSL.Text = (dataGridViewXem.Rows.Count).ToString();
+            labelTGV.Text = String.Format("{0:0,0.00}", CalculateTotal());
+            labelTGV.Text = String.Format("{0:0,0.00}", CalculateTotal());
+            labelTTC.Text = String.Format("{0:0,0.00}", CalculateTotalTienCong());
+            labelTTL.Text = String.Format("{0:0,0.00}", CalculateTotalTrongLuong());
+            labelTTH.Text = String.Format("{0:0,0.00}", CalculateTotalTruHot());
+        }
     }
 } 
