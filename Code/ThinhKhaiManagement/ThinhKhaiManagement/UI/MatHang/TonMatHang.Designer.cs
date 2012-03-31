@@ -60,18 +60,26 @@
             this.labelTongTienCong = new System.Windows.Forms.Label();
             this.buttonXoaHet = new System.Windows.Forms.Button();
             this.buttonInPhieu = new System.Windows.Forms.Button();
+            this.groupBoxLocTheoSTT = new System.Windows.Forms.GroupBox();
+            this.buttonLoc2 = new System.Windows.Forms.Button();
+            this.labelTu = new System.Windows.Forms.Label();
+            this.labelDen = new System.Windows.Forms.Label();
+            this.radSpinEditorTu = new Telerik.WinControls.UI.RadSpinEditor();
+            this.radSpinEditorDen = new Telerik.WinControls.UI.RadSpinEditor();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewXem)).BeginInit();
             this.groupBoxLoc.SuspendLayout();
             this.groupBoxKiemTraVonTungMatHang.SuspendLayout();
+            this.groupBoxLocTheoSTT.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDen)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNgayTonMatHang
             // 
-            this.labelNgayTonMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelNgayTonMatHang.AutoSize = true;
             this.labelNgayTonMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNgayTonMatHang.ForeColor = System.Drawing.Color.Blue;
-            this.labelNgayTonMatHang.Location = new System.Drawing.Point(11, 9);
+            this.labelNgayTonMatHang.Location = new System.Drawing.Point(11, 11);
             this.labelNgayTonMatHang.Name = "labelNgayTonMatHang";
             this.labelNgayTonMatHang.Size = new System.Drawing.Size(76, 15);
             this.labelNgayTonMatHang.TabIndex = 3;
@@ -79,11 +87,10 @@
             // 
             // labelHeaderTonMatHang
             // 
-            this.labelHeaderTonMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelHeaderTonMatHang.AutoSize = true;
             this.labelHeaderTonMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeaderTonMatHang.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHeaderTonMatHang.Location = new System.Drawing.Point(246, 31);
+            this.labelHeaderTonMatHang.Location = new System.Drawing.Point(263, 39);
             this.labelHeaderTonMatHang.Name = "labelHeaderTonMatHang";
             this.labelHeaderTonMatHang.Size = new System.Drawing.Size(261, 31);
             this.labelHeaderTonMatHang.TabIndex = 2;
@@ -95,10 +102,9 @@
             this.dataGridViewXem.AllowUserToDeleteRows = false;
             this.dataGridViewXem.AllowUserToResizeColumns = false;
             this.dataGridViewXem.AllowUserToResizeRows = false;
-            this.dataGridViewXem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewXem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewXem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewXem.Location = new System.Drawing.Point(14, 296);
+            this.dataGridViewXem.Location = new System.Drawing.Point(14, 389);
             this.dataGridViewXem.Name = "dataGridViewXem";
             this.dataGridViewXem.ReadOnly = true;
             this.dataGridViewXem.Size = new System.Drawing.Size(741, 292);
@@ -107,7 +113,6 @@
             // 
             // groupBoxLoc
             // 
-            this.groupBoxLoc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxLoc.Controls.Add(this.comboBoxLoaiMatHang);
             this.groupBoxLoc.Controls.Add(this.buttonXemToanBo);
             this.groupBoxLoc.Controls.Add(this.comboBoxChatLieu);
@@ -115,7 +120,7 @@
             this.groupBoxLoc.Controls.Add(this.labelLoaiMatHang);
             this.groupBoxLoc.Controls.Add(this.labelChatLieu);
             this.groupBoxLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxLoc.Location = new System.Drawing.Point(12, 70);
+            this.groupBoxLoc.Location = new System.Drawing.Point(14, 81);
             this.groupBoxLoc.Name = "groupBoxLoc";
             this.groupBoxLoc.Size = new System.Drawing.Size(384, 118);
             this.groupBoxLoc.TabIndex = 5;
@@ -190,11 +195,10 @@
             // 
             // labelTGV
             // 
-            this.labelTGV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTGV.AutoSize = true;
             this.labelTGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTGV.ForeColor = System.Drawing.Color.Blue;
-            this.labelTGV.Location = new System.Drawing.Point(513, 253);
+            this.labelTGV.Location = new System.Drawing.Point(515, 351);
             this.labelTGV.Name = "labelTGV";
             this.labelTGV.Size = new System.Drawing.Size(66, 25);
             this.labelTGV.TabIndex = 9;
@@ -203,11 +207,10 @@
             // 
             // labelTongSoLuong
             // 
-            this.labelTongSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTongSoLuong.AutoSize = true;
             this.labelTongSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongSoLuong.ForeColor = System.Drawing.Color.Maroon;
-            this.labelTongSoLuong.Location = new System.Drawing.Point(11, 199);
+            this.labelTongSoLuong.Location = new System.Drawing.Point(13, 297);
             this.labelTongSoLuong.Name = "labelTongSoLuong";
             this.labelTongSoLuong.Size = new System.Drawing.Size(113, 16);
             this.labelTongSoLuong.TabIndex = 4;
@@ -215,11 +218,10 @@
             // 
             // labelTongGiaVon
             // 
-            this.labelTongGiaVon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTongGiaVon.AutoSize = true;
             this.labelTongGiaVon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongGiaVon.ForeColor = System.Drawing.Color.Maroon;
-            this.labelTongGiaVon.Location = new System.Drawing.Point(345, 260);
+            this.labelTongGiaVon.Location = new System.Drawing.Point(347, 358);
             this.labelTongGiaVon.Name = "labelTongGiaVon";
             this.labelTongGiaVon.Size = new System.Drawing.Size(103, 16);
             this.labelTongGiaVon.TabIndex = 8;
@@ -227,11 +229,10 @@
             // 
             // labelTSL
             // 
-            this.labelTSL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTSL.AutoSize = true;
             this.labelTSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTSL.ForeColor = System.Drawing.Color.Blue;
-            this.labelTSL.Location = new System.Drawing.Point(160, 192);
+            this.labelTSL.Location = new System.Drawing.Point(162, 290);
             this.labelTSL.Name = "labelTSL";
             this.labelTSL.Size = new System.Drawing.Size(66, 25);
             this.labelTSL.TabIndex = 5;
@@ -240,11 +241,10 @@
             // 
             // labelGiaVonTungMatHang
             // 
-            this.labelGiaVonTungMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelGiaVonTungMatHang.AutoSize = true;
             this.labelGiaVonTungMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGiaVonTungMatHang.ForeColor = System.Drawing.Color.Maroon;
-            this.labelGiaVonTungMatHang.Location = new System.Drawing.Point(108, 88);
+            this.labelGiaVonTungMatHang.Location = new System.Drawing.Point(491, 35);
             this.labelGiaVonTungMatHang.Name = "labelGiaVonTungMatHang";
             this.labelGiaVonTungMatHang.Size = new System.Drawing.Size(63, 16);
             this.labelGiaVonTungMatHang.TabIndex = 10;
@@ -252,7 +252,6 @@
             // 
             // groupBoxKiemTraVonTungMatHang
             // 
-            this.groupBoxKiemTraVonTungMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxKiemTraVonTungMatHang.Controls.Add(this.buttonKiemTra);
             this.groupBoxKiemTraVonTungMatHang.Controls.Add(this.textBoxTenMatHang);
             this.groupBoxKiemTraVonTungMatHang.Controls.Add(this.textBoxMaMatHang);
@@ -261,18 +260,17 @@
             this.groupBoxKiemTraVonTungMatHang.Controls.Add(this.labelGV);
             this.groupBoxKiemTraVonTungMatHang.Controls.Add(this.labelGiaVonTungMatHang);
             this.groupBoxKiemTraVonTungMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxKiemTraVonTungMatHang.Location = new System.Drawing.Point(420, 70);
+            this.groupBoxKiemTraVonTungMatHang.Location = new System.Drawing.Point(14, 205);
             this.groupBoxKiemTraVonTungMatHang.Name = "groupBoxKiemTraVonTungMatHang";
-            this.groupBoxKiemTraVonTungMatHang.Size = new System.Drawing.Size(335, 118);
+            this.groupBoxKiemTraVonTungMatHang.Size = new System.Drawing.Size(743, 83);
             this.groupBoxKiemTraVonTungMatHang.TabIndex = 6;
             this.groupBoxKiemTraVonTungMatHang.TabStop = false;
             this.groupBoxKiemTraVonTungMatHang.Text = "Kiểm Tra Vốn Từng Mặt Hàng";
             // 
             // buttonKiemTra
             // 
-            this.buttonKiemTra.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonKiemTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKiemTra.Location = new System.Drawing.Point(27, 84);
+            this.buttonKiemTra.Location = new System.Drawing.Point(393, 32);
             this.buttonKiemTra.Name = "buttonKiemTra";
             this.buttonKiemTra.Size = new System.Drawing.Size(75, 23);
             this.buttonKiemTra.TabIndex = 16;
@@ -282,9 +280,8 @@
             // 
             // textBoxTenMatHang
             // 
-            this.textBoxTenMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxTenMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTenMatHang.Location = new System.Drawing.Point(129, 48);
+            this.textBoxTenMatHang.Location = new System.Drawing.Point(153, 50);
             this.textBoxTenMatHang.Name = "textBoxTenMatHang";
             this.textBoxTenMatHang.ReadOnly = true;
             this.textBoxTenMatHang.Size = new System.Drawing.Size(173, 22);
@@ -292,9 +289,8 @@
             // 
             // textBoxMaMatHang
             // 
-            this.textBoxMaMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxMaMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMaMatHang.Location = new System.Drawing.Point(129, 19);
+            this.textBoxMaMatHang.Location = new System.Drawing.Point(153, 22);
             this.textBoxMaMatHang.Name = "textBoxMaMatHang";
             this.textBoxMaMatHang.ReadOnly = true;
             this.textBoxMaMatHang.Size = new System.Drawing.Size(173, 22);
@@ -302,10 +298,9 @@
             // 
             // labelTenMatHang
             // 
-            this.labelTenMatHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTenMatHang.AutoSize = true;
             this.labelTenMatHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenMatHang.Location = new System.Drawing.Point(24, 51);
+            this.labelTenMatHang.Location = new System.Drawing.Point(10, 53);
             this.labelTenMatHang.Name = "labelTenMatHang";
             this.labelTenMatHang.Size = new System.Drawing.Size(93, 16);
             this.labelTenMatHang.TabIndex = 13;
@@ -313,10 +308,9 @@
             // 
             // labelMaMH
             // 
-            this.labelMaMH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelMaMH.AutoSize = true;
             this.labelMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaMH.Location = new System.Drawing.Point(24, 22);
+            this.labelMaMH.Location = new System.Drawing.Point(10, 25);
             this.labelMaMH.Name = "labelMaMH";
             this.labelMaMH.Size = new System.Drawing.Size(88, 16);
             this.labelMaMH.TabIndex = 12;
@@ -324,11 +318,10 @@
             // 
             // labelGV
             // 
-            this.labelGV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelGV.AutoSize = true;
             this.labelGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGV.ForeColor = System.Drawing.Color.Blue;
-            this.labelGV.Location = new System.Drawing.Point(177, 84);
+            this.labelGV.Location = new System.Drawing.Point(560, 28);
             this.labelGV.Name = "labelGV";
             this.labelGV.Size = new System.Drawing.Size(66, 25);
             this.labelGV.TabIndex = 11;
@@ -337,11 +330,10 @@
             // 
             // labelTTH
             // 
-            this.labelTTH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTTH.AutoSize = true;
             this.labelTTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTTH.ForeColor = System.Drawing.Color.Blue;
-            this.labelTTH.Location = new System.Drawing.Point(160, 222);
+            this.labelTTH.Location = new System.Drawing.Point(162, 320);
             this.labelTTH.Name = "labelTTH";
             this.labelTTH.Size = new System.Drawing.Size(66, 25);
             this.labelTTH.TabIndex = 11;
@@ -350,11 +342,10 @@
             // 
             // labelTongTruHot
             // 
-            this.labelTongTruHot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTongTruHot.AutoSize = true;
             this.labelTongTruHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongTruHot.ForeColor = System.Drawing.Color.Maroon;
-            this.labelTongTruHot.Location = new System.Drawing.Point(12, 231);
+            this.labelTongTruHot.Location = new System.Drawing.Point(14, 329);
             this.labelTongTruHot.Name = "labelTongTruHot";
             this.labelTongTruHot.Size = new System.Drawing.Size(99, 16);
             this.labelTongTruHot.TabIndex = 10;
@@ -362,11 +353,10 @@
             // 
             // labelTTL
             // 
-            this.labelTTL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTTL.AutoSize = true;
             this.labelTTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTTL.ForeColor = System.Drawing.Color.Blue;
-            this.labelTTL.Location = new System.Drawing.Point(513, 193);
+            this.labelTTL.Location = new System.Drawing.Point(515, 291);
             this.labelTTL.Name = "labelTTL";
             this.labelTTL.Size = new System.Drawing.Size(66, 25);
             this.labelTTL.TabIndex = 13;
@@ -375,11 +365,10 @@
             // 
             // labelTongTrongLuong
             // 
-            this.labelTongTrongLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTongTrongLuong.AutoSize = true;
             this.labelTongTrongLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongTrongLuong.ForeColor = System.Drawing.Color.Maroon;
-            this.labelTongTrongLuong.Location = new System.Drawing.Point(345, 199);
+            this.labelTongTrongLuong.Location = new System.Drawing.Point(347, 297);
             this.labelTongTrongLuong.Name = "labelTongTrongLuong";
             this.labelTongTrongLuong.Size = new System.Drawing.Size(135, 16);
             this.labelTongTrongLuong.TabIndex = 12;
@@ -387,11 +376,10 @@
             // 
             // labelTTiH
             // 
-            this.labelTTiH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTTiH.AutoSize = true;
             this.labelTTiH.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTTiH.ForeColor = System.Drawing.Color.Blue;
-            this.labelTTiH.Location = new System.Drawing.Point(513, 222);
+            this.labelTTiH.Location = new System.Drawing.Point(515, 320);
             this.labelTTiH.Name = "labelTTiH";
             this.labelTTiH.Size = new System.Drawing.Size(66, 25);
             this.labelTTiH.TabIndex = 15;
@@ -400,11 +388,10 @@
             // 
             // labelTongTienHot
             // 
-            this.labelTongTienHot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTongTienHot.AutoSize = true;
             this.labelTongTienHot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongTienHot.ForeColor = System.Drawing.Color.Maroon;
-            this.labelTongTienHot.Location = new System.Drawing.Point(345, 231);
+            this.labelTongTienHot.Location = new System.Drawing.Point(347, 329);
             this.labelTongTienHot.Name = "labelTongTienHot";
             this.labelTongTienHot.Size = new System.Drawing.Size(107, 16);
             this.labelTongTienHot.TabIndex = 14;
@@ -412,11 +399,10 @@
             // 
             // labelTTC
             // 
-            this.labelTTC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTTC.AutoSize = true;
             this.labelTTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTTC.ForeColor = System.Drawing.Color.Blue;
-            this.labelTTC.Location = new System.Drawing.Point(160, 253);
+            this.labelTTC.Location = new System.Drawing.Point(162, 351);
             this.labelTTC.Name = "labelTTC";
             this.labelTTC.Size = new System.Drawing.Size(66, 25);
             this.labelTTC.TabIndex = 17;
@@ -425,11 +411,10 @@
             // 
             // labelTongTienCong
             // 
-            this.labelTongTienCong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTongTienCong.AutoSize = true;
             this.labelTongTienCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongTienCong.ForeColor = System.Drawing.Color.Maroon;
-            this.labelTongTienCong.Location = new System.Drawing.Point(11, 260);
+            this.labelTongTienCong.Location = new System.Drawing.Point(13, 358);
             this.labelTongTienCong.Name = "labelTongTienCong";
             this.labelTongTienCong.Size = new System.Drawing.Size(119, 16);
             this.labelTongTienCong.TabIndex = 16;
@@ -437,7 +422,7 @@
             // 
             // buttonXoaHet
             // 
-            this.buttonXoaHet.Location = new System.Drawing.Point(701, 196);
+            this.buttonXoaHet.Location = new System.Drawing.Point(703, 297);
             this.buttonXoaHet.Name = "buttonXoaHet";
             this.buttonXoaHet.Size = new System.Drawing.Size(54, 23);
             this.buttonXoaHet.TabIndex = 18;
@@ -447,7 +432,7 @@
             // 
             // buttonInPhieu
             // 
-            this.buttonInPhieu.Location = new System.Drawing.Point(680, 39);
+            this.buttonInPhieu.Location = new System.Drawing.Point(682, 11);
             this.buttonInPhieu.Name = "buttonInPhieu";
             this.buttonInPhieu.Size = new System.Drawing.Size(75, 23);
             this.buttonInPhieu.TabIndex = 19;
@@ -455,11 +440,125 @@
             this.buttonInPhieu.UseVisualStyleBackColor = true;
             this.buttonInPhieu.Click += new System.EventHandler(this.buttonInPhieu_Click);
             // 
+            // groupBoxLocTheoSTT
+            // 
+            this.groupBoxLocTheoSTT.Controls.Add(this.radSpinEditorDen);
+            this.groupBoxLocTheoSTT.Controls.Add(this.radSpinEditorTu);
+            this.groupBoxLocTheoSTT.Controls.Add(this.buttonLoc2);
+            this.groupBoxLocTheoSTT.Controls.Add(this.labelTu);
+            this.groupBoxLocTheoSTT.Controls.Add(this.labelDen);
+            this.groupBoxLocTheoSTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxLocTheoSTT.Location = new System.Drawing.Point(407, 81);
+            this.groupBoxLocTheoSTT.Name = "groupBoxLocTheoSTT";
+            this.groupBoxLocTheoSTT.Size = new System.Drawing.Size(348, 118);
+            this.groupBoxLocTheoSTT.TabIndex = 20;
+            this.groupBoxLocTheoSTT.TabStop = false;
+            this.groupBoxLocTheoSTT.Text = "Lọc Theo Số Thứ Tự";
+            // 
+            // buttonLoc2
+            // 
+            this.buttonLoc2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonLoc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoc2.Location = new System.Drawing.Point(6, 84);
+            this.buttonLoc2.Name = "buttonLoc2";
+            this.buttonLoc2.Size = new System.Drawing.Size(319, 24);
+            this.buttonLoc2.TabIndex = 7;
+            this.buttonLoc2.Text = "Xem Theo Điều Kiện";
+            this.buttonLoc2.UseVisualStyleBackColor = true;
+            this.buttonLoc2.Click += new System.EventHandler(this.buttonLoc2_Click);
+            // 
+            // labelTu
+            // 
+            this.labelTu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTu.AutoSize = true;
+            this.labelTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTu.Location = new System.Drawing.Point(12, 23);
+            this.labelTu.Name = "labelTu";
+            this.labelTu.Size = new System.Drawing.Size(24, 16);
+            this.labelTu.TabIndex = 0;
+            this.labelTu.Text = "Từ";
+            // 
+            // labelDen
+            // 
+            this.labelDen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelDen.AutoSize = true;
+            this.labelDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDen.Location = new System.Drawing.Point(12, 53);
+            this.labelDen.Name = "labelDen";
+            this.labelDen.Size = new System.Drawing.Size(32, 16);
+            this.labelDen.TabIndex = 1;
+            this.labelDen.Text = "Đến";
+            // 
+            // radSpinEditorTu
+            // 
+            this.radSpinEditorTu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radSpinEditorTu.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditorTu.Location = new System.Drawing.Point(62, 23);
+            this.radSpinEditorTu.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.radSpinEditorTu.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.radSpinEditorTu.Name = "radSpinEditorTu";
+            // 
+            // 
+            // 
+            this.radSpinEditorTu.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorTu.ShowBorder = true;
+            this.radSpinEditorTu.ShowUpDownButtons = false;
+            this.radSpinEditorTu.Size = new System.Drawing.Size(263, 21);
+            this.radSpinEditorTu.TabIndex = 8;
+            this.radSpinEditorTu.Text = "radSpinEditor1";
+            this.radSpinEditorTu.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // radSpinEditorDen
+            // 
+            this.radSpinEditorDen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radSpinEditorDen.BackColor = System.Drawing.Color.White;
+            this.radSpinEditorDen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radSpinEditorDen.Location = new System.Drawing.Point(62, 53);
+            this.radSpinEditorDen.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.radSpinEditorDen.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.radSpinEditorDen.Name = "radSpinEditorDen";
+            // 
+            // 
+            // 
+            this.radSpinEditorDen.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radSpinEditorDen.ShowBorder = true;
+            this.radSpinEditorDen.ShowUpDownButtons = false;
+            this.radSpinEditorDen.Size = new System.Drawing.Size(263, 21);
+            this.radSpinEditorDen.TabIndex = 8;
+            this.radSpinEditorDen.Text = "radSpinEditor1";
+            this.radSpinEditorDen.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // TonMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 594);
+            this.ClientSize = new System.Drawing.Size(761, 693);
+            this.Controls.Add(this.groupBoxLocTheoSTT);
             this.Controls.Add(this.buttonInPhieu);
             this.Controls.Add(this.buttonXoaHet);
             this.Controls.Add(this.labelTTC);
@@ -491,6 +590,10 @@
             this.groupBoxLoc.PerformLayout();
             this.groupBoxKiemTraVonTungMatHang.ResumeLayout(false);
             this.groupBoxKiemTraVonTungMatHang.PerformLayout();
+            this.groupBoxLocTheoSTT.ResumeLayout(false);
+            this.groupBoxLocTheoSTT.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorTu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSpinEditorDen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,5 +633,11 @@
         private System.Windows.Forms.Label labelTongTienCong;
         private System.Windows.Forms.Button buttonXoaHet;
         private System.Windows.Forms.Button buttonInPhieu;
+        private System.Windows.Forms.GroupBox groupBoxLocTheoSTT;
+        private System.Windows.Forms.Button buttonLoc2;
+        private System.Windows.Forms.Label labelTu;
+        private System.Windows.Forms.Label labelDen;
+        public Telerik.WinControls.UI.RadSpinEditor radSpinEditorDen;
+        public Telerik.WinControls.UI.RadSpinEditor radSpinEditorTu;
     }
 }
