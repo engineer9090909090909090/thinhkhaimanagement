@@ -77,6 +77,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.xoáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cânBằngSốDưToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxDemTien.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown500kT)).BeginInit();
@@ -105,6 +107,7 @@
             this.groupBoxDoiChieu.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxDemTien
@@ -688,6 +691,20 @@
             this.panel3.Size = new System.Drawing.Size(74, 350);
             this.panel3.TabIndex = 54;
             // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cânBằngSốDưToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(158, 48);
+            // 
+            // cânBằngSốDưToolStripMenuItem
+            // 
+            this.cânBằngSốDưToolStripMenuItem.Name = "cânBằngSốDưToolStripMenuItem";
+            this.cânBằngSốDưToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.cânBằngSốDưToolStripMenuItem.Text = "Cân bằng số dư";
+            this.cânBằngSốDưToolStripMenuItem.Click += new System.EventHandler(this.cânBằngSốDưToolStripMenuItem_Click);
+            // 
             // KiemTraTienMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -734,6 +751,7 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,6 +807,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem xoáToolStripMenuItem;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem cânBằngSốDưToolStripMenuItem;
 
     }
 }
