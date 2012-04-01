@@ -60,7 +60,7 @@ namespace ThinhKhaiManagement.UI.TienMat
         private void ChonHet(object sender, EventArgs e)
         {
             NumericUpDown nm = (NumericUpDown)sender;
-            nm.Select(0,nm.Value.ToString().Length);
+            nm.Select(0, nm.Value.ToString().Length);
         }
 
         private void TongSoLoaiTien(object sender, KeyEventArgs e)
@@ -119,7 +119,7 @@ namespace ThinhKhaiManagement.UI.TienMat
         {
             decimal temp = 0;
             foreach (var a in panel1.Controls)
-            { 
+            {
                 NumericUpDown nm = (NumericUpDown)a;
                 switch (nm.Name)
                 {
@@ -177,6 +177,7 @@ namespace ThinhKhaiManagement.UI.TienMat
                 labelTienMatThuc.Text = string.Format("TM thực: {0}", labelTongCong.Text.Split(':')[1].Trim());
                 labelTienMatMay.Text = string.Format("TM máy: {0}", Convert.ToDecimal(ShowTonTienMat().Rows[0][2]).ToString("#,##0.00"));
                 labelChenhLech.Text = string.Format("Chênh lệch: {0}", (Convert.ToDecimal(labelTienMatThuc.Text.Split(':')[1]) - Convert.ToDecimal(labelTienMatMay.Text.Split(':')[1])).ToString("#,##0.00"));
+                BindEventCanBangSoDu();
             }
             else
             {
@@ -194,6 +195,7 @@ namespace ThinhKhaiManagement.UI.TienMat
             labelTienMatMay.Text = "TM máy:";
             labelChenhLech.Text = "Chênh lệch:";
             numericUpDown500kL.Focus();
+            labelChenhLech.ContextMenuStrip = null;
         }
 
         private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
@@ -208,9 +210,61 @@ namespace ThinhKhaiManagement.UI.TienMat
                     TongTien();
                     break;
                 }
-                  
+
             }
+        }
+
+        private void BindEventCanBangSoDu()
+        {
+            decimal soDuThuc = Convert.ToDecimal(labelTienMatThuc.Text.Split(':')[1].Trim());
+            decimal soDuMay = Convert.ToDecimal(labelTienMatMay.Text.Split(':')[1].Trim());
+            decimal soChenhLech = Convert.ToDecimal(labelChenhLech.Text.Split(':')[1].Trim());
+            if (soDuThuc != soDuMay && Math.Abs(soChenhLech)<=1000)
+            {
+                labelChenhLech.ContextMenuStrip = contextMenuStrip2;
+            }
+            else
+            {
+                labelChenhLech.ContextMenuStrip = null;
+            }
+        }
+
+        private void cânBằngSốDưToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            decimal soChenhLech = Convert.ToDecimal(labelChenhLech.Text.Split(':')[1].Trim());
+            if (soChenhLech > 0)
+            {
+                if ((bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                        StoreProcedureNames.constNhapTienMat_Insert,
+                        new Collection<KeyValuePair<object, int>>{
+                        new KeyValuePair<object,int>(DateTime.Today,(int)ParameterType.String),
+                        new KeyValuePair<object,int>(Math.Abs(soChenhLech),(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>("Cân bằng số dư",(int)ParameterType.String),
+                        new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
+                    },
+                        (int)ExecuteType.NonQuery
+                        ))
+                    MessageBox.Show("Cân bằng số dư thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Cân bằng số dư thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (soChenhLech < 0)
+            {
+                if ((bool)dataaccess.Access(StaticMethods.ShowSqlConnection(),
+                       StoreProcedureNames.constXuatTienMat_Insert,
+                       new Collection<KeyValuePair<object, int>>{
+                        new KeyValuePair<object,int>(DateTime.Today,(int)ParameterType.String),
+                        new KeyValuePair<object,int>(Math.Abs(soChenhLech),(int)ParameterType.NonString),
+                        new KeyValuePair<object,int>("Cân bằng số dư",(int)ParameterType.String),
+                        new KeyValuePair<object,int>("NULL",(int)ParameterType.NonString),
+                    },
+                       (int)ExecuteType.NonQuery
+                       ))
+                    MessageBox.Show("Cân bằng số dư thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Cân bằng số dư thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            buttonDoiChieu_Click(sender, e);
         }
     }
 }
-    
