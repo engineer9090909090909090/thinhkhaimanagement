@@ -185,12 +185,7 @@ namespace ThinhKhaiManagement.UI.MatHang
             }
 
             //5
-            if (radSpinEditorTienCongBan.Value <= radSpinEditorTienCong.Value && radSpinEditorTienCong.Value > 0)
-            {
-                errorProvider_NhapMatHang.SetError(radSpinEditorTienCongBan, "Tiền công bán không hợp lệ");
-                flag = 0;
-            }
-            else if (radSpinEditorTienCongBan.Value > radSpinEditorTienCong.Value && radSpinEditorTienCong.Value == 0)
+            if (radSpinEditorTienCongBan.Value <= radSpinEditorTienCong.Value)
             {
                 errorProvider_NhapMatHang.SetError(radSpinEditorTienCongBan, "Tiền công bán không hợp lệ");
                 flag = 0;
